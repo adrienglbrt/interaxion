@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import { ReactNode } from "react";
+import NavBar from "../navigation/navBar";
 
 const enduro = localFont({
   src: [
@@ -28,9 +29,10 @@ const cardinalPhoto = localFont({
 export default function Layout({ children }: { children: ReactNode }) {
   return (
     <div
-      className={`${cardinalPhoto.variable} ${enduro.variable} font-serif antialiased bg-white text-black`}
+      className={`${cardinalPhoto.variable} ${enduro.variable} font-sans antialiased bg-white text-black min-h-[100svh]`}
     >
       {children}
+      <NavBar />
     </div>
   );
 }
