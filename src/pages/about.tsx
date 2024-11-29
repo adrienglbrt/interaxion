@@ -1,5 +1,5 @@
 import { PageProps } from "@/types/interfaces";
-import { getPageData } from "@/utils/dataQueries";
+import { getGlobalData, getPageData } from "@/utils/dataQueries";
 import { GetStaticProps } from "next";
 import { useTina } from "tinacms/dist/react";
 
@@ -20,7 +20,10 @@ export default function About({ pageData }: { pageData: PageProps }) {
 // Data fetching
 
 export const getStaticProps: GetStaticProps = async () => {
-  const [pageData] = await Promise.all([getPageData({ slug: "about" })]);
+  const [pageData, globalData] = await Promise.all([
+    getPageData({ slug: "about" }),
+    getGlobalData(),
+  ]);
 
-  return { props: { pageData } };
+  return { props: { pageData, globalData } };
 };
