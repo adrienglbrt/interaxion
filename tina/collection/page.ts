@@ -6,6 +6,10 @@ const Page: Collection = {
   path: "content/pages",
   format: "md",
   ui: {
+    allowedActions: {
+      create: false,
+      delete: false,
+    },
     router: (props) => {
       if (props.document._sys.filename === "home") {
         return `/`;
