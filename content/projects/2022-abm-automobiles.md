@@ -5,9 +5,9 @@ brand: Porsche
 isActive: true
 isShowcased: false
 mainImage:
-  image16by9: /uploads/16_9.jpg
-  image5by7: /uploads/5_7.jpg
-  image4by3: /uploads/4_3.jpg
+  image16by9: /uploads/porsche/porsche_16_9.jpg
+  image5by7: /uploads/porsche/porsche_5_7.jpg
+  image4by3: /uploads/porsche/porsche_4_3.jpg
   alt: Alt test
 introduction: >-
   Sed molestie metus non sagittis vulputate. Duis placerat tristique libero at
