@@ -7,9 +7,9 @@ const Project: Collection = {
   format: "md",
   ui: {
     filename: {
-      slugify: (values) => {
-        if (values.year && values.title) {
-          return `${values.year}-${values.title}`
+      slugify: (props) => {
+        if (props.year && props.title) {
+          return `${props.year}-${props.title}`
             .normalize("NFKD") // The normalize() using NFKD method returns the Unicode Normalization Form of a given string.
             .toLowerCase() // Convert the string to lowercase letters
             .trim() // Remove whitespace from both sides of a string (optional)
