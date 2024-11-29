@@ -1,3 +1,4 @@
+import ShowcaseItem from "@/components/ui/showcaseItem";
 import { PageProps } from "@/types/interfaces";
 import {
   getGlobalData,
@@ -6,7 +7,10 @@ import {
 } from "@/utils/dataQueries";
 import { GetStaticProps } from "next";
 import { useTina } from "tinacms/dist/react";
-import { ProjectConnectionEdges } from "../../tina/__generated__/types";
+import {
+  Project,
+  ProjectConnectionEdges,
+} from "../../tina/__generated__/types";
 
 export default function Home({
   pageData,
@@ -24,20 +28,20 @@ export default function Home({
 
   const activeProjects = projectsList
     .map(({ node }) => node)
-    .filter((project) => project?.isActive);
+    .filter((project) => project?.isActive && project?.isShowcased);
 
   return (
-    <div className='h-[100svh] overflow-hidden'>
-      <h1>{page.title}</h1>
-      {activeProjects &&
-        activeProjects.length > 0 &&
-        activeProjects.map((project) => {
-          return (
-            <li key={project?.title} className='h-full'>
-              {project?.title}
-            </li>
-          );
-        })}
+    <div className='h-[100dvh]'>
+      <h1 className='hidden'>{page.title}</h1>
+      <ul className='h-[100dvh] overflow-y-scroll snap-y snap-mandatory'>
+        {activeProjects &&
+          activeProjects.length > 0 &&
+          activeProjects.map((project) => {
+            return (
+              <ShowcaseItem key={project?.title} project={project as Project} />
+            );
+          })}
+      </ul>
     </div>
   );
 }

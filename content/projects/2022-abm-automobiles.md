@@ -3,7 +3,7 @@ title: Abm automobiles
 year: 2022
 brand: Porsche
 isActive: true
-isShowcased: false
+isShowcased: true
 mainImage:
   image16by9: /uploads/porsche/porsche_16_9.jpg
   image5by7: /uploads/porsche/porsche_5_7.jpg
