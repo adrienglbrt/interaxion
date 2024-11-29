@@ -52,6 +52,18 @@ const Project: Collection = {
       required: false,
     },
     {
+      name: "year",
+      type: "number",
+      label: "Year",
+      required: true,
+    },
+    {
+      name: "brand",
+      type: "string",
+      label: "Brand",
+      required: true,
+    },
+    {
       name: "isActive",
       type: "boolean",
       label: "Is Active",
@@ -107,12 +119,6 @@ const Project: Collection = {
       ],
     },
     {
-      name: "year",
-      type: "number",
-      label: "Year",
-      required: true,
-    },
-    {
       name: "introduction",
       type: "string",
       label: "Introduction",
@@ -125,7 +131,7 @@ const Project: Collection = {
       name: "credits",
       type: "object",
       label: "Credits",
-      required: true,
+      required: false,
       list: true,
       ui: {
         itemProps: (item) => {

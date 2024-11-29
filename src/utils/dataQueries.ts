@@ -4,6 +4,9 @@ import {
   GlobalQueryVariables,
   PageQuery,
   PageQueryVariables,
+  ProjectConnectionEdges,
+  ProjectQuery,
+  ProjectQueryVariables,
 } from "../../tina/__generated__/types";
 
 export const getPageData = async ({ slug }: { slug: string }) => {
@@ -29,4 +32,22 @@ export const getGlobalData = async () => {
   }: { data: GlobalQuery; query: string; variables: GlobalQueryVariables } =
     result;
   return { data, query, variables };
+};
+
+export const getProjectData = async ({ slug }: { slug: string }) => {
+  const result = await client.queries.project({
+    relativePath: `${slug}.md`,
+  });
+  const {
+    data,
+    query,
+    variables,
+  }: { data: ProjectQuery; query: string; variables: ProjectQueryVariables } =
+    result;
+  return { data, query, variables };
+};
+
+export const getProjectsList = async () => {
+  const { data } = await client.queries.projectConnection();
+  return data.projectConnection.edges as ProjectConnectionEdges[];
 };
