@@ -1,5 +1,6 @@
 import { useGlobal } from "@/utils/globalContext";
 import { useMobile } from "@/utils/mobileContext";
+import { useEffect, useState } from "react";
 import Grid from "../layout/grid";
 import Wrapper from "../layout/wrapper";
 import NavEntry from "./navEntry";
@@ -8,6 +9,15 @@ export default function NavBar() {
   const { isMobile } = useMobile();
   const globalData = useGlobal();
   const { contact, socials } = globalData.data.global;
+
+  const [hydrated, setHydrated] = useState(false);
+  useEffect(() => {
+    setHydrated(true);
+  }, []);
+
+  if (!hydrated) {
+    return null;
+  }
 
   return (
     <nav className='fixed bottom-0 h-16 w-full mix-blend-difference text-white z-20'>
