@@ -6,6 +6,6 @@ export default function Grid({
   children: ReactNode | ReactNode[];
 }) {
   return (
-    <div className='grid grid-cols-6 sm:grid-cols-12 gap-8'>{children}</div>
+    <div className='grid grid-cols-6 sm:grid-cols-12 gap-4'>{children}</div>
   );
 }

@@ -1,3 +1,5 @@
+import ProjectsGrid from "@/components/blocks/projectsGrid";
+import Wrapper from "@/components/layout/wrapper";
 import { PageProps } from "@/types/interfaces";
 import {
   getGlobalData,
@@ -6,7 +8,10 @@ import {
 } from "@/utils/dataQueries";
 import { GetStaticProps } from "next";
 import { useTina } from "tinacms/dist/react";
-import { ProjectConnectionEdges } from "../../../tina/__generated__/types";
+import {
+  Project,
+  ProjectConnectionEdges,
+} from "../../../tina/__generated__/types";
 
 export default function Work({
   pageData,
@@ -24,17 +29,23 @@ export default function Work({
 
   const activeProjects = projectsList
     .map(({ node }) => node)
-    .filter((project) => project?.isActive);
+    .filter(
+      (project): project is Project =>
+        project !== undefined && project?.isActive === true
+    )
+    .sort((a, b) => {
+      return (b?.year ?? 0) - (a?.year ?? 0);
+    });
 
   return (
-    <div>
-      <h1>{page.title}</h1>
-      <ul>
-        {activeProjects.map((project) => {
-          return <li key={project?.title}>{project?.title}</li>;
-        })}
-      </ul>
-    </div>
+    <Wrapper>
+      <div>
+        <h1>{page.title}</h1>
+        {activeProjects && activeProjects.length > 0 && (
+          <ProjectsGrid projects={activeProjects} />
+        )}
+      </div>
+    </Wrapper>
   );
 }
 
