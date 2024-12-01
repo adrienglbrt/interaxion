@@ -77,6 +77,76 @@ const Page: Collection = {
             "The description of the page, displayed in Google search results and in social media shares. If not provided, the heading field will be used.",
           required: false,
         },
+        {
+          name: "introductionText",
+          label: "Introduction Text",
+          type: "rich-text",
+          required: true,
+        },
+        {
+          name: "image",
+          label: "Image",
+          type: "image",
+          description:
+            "Aspect ratio needs to be 16:9. On mobile it will be cropped into a 5:7, so please keep the subject in the center.",
+          required: true,
+        },
+        {
+          name: "imageAlt",
+          label: "Image Alt Text",
+          type: "string",
+          required: false,
+        },
+        {
+          name: "clients",
+          label: "Clients",
+          type: "object",
+          required: true,
+          fields: [
+            {
+              name: "heading",
+              label: "Heading",
+              type: "string",
+              required: true,
+            },
+            {
+              name: "content",
+              label: "Description",
+              type: "string",
+              ui: {
+                component: "textarea",
+              },
+              required: true,
+            },
+          ],
+        },
+        {
+          name: "contact",
+          label: "Contact",
+          type: "object",
+          required: true,
+          fields: [
+            {
+              name: "heading",
+              label: "Heading",
+              type: "string",
+              required: true,
+            },
+          ],
+        },
+        {
+          name: "socials",
+          label: "Socials",
+          type: "object",
+          fields: [
+            {
+              name: "heading",
+              label: "Heading",
+              type: "string",
+              required: true,
+            },
+          ],
+        },
       ],
     },
     {
