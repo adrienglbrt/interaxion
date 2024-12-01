@@ -36,7 +36,7 @@ export default function NavBar() {
               {!isMobile && (
                 <>
                   <span className='mx-2'> / </span>
-                  <NavEntry href={contact?.email} isExternal>
+                  <NavEntry href={`mailto:${contact?.email}`} isExternal>
                     Email
                   </NavEntry>
                 </>
