@@ -14,6 +14,7 @@ export default function NavEntry({
       href={href}
       target={isExternal ? "_blank" : "_self"}
       className='uppercase hover:opacity-70 transition-opacity duration-300'
+      scroll={false}
     >
       {children}
     </Link>

@@ -10,7 +10,7 @@ export default function ProjectCard({
   aspectRatio: string;
 }) {
   return (
-    <Link href={`/work/${project?._sys.filename}`}>
+    <Link href={`/work/${project?._sys.filename}`} scroll={false}>
       <div
         className='group relative overflow-hidden'
         style={{ paddingBottom: aspectRatio }}
