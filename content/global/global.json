@@ -1,9 +1,23 @@
 {
   "contact": {
     "email": "contact@interaxion.tv",
+    "address": {
+      "addressLineOne": "Interaxion Agency France",
+      "addressLineTwo": "14 rue de Montevideo",
+      "city": "Paris",
+      "postCode": "75116",
+      "country": "France",
+      "phone": "+33 (0)6 10 58 33 43"
+    }
+  },
+  "socials": {
     "instagram": {
       "url": "https://www.instagram.com/interaxion.tv/",
       "label": "Instagram"
+    },
+    "linkedin": {
+      "url": "https://www.linkedin.com/company/interaxion-agency",
+      "label": "LinkedIn"
     }
   }
 }

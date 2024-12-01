@@ -25,8 +25,70 @@ const Global: Collection = {
           required: true,
         },
         {
+          name: "address",
+          label: "Address",
+          type: "object",
+          required: true,
+          fields: [
+            {
+              name: "addressLineOne",
+              label: "Address Line One",
+              type: "string",
+              required: true,
+            },
+            {
+              name: "addressLineTwo",
+              label: "Address Line Two",
+              type: "string",
+              required: true,
+            },
+            {
+              name: "city",
+              label: "City",
+              type: "string",
+              required: true,
+            },
+            {
+              name: "postCode",
+              label: "Post Code",
+              type: "string",
+              required: true,
+            },
+            {
+              name: "country",
+              label: "Country",
+              type: "string",
+              required: true,
+            },
+            {
+              name: "phone",
+              label: "Phone",
+              type: "string",
+              required: true,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "socials",
+      label: "Socials",
+      type: "object",
+      required: true,
+      fields: [
+        {
           name: "instagram",
           label: "Instagram",
+          type: "object",
+          required: true,
+          fields: [
+            { name: "url", type: "string", label: "URL", required: true },
+            { name: "label", type: "string", label: "Label", required: true },
+          ],
+        },
+        {
+          name: "linkedin",
+          label: "LinkedIn",
           type: "object",
           required: true,
           fields: [

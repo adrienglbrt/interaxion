@@ -138,6 +138,7 @@ const Page: Collection = {
           name: "socials",
           label: "Socials",
           type: "object",
+          required: true,
           fields: [
             {
               name: "heading",
