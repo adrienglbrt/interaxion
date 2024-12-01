@@ -17,6 +17,7 @@ const Global: Collection = {
       name: "contact",
       label: "Contact",
       type: "object",
+      required: true,
       fields: [
         {
           name: "email",
