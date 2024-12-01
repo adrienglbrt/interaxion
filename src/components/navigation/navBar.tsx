@@ -3,7 +3,7 @@ import NavEntry from "./navEntry";
 
 export default function NavBar() {
   return (
-    <nav className='fixed bottom-0 h-16 w-full mix-blend-difference text-white'>
+    <nav className='fixed bottom-0 h-16 w-full mix-blend-difference text-white z-20'>
       <Wrapper>
         <div className='h-full flex items-center justify-between'>
           <NavEntry href='/'>Interaxion</NavEntry>
