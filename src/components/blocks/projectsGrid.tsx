@@ -28,7 +28,7 @@ export default function ProjectsGrid({ projects }: { projects: Project[] }) {
   };
 
   return (
-    <div className='flex flex-col sm:flex-row gap-4'>
+    <div className='pt-8 lg:pt-12 2xl:pt-16 flex flex-col sm:flex-row gap-4'>
       {[...Array(columns)].map((_, columnIndex) => (
         <div key={columnIndex} className='flex-1 flex flex-col gap-4'>
           {getColumnProjects(columnIndex).map((project, index) => (

@@ -39,8 +39,12 @@ export default function Work({
 
   return (
     <Wrapper>
-      <div>
-        <h1>{page.title}</h1>
+      <div className='pb-16'>
+        <div className='pt-16 lg:pt-24'>
+          <h1 className='font-serif text-6xl sm:text-7xl lg:text-8xl xl:text-9xl'>
+            {page.title}
+          </h1>
+        </div>
         {activeProjects && activeProjects.length > 0 && (
           <ProjectsGrid projects={activeProjects} />
         )}
