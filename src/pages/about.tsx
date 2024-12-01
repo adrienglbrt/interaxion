@@ -1,7 +1,12 @@
+import Grid from "@/components/layout/grid";
+import Wrapper from "@/components/layout/wrapper";
+import RichText from "@/components/ui/richText";
 import { PageProps } from "@/types/interfaces";
 import { getGlobalData, getPageData } from "@/utils/dataQueries";
 import { GetStaticProps } from "next";
+import Image from "next/image";
 import { useTina } from "tinacms/dist/react";
+import { PageAbout } from "../../tina/__generated__/types";
 
 export default function About({ pageData }: { pageData: PageProps }) {
   const { data } = useTina({
@@ -9,11 +14,36 @@ export default function About({ pageData }: { pageData: PageProps }) {
     data: pageData.data,
     variables: pageData.variables,
   });
-  const { page } = data;
+  const page = data.page as PageAbout;
+
+  console.log(page);
   return (
-    <div>
-      <h1>{page.title}</h1>
-    </div>
+    <Wrapper>
+      <div className='pb-16'>
+        <Grid>
+          <div className='col-span-6 sm:col-start-2 sm:col-span-4 lg:col-start-7 lg:col-span-5 pt-20 lg:pt-40'>
+            <RichText text={page.introductionText} />
+          </div>
+          <div className='col-span-6 lg:col-span-12 -mx-4 pt-10 lg:pt-20'>
+            <div className='relative pb-[140%] sm:pb-[56.25%]'>
+              <Image
+                src={page.image}
+                alt={page.imageAlt ?? ""}
+                fill
+                sizes='100vw'
+                className='object-cover'
+              />
+            </div>
+          </div>
+          <div className='col-span-6 sm:col-start-2 sm:col-span-4 lg:col-start-7 lg:col-span-5 pt-10 lg:pt-20'>
+            <h2 className='text-grey'>{page.clients.heading}</h2>
+            <p className='pt-4 leading-relaxed max-w-prose text-pretty'>
+              {page.clients.content}
+            </p>
+          </div>
+        </Grid>
+      </div>
+    </Wrapper>
   );
 }
 
