@@ -1,7 +1,7 @@
+import ProjectHeader from "@/components/blocks/projectHeader";
+import ProjectIntroduction from "@/components/blocks/projectIntroduction";
 import Grid from "@/components/layout/grid";
 import Wrapper from "@/components/layout/wrapper";
-import ProjectHeader from "@/components/ui/projectHeader";
-import ProjectIntroduction from "@/components/ui/projectIntroduction";
 import { ProjectProps } from "@/types/interfaces";
 import { getGlobalData, getProjectData } from "@/utils/dataQueries";
 import { GetStaticPaths, GetStaticProps } from "next";

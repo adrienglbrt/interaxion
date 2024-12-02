@@ -1,6 +1,6 @@
 import { Project, ProjectCredits } from "../../../tina/__generated__/types";
-import ProjectCreditsItem from "./projectCreditsItem";
-import RichText from "./richText";
+import ProjectCreditsItem from "../ui/projectCreditsItem";
+import RichText from "../ui/richText";
 
 export default function ProjectIntroduction({ project }: { project: Project }) {
   return (

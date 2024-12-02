@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Project } from "../../../tina/__generated__/types";
 import Wrapper from "../layout/wrapper";
-import HeadingOne from "./headingOne";
+import HeadingOne from "../ui/headingOne";
 
 export default function ProjectHeader({ project }: { project: Project }) {
   return (
