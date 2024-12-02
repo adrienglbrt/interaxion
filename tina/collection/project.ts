@@ -120,11 +120,8 @@ const Project: Collection = {
     },
     {
       name: "introduction",
-      type: "string",
+      type: "rich-text",
       label: "Introduction",
-      ui: {
-        component: "textarea",
-      },
       required: true,
     },
     {

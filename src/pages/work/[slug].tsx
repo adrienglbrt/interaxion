@@ -1,8 +1,13 @@
+import Grid from "@/components/layout/grid";
+import Wrapper from "@/components/layout/wrapper";
+import ProjectHeader from "@/components/ui/projectHeader";
+import RichText from "@/components/ui/richText";
 import { ProjectProps } from "@/types/interfaces";
 import { getGlobalData, getProjectData } from "@/utils/dataQueries";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { useTina } from "tinacms/dist/react";
 import client from "../../../tina/__generated__/client";
+import type { Project } from "../../../tina/__generated__/types";
 
 export default function Project({
   projectData,
@@ -15,8 +20,24 @@ export default function Project({
     variables: projectData.variables,
   });
 
-  const { project } = data;
-  return <div>{project.title}</div>;
+  const project = data.project as Project;
+
+  return (
+    <>
+      <ProjectHeader project={project} />
+      <main>
+        <Wrapper>
+          <div className='pb-32'>
+            <Grid>
+              <div className='col-span-6 sm:col-start-2 sm:col-span-4 lg:col-start-7 lg:col-span-5 pt-20 lg:pt-40'>
+                <RichText text={project.introduction} />
+              </div>
+            </Grid>
+          </div>
+        </Wrapper>
+      </main>
+    </>
+  );
 }
 
 // Data fetching
