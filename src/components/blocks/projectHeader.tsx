@@ -5,7 +5,7 @@ import HeadingOne from "../ui/headingOne";
 
 export default function ProjectHeader({ project }: { project: Project }) {
   return (
-    <header className='relative h-[100svh] w-full'>
+    <header className='relative h-screen w-full'>
       <Image
         src={project.mainImage.image16by9}
         alt={project.mainImage.alt ?? project.title}
