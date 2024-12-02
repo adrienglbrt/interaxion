@@ -9,7 +9,7 @@ export default function ShowcaseItem({ project }: { project: Project }) {
       {project?.mainImage.image16by9 && (
         <Image
           src={project?.mainImage.image16by9}
-          alt=''
+          alt={project?.mainImage.alt ?? project.title}
           fill
           sizes='100vw'
           className='object-cover'
