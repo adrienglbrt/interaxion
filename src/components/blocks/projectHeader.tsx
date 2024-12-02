@@ -16,7 +16,7 @@ export default function ProjectHeader({ project }: { project: Project }) {
       />
       <div className='h-full w-full'>
         <Wrapper>
-          <div className='sticky top-4 bottom-4 z-10 pt-20 mix-blend-difference'>
+          <div className='sticky top-16 pb-16 mix-blend-difference'>
             <HeadingOne hasMixBlendMode>{project.title}</HeadingOne>
           </div>
         </Wrapper>
