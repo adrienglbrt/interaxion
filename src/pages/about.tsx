@@ -21,7 +21,7 @@ export default function About({ pageData }: { pageData: PageProps }) {
   const { contact, socials } = globalData.data.global;
   return (
     <Wrapper>
-      <div className='pb-32'>
+      <main className='pb-32'>
         <Grid>
           <div className='col-span-6 sm:col-start-2 sm:col-span-4 lg:col-start-7 lg:col-span-5 pt-20 lg:pt-40'>
             <RichText text={page.introductionText} />
@@ -88,7 +88,7 @@ export default function About({ pageData }: { pageData: PageProps }) {
             </ul>
           </div>
         </Grid>
-      </div>
+      </main>
     </Wrapper>
   );
 }

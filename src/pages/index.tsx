@@ -31,7 +31,7 @@ export default function Home({
     .filter((project) => project?.isActive && project?.isShowcased);
 
   return (
-    <div className='h-[100dvh]'>
+    <main className='h-[100dvh]'>
       <h1 className='hidden'>{page.title}</h1>
       <ul className='h-[100dvh] overflow-y-scroll snap-y snap-mandatory'>
         {activeProjects &&
@@ -42,7 +42,7 @@ export default function Home({
             );
           })}
       </ul>
-    </div>
+    </main>
   );
 }
 

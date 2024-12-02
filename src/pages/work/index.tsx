@@ -39,7 +39,7 @@ export default function Work({
 
   return (
     <Wrapper>
-      <div className='pb-16'>
+      <main className='pb-16'>
         <div className='pt-16 lg:pt-24'>
           <h1 className='font-serif text-6xl sm:text-7xl lg:text-8xl xl:text-9xl'>
             {page.title}
@@ -48,7 +48,7 @@ export default function Work({
         {activeProjects && activeProjects.length > 0 && (
           <ProjectsGrid projects={activeProjects} />
         )}
-      </div>
+      </main>
     </Wrapper>
   );
 }
