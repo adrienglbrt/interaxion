@@ -8,16 +8,17 @@ import NavEntry from "./navEntry";
 export default function NavBar() {
   const { isMobile } = useMobile();
   const globalData = useGlobal();
-  const { contact, socials } = globalData.data.global;
-
   const [hydrated, setHydrated] = useState(false);
+
   useEffect(() => {
     setHydrated(true);
   }, []);
 
-  if (!hydrated) {
+  if (!hydrated || !globalData?.data?.global) {
     return null;
   }
+
+  const { contact, socials } = globalData.data.global;
 
   return (
     <nav className='fixed bottom-0 h-16 w-full mix-blend-difference text-white z-20'>
