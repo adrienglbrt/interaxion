@@ -10,6 +10,7 @@ export default function ProjectHeader({ project }: { project: Project }) {
         src={project.mainImage.image16by9}
         alt={project.mainImage.alt ?? project.title}
         fill
+        priority
         sizes='100vw'
         className='object-cover'
       />
