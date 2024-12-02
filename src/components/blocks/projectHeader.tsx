@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Project } from "../../../tina/__generated__/types";
 import Wrapper from "../layout/wrapper";
-import HeadingOne from "../ui/headingOne";
 
 export default function ProjectHeader({ project }: { project: Project }) {
   return (
@@ -17,7 +16,10 @@ export default function ProjectHeader({ project }: { project: Project }) {
       <div className='h-full w-full'>
         <Wrapper>
           <div className='sticky top-16 pb-16 mix-blend-difference'>
-            <HeadingOne hasMixBlendMode>{project.title}</HeadingOne>
+            <h1 className='flex flex-col gap-2 font-serif text-6xl sm:text-7xl lg:text-8xl xl:text-9xl text-white'>
+              <span>{project.brand}</span>
+              <span>{project.title}</span>
+            </h1>
           </div>
         </Wrapper>
       </div>

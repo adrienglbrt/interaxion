@@ -18,8 +18,9 @@ export default function ShowcaseItem({ project }: { project: Project }) {
       <Wrapper>
         <div className='h-full w-full flex items-center justify-start'>
           <Link href={`/work/${project?._sys.filename}`} scroll={false}>
-            <h2 className='font-serif mix-blend-difference text-white text-5xl sm:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl'>
-              {project?.title}
+            <h2 className='flex flex-col gap-2 font-serif mix-blend-difference text-white text-5xl sm:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl'>
+              <span>{project.brand}</span>
+              <span>{project.title}</span>
             </h2>
           </Link>
         </div>
