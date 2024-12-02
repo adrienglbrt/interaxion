@@ -24,7 +24,7 @@ export default function ProjectOptionalBlockTripleImage({
         width={aspectRatioWidth}
         height={aspectRatioHeight}
         sizes='33vw'
-        className='col-span-2 lg:col-start-2 lg:col-span-3 w-full'
+        className='col-span-2 lg:col-start-4 w-full'
       />
       <Image
         src={imageTwo}
@@ -32,7 +32,7 @@ export default function ProjectOptionalBlockTripleImage({
         width={aspectRatioWidth}
         height={aspectRatioHeight}
         sizes='33vw'
-        className='col-span-2 lg:col-span-3 w-full'
+        className='col-span-2 w-full'
       />
       <Image
         src={imageThree}
@@ -40,7 +40,7 @@ export default function ProjectOptionalBlockTripleImage({
         width={aspectRatioWidth}
         height={aspectRatioHeight}
         sizes='33vw'
-        className='col-span-2 lg:col-span-3 w-full'
+        className='col-span-2 w-full'
       />
     </div>
   );
