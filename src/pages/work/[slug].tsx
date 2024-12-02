@@ -1,5 +1,6 @@
 import ProjectHeader from "@/components/blocks/projectHeader";
 import ProjectIntroduction from "@/components/blocks/projectIntroduction";
+import ProjectOptionalBlocks from "@/components/blocks/projectOptionalBlocks";
 import Grid from "@/components/layout/grid";
 import Wrapper from "@/components/layout/wrapper";
 import { ProjectProps } from "@/types/interfaces";
@@ -30,6 +31,9 @@ export default function Project({
           <div className='pb-32'>
             <Grid>
               <ProjectIntroduction project={project} />
+              {project.optionalBlocks && project.optionalBlocks.length > 0 && (
+                <ProjectOptionalBlocks blocks={project.optionalBlocks} />
+              )}
             </Grid>
           </div>
         </Wrapper>
