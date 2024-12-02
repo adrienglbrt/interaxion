@@ -1,3 +1,4 @@
+import { useMobile } from "@/utils/mobileContext";
 import Image from "next/image";
 import Link from "next/link";
 import { Project } from "../../../tina/__generated__/types";
@@ -9,6 +10,7 @@ export default function ProjectCard({
   project: Project;
   aspectRatio: string;
 }) {
+  const { isMobile } = useMobile();
   return (
     <Link href={`/work/${project?._sys.filename}`} scroll={false}>
       <div
@@ -28,11 +30,19 @@ export default function ProjectCard({
           fill
           className='object-cover group-hover:scale-[102%] transition-transform duration-500 ease-in-out'
         />
-        <h2 className='absolute bottom-4 left-4 flex flex-col gap-2 font-serif mix-blend-difference text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10'>
-          <span>{project.brand}</span>
-          <span>{project.title}</span>
-        </h2>
+        {!isMobile && (
+          <h2 className='absolute bottom-4 left-4 flex flex-col gap-2 font-serif mix-blend-difference text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10'>
+            <span>{project.brand}</span>
+            <span>{project.title}</span>
+          </h2>
+        )}
       </div>
+      {isMobile && (
+        <h2 className='pt-2 pb-8 flex justify-between'>
+          <span className='truncate text-nowrap'>{project.title}</span>
+          <span className='text-grey'>{project.brand}</span>
+        </h2>
+      )}
     </Link>
   );
 }
