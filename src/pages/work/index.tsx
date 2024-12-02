@@ -1,5 +1,6 @@
 import ProjectsGrid from "@/components/blocks/projectsGrid";
 import Wrapper from "@/components/layout/wrapper";
+import HeadingOne from "@/components/ui/headingOne";
 import { PageProps } from "@/types/interfaces";
 import {
   getGlobalData,
@@ -41,9 +42,7 @@ export default function Work({
     <Wrapper>
       <div className='pb-16'>
         <div className='pt-16 lg:pt-24'>
-          <h1 className='font-serif text-6xl sm:text-7xl lg:text-8xl xl:text-9xl'>
-            {page.title}
-          </h1>
+          <HeadingOne>{page.title}</HeadingOne>
         </div>
         {activeProjects && activeProjects.length > 0 && (
           <ProjectsGrid projects={activeProjects} />
