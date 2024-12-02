@@ -8,7 +8,7 @@ export default function ProjectOptionalBlockSingleImage({
 }) {
   const { image, alt, aspectRatioWidth, aspectRatioHeight, version } = block;
   return (
-    <div className='pt-10 lg:pt-20 col-span-6 lg:col-span-12 grid grid-cols-6 lg:grid-cols-12 gap-4'>
+    <div className='pt-10 lg:pt-20 col-span-6 lg:col-span-12 grid grid-cols-6 lg:grid-cols-12 gap-1 sm:gap-2 lg:gap-4'>
       <Image
         src={image}
         alt={alt ?? ""}
