@@ -1,4 +1,5 @@
 import ProjectsGrid from "@/components/blocks/projectsGrid";
+import MetaTags from "@/components/layout/metaTags";
 import Wrapper from "@/components/layout/wrapper";
 import { PageProps } from "@/types/interfaces";
 import {
@@ -38,18 +39,25 @@ export default function Work({
     });
 
   return (
-    <Wrapper>
-      <main className='pb-16'>
-        <div className='pt-16 lg:pt-24'>
-          <h1 className='font-serif text-6xl sm:text-7xl lg:text-8xl xl:text-9xl'>
-            {page.title}
-          </h1>
-        </div>
-        {activeProjects && activeProjects.length > 0 && (
-          <ProjectsGrid projects={activeProjects} />
-        )}
-      </main>
-    </Wrapper>
+    <>
+      <MetaTags
+        title={page.title}
+        metaTitle={page.metaTitle}
+        metaDescription={page.metaDescription}
+      />
+      <Wrapper>
+        <main className='pb-16'>
+          <div className='pt-16 lg:pt-24'>
+            <h1 className='font-serif text-6xl sm:text-7xl lg:text-8xl xl:text-9xl'>
+              {page.title}
+            </h1>
+          </div>
+          {activeProjects && activeProjects.length > 0 && (
+            <ProjectsGrid projects={activeProjects} />
+          )}
+        </main>
+      </Wrapper>
+    </>
   );
 }
 

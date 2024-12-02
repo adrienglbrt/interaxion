@@ -1,3 +1,4 @@
+import MetaTags from "@/components/layout/metaTags";
 import ShowcaseItem from "@/components/ui/showcaseItem";
 import { PageProps } from "@/types/interfaces";
 import {
@@ -31,18 +32,28 @@ export default function Home({
     .filter((project) => project?.isActive && project?.isShowcased);
 
   return (
-    <main className='h-[100dvh]'>
-      <h1 className='hidden'>{page.title}</h1>
-      <ul className='h-[100dvh] overflow-y-scroll snap-y snap-mandatory'>
-        {activeProjects &&
-          activeProjects.length > 0 &&
-          activeProjects.map((project) => {
-            return (
-              <ShowcaseItem key={project?.title} project={project as Project} />
-            );
-          })}
-      </ul>
-    </main>
+    <>
+      <MetaTags
+        title={page.title}
+        metaTitle={page.metaTitle}
+        metaDescription={page.metaDescription}
+      />
+      <main className='h-[100dvh]'>
+        <h1 className='hidden'>{page.title}</h1>
+        <ul className='h-[100dvh] overflow-y-scroll snap-y snap-mandatory'>
+          {activeProjects &&
+            activeProjects.length > 0 &&
+            activeProjects.map((project) => {
+              return (
+                <ShowcaseItem
+                  key={project?.title}
+                  project={project as Project}
+                />
+              );
+            })}
+        </ul>
+      </main>
+    </>
   );
 }
 

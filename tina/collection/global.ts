@@ -99,6 +99,34 @@ const Global: Collection = {
         },
       ],
     },
+    {
+      name: "metaData",
+      label: "Meta data",
+      type: "object",
+      required: true,
+      fields: [
+        {
+          name: "websiteTitle",
+          type: "string",
+          label: "Website Title",
+          required: true,
+        },
+        {
+          name: "websiteDescription",
+          type: "string",
+          label: "Website Description",
+          required: true,
+        },
+        {
+          name: "websiteImage",
+          type: "image",
+          label: "Website Image",
+          required: true,
+          description:
+            "The image used when sharing the website on social media. Size must be 1200 X 630 pixels.",
+        },
+      ],
+    },
   ],
 };
 

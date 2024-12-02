@@ -2,6 +2,7 @@ import ProjectHeader from "@/components/blocks/projectHeader";
 import ProjectIntroduction from "@/components/blocks/projectIntroduction";
 import ProjectOptionalBlocks from "@/components/blocks/projectOptionalBlocks";
 import Grid from "@/components/layout/grid";
+import MetaTags from "@/components/layout/metaTags";
 import Wrapper from "@/components/layout/wrapper";
 import { ProjectProps } from "@/types/interfaces";
 import { getGlobalData, getProjectData } from "@/utils/dataQueries";
@@ -25,6 +26,11 @@ export default function Project({
 
   return (
     <>
+      <MetaTags
+        title={project.title}
+        metaTitle={project.metaTitle}
+        metaDescription={project.metaDescription}
+      />
       <ProjectHeader project={project} />
       <main>
         <Wrapper>
