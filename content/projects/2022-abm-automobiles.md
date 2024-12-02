@@ -24,6 +24,7 @@ credits:
       - Evelyne Kamarad
   - label: Sound design
     name:
+      - Marcel Doe
       - Nathalie Huizenga
 optionalBlocks:
   - imageOne: /uploads/porsche/porsche_case_dual_5_7-1.jpg

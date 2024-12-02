@@ -1,7 +1,7 @@
 import Grid from "@/components/layout/grid";
 import Wrapper from "@/components/layout/wrapper";
 import ProjectHeader from "@/components/ui/projectHeader";
-import RichText from "@/components/ui/richText";
+import ProjectIntroduction from "@/components/ui/projectIntroduction";
 import { ProjectProps } from "@/types/interfaces";
 import { getGlobalData, getProjectData } from "@/utils/dataQueries";
 import { GetStaticPaths, GetStaticProps } from "next";
@@ -29,9 +29,7 @@ export default function Project({
         <Wrapper>
           <div className='pb-32'>
             <Grid>
-              <div className='col-span-6 sm:col-start-2 sm:col-span-4 lg:col-start-7 lg:col-span-5 pt-20 lg:pt-40'>
-                <RichText text={project.introduction} />
-              </div>
+              <ProjectIntroduction project={project} />
             </Grid>
           </div>
         </Wrapper>
