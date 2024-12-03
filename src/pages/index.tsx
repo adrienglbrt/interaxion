@@ -1,11 +1,12 @@
 import MetaTags from "@/components/layout/metaTags";
 import ShowcaseItem from "@/components/ui/showcaseItem";
-import { PageProps } from "@/types/interfaces";
+import { EnhancedProject, PageProps } from "@/types/interfaces";
 import {
   getGlobalData,
   getPageData,
   getProjectsList,
 } from "@/utils/dataQueries";
+import { getVimeoDirectLinks } from "@/utils/vimeoQueries";
 import { GetStaticProps } from "next";
 import { useTina } from "tinacms/dist/react";
 import { Project } from "../../tina/__generated__/types";
@@ -15,7 +16,7 @@ export default function Home({
   activeShowcasedProjects,
 }: {
   pageData: PageProps;
-  activeShowcasedProjects: Project[];
+  activeShowcasedProjects: EnhancedProject[];
 }) {
   const { data } = useTina({
     query: pageData.query,
@@ -53,16 +54,46 @@ export default function Home({
 // Data fetching
 
 export const getStaticProps: GetStaticProps = async () => {
-  const [pageData, projectsList, globalData] = await Promise.all([
-    getPageData({ slug: "home" }),
-    getProjectsList(),
-    getGlobalData(),
-  ]);
+  try {
+    const [pageData, projectsList, globalData] = await Promise.all([
+      getPageData({ slug: "home" }),
+      getProjectsList(),
+      getGlobalData(),
+    ]);
 
-  const activeShowcasedProjects = projectsList
-    .map(({ node }) => node)
-    .filter((project) => project?.isActive && project?.isShowcased)
-    .sort((a, b) => (a?.showcaseOrder ?? 10) - (b?.showcaseOrder ?? 10));
+    const activeShowcasedProjects = projectsList
+      .map(({ node }) => node)
+      .filter((project) => project?.isActive && project?.isShowcased)
+      .sort((a, b) => (a?.showcaseOrder ?? 10) - (b?.showcaseOrder ?? 10));
 
-  return { props: { pageData, activeShowcasedProjects, globalData } };
+    const vimeoDirectLinks = await getVimeoDirectLinks(
+      activeShowcasedProjects as Project[]
+    );
+
+    const projectsWithVimeoLinks = activeShowcasedProjects.map((project) => {
+      const vimeoLinks = vimeoDirectLinks.find(
+        (link) => link.projectId === project?.id
+      );
+      return {
+        ...project,
+        videoLinks: {
+          linkLoop16by9: vimeoLinks?.linkLoop16by9,
+          linkLoop9by16: vimeoLinks?.linkLoop9by16,
+        },
+      };
+    });
+
+    return {
+      props: {
+        pageData,
+        activeShowcasedProjects: projectsWithVimeoLinks,
+        globalData,
+      },
+    };
+  } catch (error) {
+    console.error("Error in getStaticProps:", error);
+    return {
+      notFound: true,
+    };
+  }
 };

@@ -3,6 +3,7 @@ import {
   GlobalQueryVariables,
   PageQuery,
   PageQueryVariables,
+  Project,
   ProjectQuery,
   ProjectQueryVariables,
 } from "../../tina/__generated__/types";
@@ -23,4 +24,14 @@ export interface ProjectProps {
   data: ProjectQuery;
   query: string;
   variables: ProjectQueryVariables;
+}
+
+export interface VimeoDirectLinks {
+  projectId: string;
+  linkLoop16by9: {};
+  linkLoop9by16: {};
+}
+
+export interface EnhancedProject extends Project {
+  videoLinks: VimeoDirectLinks;
 }
