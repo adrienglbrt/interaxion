@@ -2,6 +2,7 @@ import { ProjectWithDirectLinks, VideoLinkObject } from "@/types/interfaces";
 import { useMobile } from "@/utils/mobileContext";
 import Image from "next/image";
 import Link from "next/link";
+import { useMemo } from "react";
 import Wrapper from "../layout/wrapper";
 
 // Possible values for rendition: 240p, 360p, 540p, 720p, 1080p, adaptive
@@ -24,24 +25,26 @@ export default function ShowcaseItem({
     project.videoDirectLinks?.linksLoop16by9 &&
     project.videoDirectLinks?.linksLoop9by16;
 
-  let videoSrc16by9;
-  let videoSrc9by16;
+  const videoSrc = useMemo(() => {
+    if (!hasLoopVideo) return null;
 
-  if (hasLoopVideo) {
-    videoSrc16by9 = getVideoLinkByRendition(
-      project.videoDirectLinks?.linksLoop16by9,
-      "720p"
-    );
-    videoSrc9by16 = getVideoLinkByRendition(
-      project.videoDirectLinks?.linksLoop9by16,
-      "720p"
-    );
-  }
+    return {
+      src16by9: getVideoLinkByRendition(
+        project.videoDirectLinks?.linksLoop16by9,
+        "720p"
+      ),
+      src9by16: getVideoLinkByRendition(
+        project.videoDirectLinks?.linksLoop9by16,
+        "720p"
+      ),
+    };
+  }, [hasLoopVideo, isMobile, project.videoDirectLinks]);
 
   return (
     <li className='relative h-[100svh] w-full snap-start snap-always'>
-      {hasLoopVideo ? (
+      {hasLoopVideo && videoSrc ? (
         <video
+          key={isMobile ? "mobile" : "desktop"} // Force re-render when switching
           loop
           muted
           playsInline
@@ -49,7 +52,10 @@ export default function ShowcaseItem({
           className='absolute w-full h-full object-cover'
           poster={project.mainImage.image16by9}
         >
-          <source src={isMobile ? videoSrc9by16 : videoSrc16by9} />
+          <source
+            src={isMobile ? videoSrc.src9by16 : videoSrc.src16by9}
+            type='video/mp4'
+          />
         </video>
       ) : (
         project?.mainImage.image16by9 && (
