@@ -32,6 +32,6 @@ export interface VimeoDirectLinks {
   linkLoop9by16: {};
 }
 
-export interface EnhancedProject extends Project {
+export interface ProjectWithDirectLinks extends Project {
   videoLinks: VimeoDirectLinks;
 }

@@ -1,6 +1,6 @@
 import MetaTags from "@/components/layout/metaTags";
 import ShowcaseItem from "@/components/ui/showcaseItem";
-import { EnhancedProject, PageProps } from "@/types/interfaces";
+import { PageProps, ProjectWithDirectLinks } from "@/types/interfaces";
 import {
   getGlobalData,
   getPageData,
@@ -16,7 +16,7 @@ export default function Home({
   activeShowcasedProjects,
 }: {
   pageData: PageProps;
-  activeShowcasedProjects: EnhancedProject[];
+  activeShowcasedProjects: ProjectWithDirectLinks[];
 }) {
   const { data } = useTina({
     query: pageData.query,
@@ -41,7 +41,7 @@ export default function Home({
               return (
                 <ShowcaseItem
                   key={project?.title}
-                  project={project as Project}
+                  project={project as ProjectWithDirectLinks}
                 />
               );
             })}

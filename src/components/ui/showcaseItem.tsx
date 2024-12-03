@@ -1,9 +1,13 @@
+import { ProjectWithDirectLinks } from "@/types/interfaces";
 import Image from "next/image";
 import Link from "next/link";
-import { Project } from "../../../tina/__generated__/types";
 import Wrapper from "../layout/wrapper";
 
-export default function ShowcaseItem({ project }: { project: Project }) {
+export default function ShowcaseItem({
+  project,
+}: {
+  project: ProjectWithDirectLinks;
+}) {
   return (
     <li className='relative h-[100svh] w-full snap-start snap-always'>
       {project?.mainImage.image16by9 && (
