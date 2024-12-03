@@ -30,11 +30,11 @@ export default function ShowcaseItem({
 
     return {
       src16by9: getVideoLinkByRendition(
-        project.videoDirectLinks?.linksLoop16by9,
+        project.videoDirectLinks?.linksLoop16by9 ?? [],
         "720p"
       ),
       src9by16: getVideoLinkByRendition(
-        project.videoDirectLinks?.linksLoop9by16,
+        project.videoDirectLinks?.linksLoop9by16 ?? [],
         "720p"
       ),
     };

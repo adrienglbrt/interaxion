@@ -28,8 +28,8 @@ export interface ProjectProps {
 
 export interface VideoDirectLinks {
   projectId: string;
-  linksLoop16by9?: any;
-  linksLoop9by16?: any;
+  linksLoop16by9?: VideoLinkObject[];
+  linksLoop9by16?: VideoLinkObject[];
 }
 
 export interface ProjectWithDirectLinks extends Project {
