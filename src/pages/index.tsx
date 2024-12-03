@@ -76,9 +76,9 @@ export const getStaticProps: GetStaticProps = async () => {
       );
       return {
         ...project,
-        videoLinks: {
-          linkLoop16by9: vimeoLinks?.linkLoop16by9,
-          linkLoop9by16: vimeoLinks?.linkLoop9by16,
+        videoDirectLinks: {
+          linksLoop16by9: vimeoLinks?.linksLoop16by9,
+          linksLoop9by16: vimeoLinks?.linksLoop9by16,
         },
       };
     });

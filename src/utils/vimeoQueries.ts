@@ -1,4 +1,4 @@
-import { VimeoDirectLinks } from "@/types/interfaces";
+import { VideoDirectLinks } from "@/types/interfaces";
 import { Project } from "../../tina/__generated__/types";
 
 const VIMEO_ACCESS_TOKEN = process.env.VIMEO_ACCESS_TOKEN;
@@ -7,7 +7,7 @@ if (!VIMEO_ACCESS_TOKEN) {
   console.error("VIMEO_ACCESS_TOKEN is not set in the environment variables");
 }
 
-async function fetchVimeoDirectLink(videoId: string) {
+async function fetchVimeoDirectLinks(videoId: string) {
   if (!videoId) {
     console.warn("Attempted to fetch Vimeo link with empty videoId");
     return null;
@@ -34,18 +34,18 @@ export const getVimeoDirectLinks = async (
   activeShowcasedProjects: Project[]
 ) => {
   try {
-    const results: VimeoDirectLinks[] = await Promise.all(
+    const results: VideoDirectLinks[] = await Promise.all(
       activeShowcasedProjects.map(async (project) => {
         const { loop16by9, loop9by16 } = project.videoLoop || {};
 
-        const linkLoop16by9 = loop16by9
-          ? await fetchVimeoDirectLink(loop16by9)
+        const linksLoop16by9 = loop16by9
+          ? await fetchVimeoDirectLinks(loop16by9)
           : null;
-        const linkLoop9by16 = loop9by16
-          ? await fetchVimeoDirectLink(loop9by16)
+        const linksLoop9by16 = loop9by16
+          ? await fetchVimeoDirectLinks(loop9by16)
           : null;
 
-        return { projectId: project.id, linkLoop16by9, linkLoop9by16 };
+        return { projectId: project.id, linksLoop16by9, linksLoop9by16 };
       })
     );
     return results;

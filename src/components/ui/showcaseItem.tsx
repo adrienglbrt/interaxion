@@ -1,23 +1,66 @@
-import { ProjectWithDirectLinks } from "@/types/interfaces";
+import { ProjectWithDirectLinks, VideoLinkObject } from "@/types/interfaces";
+import { useMobile } from "@/utils/mobileContext";
 import Image from "next/image";
 import Link from "next/link";
 import Wrapper from "../layout/wrapper";
+
+// Possible values for rendition: 240p, 360p, 540p, 720p, 1080p, adaptive
+function getVideoLinkByRendition(
+  videos: VideoLinkObject[],
+  rendition: string
+): string {
+  const video = videos.find((video) => video.rendition === rendition);
+  return video ? video.link : "";
+}
 
 export default function ShowcaseItem({
   project,
 }: {
   project: ProjectWithDirectLinks;
 }) {
+  const { isMobile } = useMobile();
+  const hasLoopVideo =
+    project.videoDirectLinks &&
+    project.videoDirectLinks?.linksLoop16by9 &&
+    project.videoDirectLinks?.linksLoop9by16;
+
+  let videoSrc16by9;
+  let videoSrc9by16;
+
+  if (hasLoopVideo) {
+    videoSrc16by9 = getVideoLinkByRendition(
+      project.videoDirectLinks?.linksLoop16by9,
+      "720p"
+    );
+    videoSrc9by16 = getVideoLinkByRendition(
+      project.videoDirectLinks?.linksLoop9by16,
+      "720p"
+    );
+  }
+
   return (
     <li className='relative h-[100svh] w-full snap-start snap-always'>
-      {project?.mainImage.image16by9 && (
-        <Image
-          src={project?.mainImage.image16by9}
-          alt={project?.mainImage.alt ?? project.title}
-          fill
-          sizes='100vw'
-          className='object-cover'
-        />
+      {hasLoopVideo ? (
+        <video
+          loop
+          muted
+          playsInline
+          autoPlay
+          className='absolute w-full h-full object-cover'
+          poster={project.mainImage.image16by9}
+        >
+          <source src={isMobile ? videoSrc9by16 : videoSrc16by9} />
+        </video>
+      ) : (
+        project?.mainImage.image16by9 && (
+          <Image
+            src={project?.mainImage.image16by9}
+            alt={project?.mainImage.alt ?? project.title}
+            fill
+            sizes='100vw'
+            className='object-cover'
+          />
+        )
       )}
       <Wrapper>
         <div className='h-full w-full flex items-center justify-start'>

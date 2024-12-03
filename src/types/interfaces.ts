@@ -26,12 +26,17 @@ export interface ProjectProps {
   variables: ProjectQueryVariables;
 }
 
-export interface VimeoDirectLinks {
+export interface VideoDirectLinks {
   projectId: string;
-  linkLoop16by9: {};
-  linkLoop9by16: {};
+  linksLoop16by9?: any;
+  linksLoop9by16?: any;
 }
 
 export interface ProjectWithDirectLinks extends Project {
-  videoLinks: VimeoDirectLinks;
+  videoDirectLinks?: VideoDirectLinks;
+}
+
+export interface VideoLinkObject {
+  link: string;
+  rendition: string;
 }
