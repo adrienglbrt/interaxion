@@ -89,6 +89,7 @@ export const getStaticProps: GetStaticProps = async () => {
         activeShowcasedProjects: projectsWithVimeoLinks,
         globalData,
       },
+      revalidate: 86400, // Revalidate every 24 hours
     };
   } catch (error) {
     console.error("Error in getStaticProps:", error);
