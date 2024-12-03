@@ -14,7 +14,9 @@ export default function ProjectOptionalBlockSingleImage({
         alt={alt ?? ""}
         width={aspectRatioWidth}
         height={aspectRatioHeight}
-        sizes='100vw'
+        sizes={`${
+          version === "Small" ? "50vw" : version === "Medium" ? "75vw" : "100vw"
+        }`}
         className={`${
           version === "Small"
             ? "col-span-4 col-start-2 lg:col-start-4 lg:col-span-6" // Small version

@@ -28,6 +28,7 @@ export default function ProjectCard({
           }
           alt={project.title}
           fill
+          sizes='(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw'
           className='object-cover group-hover:scale-[102%] transition-transform duration-500 ease-in-out'
         />
         {!isMobile && (
