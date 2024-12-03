@@ -29,7 +29,10 @@ export default function Home({
 
   const activeProjects = projectsList
     .map(({ node }) => node)
-    .filter((project) => project?.isActive && project?.isShowcased);
+    .filter((project) => project?.isActive && project?.isShowcased)
+    .sort((a, b) => {
+      return (a?.showcaseOrder ?? 10) - (b?.showcaseOrder ?? 10);
+    });
 
   return (
     <>

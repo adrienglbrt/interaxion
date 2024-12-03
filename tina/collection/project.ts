@@ -119,6 +119,32 @@ const Project: Collection = {
       ],
     },
     {
+      name: "videoLoop",
+      type: "object",
+      label: "Video Loop",
+      description:
+        "Will be used on the homepage, if provided. If not provided, the main image will be used.",
+      required: false,
+      fields: [
+        {
+          name: "loop16by9",
+          type: "string",
+          label: "Loop 16:9",
+          description:
+            "Enter the Vimeo video ID. The aspect ratio must be 16:9. Cropping on either sides may happen depending on user screen size.",
+          required: true,
+        },
+        {
+          name: "loop9by16",
+          type: "string",
+          label: "Loop 9:16",
+          description:
+            "Enter the Vimeo video ID. The aspect ratio must be 9:16. Cropping on top / bottom may happen depending on user screen size",
+          required: true,
+        },
+      ],
+    },
+    {
       name: "introduction",
       type: "rich-text",
       label: "Introduction",
