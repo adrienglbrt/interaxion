@@ -9,17 +9,14 @@ import {
 } from "@/utils/dataQueries";
 import { GetStaticProps } from "next";
 import { useTina } from "tinacms/dist/react";
-import {
-  Project,
-  ProjectConnectionEdges,
-} from "../../../tina/__generated__/types";
+import { Project } from "../../../tina/__generated__/types";
 
 export default function Work({
   pageData,
-  projectsList,
+  activeProjects,
 }: {
   pageData: PageProps;
-  projectsList: ProjectConnectionEdges[];
+  activeProjects: Project[];
 }) {
   const { data } = useTina({
     query: pageData.query,
@@ -27,16 +24,6 @@ export default function Work({
     variables: pageData.variables,
   });
   const { page } = data;
-
-  const activeProjects = projectsList
-    .map(({ node }) => node)
-    .filter(
-      (project): project is Project =>
-        project !== undefined && project?.isActive === true
-    )
-    .sort((a, b) => {
-      return (b?.year ?? 0) - (a?.year ?? 0);
-    });
 
   return (
     <>
@@ -70,5 +57,15 @@ export const getStaticProps: GetStaticProps = async () => {
     getGlobalData(),
   ]);
 
-  return { props: { pageData, projectsList, globalData } };
+  const activeProjects = projectsList
+    .map(({ node }) => node)
+    .filter(
+      (project): project is Project =>
+        project !== undefined && project?.isActive === true
+    )
+    .sort((a, b) => {
+      return (b?.year ?? 0) - (a?.year ?? 0);
+    });
+
+  return { props: { pageData, activeProjects, globalData } };
 };

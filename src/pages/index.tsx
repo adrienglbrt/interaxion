@@ -8,17 +8,14 @@ import {
 } from "@/utils/dataQueries";
 import { GetStaticProps } from "next";
 import { useTina } from "tinacms/dist/react";
-import {
-  Project,
-  ProjectConnectionEdges,
-} from "../../tina/__generated__/types";
+import { Project } from "../../tina/__generated__/types";
 
 export default function Home({
   pageData,
-  projectsList,
+  activeShowcasedProjects,
 }: {
   pageData: PageProps;
-  projectsList: ProjectConnectionEdges[];
+  activeShowcasedProjects: Project[];
 }) {
   const { data } = useTina({
     query: pageData.query,
@@ -26,13 +23,6 @@ export default function Home({
     variables: pageData.variables,
   });
   const { page } = data;
-
-  const activeProjects = projectsList
-    .map(({ node }) => node)
-    .filter((project) => project?.isActive && project?.isShowcased)
-    .sort((a, b) => {
-      return (a?.showcaseOrder ?? 10) - (b?.showcaseOrder ?? 10);
-    });
 
   return (
     <>
@@ -44,9 +34,9 @@ export default function Home({
       <main className='h-[100dvh]'>
         <h1 className='hidden'>{page.title}</h1>
         <ul className='h-[100dvh] overflow-y-scroll snap-y snap-mandatory'>
-          {activeProjects &&
-            activeProjects.length > 0 &&
-            activeProjects.map((project) => {
+          {activeShowcasedProjects &&
+            activeShowcasedProjects.length > 0 &&
+            activeShowcasedProjects.map((project) => {
               return (
                 <ShowcaseItem
                   key={project?.title}
@@ -69,5 +59,10 @@ export const getStaticProps: GetStaticProps = async () => {
     getGlobalData(),
   ]);
 
-  return { props: { pageData, projectsList, globalData } };
+  const activeShowcasedProjects = projectsList
+    .map(({ node }) => node)
+    .filter((project) => project?.isActive && project?.isShowcased)
+    .sort((a, b) => (a?.showcaseOrder ?? 10) - (b?.showcaseOrder ?? 10));
+
+  return { props: { pageData, activeShowcasedProjects, globalData } };
 };
