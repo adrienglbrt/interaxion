@@ -6,7 +6,8 @@ import Link from "next/link";
 import { useEffect, useMemo, useRef } from "react";
 import Wrapper from "../layout/wrapper";
 
-// Possible values for rendition: 240p, 360p, 540p, 720p, 1080p, adaptive. Note: The current code only supports adaptive rendition. To support mp4 there must be some bypass of the useEffect below
+// Possible values for rendition: 240p, 360p, 540p, 720p, 1080p, adaptive.
+// Note: The current code only supports adaptive rendition. To support mp4 there must be some bypass of the useEffect below
 function getVideoLinkByRendition(
   videos: VideoLinkObject[],
   rendition: string
@@ -69,7 +70,7 @@ export default function ShowcaseItem({
             playsInline
             autoPlay
             preload='auto'
-            className='absolute w-full h-full object-cover z-[2]'
+            className='absolute w-full h-full object-cover'
           >
             <source
               src={isMobile ? videoSrc.src9by16 : videoSrc.src16by9}
@@ -77,13 +78,6 @@ export default function ShowcaseItem({
             />
             Your browser does not support the video tag.
           </video>
-          <Image
-            src={project?.mainImage.image16by9}
-            alt={project?.mainImage.alt ?? project.title}
-            fill
-            sizes='100vw'
-            className='object-cover'
-          />
         </>
       ) : (
         project?.mainImage.image16by9 && (
