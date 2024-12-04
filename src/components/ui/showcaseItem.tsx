@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useRef } from "react";
 import Wrapper from "../layout/wrapper";
 
-// Possible values for rendition: 240p, 360p, 540p, 720p, 1080p, adaptive
+// Possible values for rendition: 240p, 360p, 540p, 720p, 1080p, adaptive. Note: The current code only supports adaptive rendition. To support mp4 there must be some bypass of the useEffect below
 function getVideoLinkByRendition(
   videos: VideoLinkObject[],
   rendition: string
