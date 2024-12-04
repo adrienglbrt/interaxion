@@ -3,7 +3,7 @@ import { useMobile } from "@/utils/mobileContext";
 import Hls from "hls.js";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Wrapper from "../layout/wrapper";
 
 // Possible values for rendition: 240p, 360p, 540p, 720p, 1080p, adaptive.
@@ -27,6 +27,8 @@ export default function ShowcaseItem({
     project.videoDirectLinks?.linksLoop16by9 &&
     project.videoDirectLinks?.linksLoop9by16;
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [posterUrl, setPosterUrl] = useState<string | null>(null);
+
   const videoSrc = useMemo(() => {
     if (!hasLoopVideo) return null;
 
@@ -58,6 +60,17 @@ export default function ShowcaseItem({
     }
   }, [videoSrc, isMobile]);
 
+  useEffect(() => {
+    if (project.mainImage.image16by9 && hasLoopVideo) {
+      const imgUrl = project.mainImage.image16by9;
+      const width = 640;
+      const quality = 40;
+      setPosterUrl(
+        `/_next/image?url=${encodeURIComponent(imgUrl)}&w=${width}&q=${quality}`
+      );
+    }
+  }, [project.mainImage.image16by9, hasLoopVideo]);
+
   return (
     <li className='relative h-[100svh] w-full snap-start snap-always'>
       {hasLoopVideo && videoSrc ? (
@@ -71,6 +84,7 @@ export default function ShowcaseItem({
             autoPlay
             preload='auto'
             className='absolute w-full h-full object-cover'
+            poster={posterUrl || undefined}
           >
             <source
               src={isMobile ? videoSrc.src9by16 : videoSrc.src16by9}
