@@ -1,8 +1,9 @@
 import { ProjectWithDirectLinks, VideoLinkObject } from "@/types/interfaces";
 import { useMobile } from "@/utils/mobileContext";
+import Hls from "hls.js";
 import Image from "next/image";
 import Link from "next/link";
-import { useMemo } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import Wrapper from "../layout/wrapper";
 
 // Possible values for rendition: 240p, 360p, 540p, 720p, 1080p, adaptive
@@ -24,39 +25,66 @@ export default function ShowcaseItem({
     project.videoDirectLinks &&
     project.videoDirectLinks?.linksLoop16by9 &&
     project.videoDirectLinks?.linksLoop9by16;
-
+  const videoRef = useRef<HTMLVideoElement>(null);
   const videoSrc = useMemo(() => {
     if (!hasLoopVideo) return null;
 
     return {
       src16by9: getVideoLinkByRendition(
         project.videoDirectLinks?.linksLoop16by9 ?? [],
-        "720p"
+        "adaptive"
       ),
       src9by16: getVideoLinkByRendition(
         project.videoDirectLinks?.linksLoop9by16 ?? [],
-        "720p"
+        "adaptive"
       ),
     };
   }, [hasLoopVideo, project.videoDirectLinks]);
 
+  useEffect(() => {
+    if (videoRef.current && videoSrc) {
+      const videoElement = videoRef.current;
+      const src = isMobile ? videoSrc.src9by16 : videoSrc.src16by9;
+
+      if (Hls.isSupported() && src) {
+        const hls = new Hls();
+        hls.loadSource(src);
+        hls.attachMedia(videoElement);
+        return () => hls.destroy();
+      } else if (videoElement.canPlayType("application/vnd.apple.mpegurl")) {
+        videoElement.src = src;
+      }
+    }
+  }, [videoSrc, isMobile]);
+
   return (
     <li className='relative h-[100svh] w-full snap-start snap-always'>
       {hasLoopVideo && videoSrc ? (
-        <video
-          key={isMobile ? "mobile" : "desktop"} // Force re-render when switching
-          loop
-          muted
-          playsInline
-          autoPlay
-          className='absolute w-full h-full object-cover'
-          poster={project.mainImage.image16by9}
-        >
-          <source
-            src={isMobile ? videoSrc.src9by16 : videoSrc.src16by9}
-            type='video/mp4'
+        <>
+          <video
+            ref={videoRef}
+            key={isMobile ? "mobile" : "desktop"} // Force re-render when switching
+            loop
+            muted
+            playsInline
+            autoPlay
+            preload='auto'
+            className='absolute w-full h-full object-cover z-[2]'
+          >
+            <source
+              src={isMobile ? videoSrc.src9by16 : videoSrc.src16by9}
+              type='video/mp4'
+            />
+            Your browser does not support the video tag.
+          </video>
+          <Image
+            src={project?.mainImage.image16by9}
+            alt={project?.mainImage.alt ?? project.title}
+            fill
+            sizes='100vw'
+            className='object-cover'
           />
-        </video>
+        </>
       ) : (
         project?.mainImage.image16by9 && (
           <Image
