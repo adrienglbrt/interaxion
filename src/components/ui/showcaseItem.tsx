@@ -106,12 +106,21 @@ export default function ShowcaseItem({
       )}
       <Wrapper>
         <div className='h-full w-full flex items-center justify-start'>
-          <Link href={`/work/${project?._sys.filename}`} scroll={false}>
+          <div>
             <h2 className='flex flex-col gap-2 font-serif tracking-wider mix-blend-difference text-white text-5xl sm:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl'>
               <span>{project.brand}</span>
               <span>{project.title}</span>
             </h2>
-          </Link>
+            <div className='pt-10'>
+              <Link
+                href={`/work/${project?._sys.filename}`}
+                scroll={false}
+                className='uppercase lg:text-xl text mix-blend-difference text-white underline underline-offset-8 hover:opacity-70 transition-opacity duration-300'
+              >
+                View project
+              </Link>
+            </div>
+          </div>
         </div>
       </Wrapper>
     </li>
