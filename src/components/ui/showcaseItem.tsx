@@ -38,7 +38,7 @@ export default function ShowcaseItem({
         "720p"
       ),
     };
-  }, [hasLoopVideo, isMobile, project.videoDirectLinks]);
+  }, [hasLoopVideo, project.videoDirectLinks]);
 
   return (
     <li className='relative h-[100svh] w-full snap-start snap-always'>
