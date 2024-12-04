@@ -35,7 +35,7 @@ export default function Work({
       <Wrapper>
         <main className='pb-16'>
           <div className='pt-16 lg:pt-24'>
-            <h1 className='font-serif text-6xl sm:text-7xl lg:text-8xl xl:text-9xl'>
+            <h1 className='font-serif tracking-wider text-6xl sm:text-7xl lg:text-8xl xl:text-9xl'>
               {page.title}
             </h1>
           </div>

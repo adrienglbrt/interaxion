@@ -32,7 +32,7 @@ export default function ProjectCard({
           className='object-cover group-hover:scale-[102%] transition-transform duration-500 ease-in-out'
         />
         {!isMobile && (
-          <h2 className='absolute bottom-4 left-4 flex flex-col gap-2 font-serif mix-blend-difference text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10'>
+          <h2 className='absolute bottom-4 left-4 flex flex-col gap-2 font-serif tracking-wider mix-blend-difference text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10'>
             <span>{project.brand}</span>
             <span>{project.title}</span>
           </h2>
