@@ -33,7 +33,7 @@ export default function About({ pageData }: { pageData: PageProps }) {
             <div className='col-span-6 sm:col-start-2 sm:col-span-4 lg:col-start-7 lg:col-span-5 pt-20 lg:pt-40'>
               <RichText text={page.introductionText} />
             </div>
-            <div className='col-span-6 lg:col-span-12 -mx-4 pt-10 lg:pt-20'>
+            <div className='col-span-6 lg:col-span-12 -mx-4 sm:-mx-8 lg:-mx-16 pt-10 lg:pt-20'>
               <div className='relative pb-[140%] sm:pb-[56.25%]'>
                 <Image
                   src={page.image}
