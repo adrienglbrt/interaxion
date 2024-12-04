@@ -2,9 +2,9 @@ import { ProjectWithDirectLinks, VideoLinkObject } from "@/types/interfaces";
 import { useMobile } from "@/utils/mobileContext";
 import Hls from "hls.js";
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import Wrapper from "../layout/wrapper";
+import AnimatedUnderlineLink from "./animatedUnderlineLink";
 
 // Possible values for rendition: 240p, 360p, 540p, 720p, 1080p, adaptive.
 // Note: The current code only supports adaptive rendition. To support mp4 there must be some bypass of the useEffect below
@@ -112,13 +112,12 @@ export default function ShowcaseItem({
               <span>{project.title}</span>
             </h2>
             <div className='pt-10'>
-              <Link
+              <AnimatedUnderlineLink
                 href={`/work/${project?._sys.filename}`}
-                scroll={false}
-                className='uppercase lg:text-xl text mix-blend-difference text-white underline underline-offset-8 hover:opacity-70 transition-opacity duration-300'
+                className='mix-blend-difference text-white'
               >
                 View project
-              </Link>
+              </AnimatedUnderlineLink>
             </div>
           </div>
         </div>
