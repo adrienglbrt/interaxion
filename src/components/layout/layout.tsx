@@ -29,7 +29,7 @@ const cardinalPhoto = localFont({
 export default function Layout({ children }: { children: ReactNode }) {
   return (
     <div
-      className={`${cardinalPhoto.variable} ${enduro.variable} font-sans antialiased bg-white text-black min-h-[100svh]`}
+      className={`${cardinalPhoto.variable} ${enduro.variable} font-sans bg-white text-black min-h-[100svh]`}
     >
       {children}
       <NavBar />

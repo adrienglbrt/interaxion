@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <meta property='og:type' content='website' />
       </Head>
-      <body className='antialiased'>
+      <body className='antialiased bg-white'>
         <Main />
         <NextScript />
       </body>
