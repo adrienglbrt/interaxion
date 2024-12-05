@@ -1,13 +1,13 @@
 import { ProjectWithDirectLinks, VideoLinkObject } from "@/types/interfaces";
 import { useMobile } from "@/utils/mobileContext";
+import { AnimatePresence } from "framer-motion";
 import Hls from "hls.js";
 import Image from "next/image";
 import { useEffect, useMemo, useRef, useState } from "react";
 import Wrapper from "../layout/wrapper";
 import AnimatedUnderlineLink from "./animatedUnderlineLink";
+import Loader from "./loader";
 
-// Possible values for rendition: 240p, 360p, 540p, 720p, 1080p, adaptive.
-// Note: The current code only supports adaptive rendition. To support mp4 there must be some bypass of the useEffect below
 function getVideoLinkByRendition(
   videos: VideoLinkObject[],
   rendition: string
@@ -27,7 +27,7 @@ export default function ShowcaseItem({
     project.videoDirectLinks?.linksLoop16by9 &&
     project.videoDirectLinks?.linksLoop9by16;
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [posterUrl, setPosterUrl] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   const videoSrc = useMemo(() => {
     if (!hasLoopVideo) return null;
@@ -49,32 +49,73 @@ export default function ShowcaseItem({
       const videoElement = videoRef.current;
       const src = isMobile ? videoSrc.src9by16 : videoSrc.src16by9;
 
+      // Reset loading state
+      setIsLoading(true);
+
+      // Function to handle successful video load
+      const handleVideoReady = () => {
+        setIsLoading(false);
+        videoElement.play().catch((error) => {
+          console.error("Autoplay prevented or failed:", error);
+          setIsLoading(false);
+        });
+      };
+
       if (Hls.isSupported() && src) {
         const hls = new Hls();
+
+        // Reset loading state on any critical errors
+        hls.on(Hls.Events.ERROR, (event, data) => {
+          if (data.fatal) {
+            console.error("Fatal HLS error:", data);
+            setIsLoading(false);
+          }
+        });
+
+        hls.on(Hls.Events.MANIFEST_PARSED, () => {
+          // Prepare for playback
+          hls.startLoad();
+        });
+
         hls.loadSource(src);
         hls.attachMedia(videoElement);
-        return () => hls.destroy();
+
+        // Listen for when video is ready to play
+        videoElement.addEventListener("canplay", handleVideoReady);
+
+        // Listen for play event to ensure loader disappears
+        videoElement.addEventListener("play", handleVideoReady);
+
+        return () => {
+          hls.destroy();
+          videoElement.removeEventListener("canplay", handleVideoReady);
+          videoElement.removeEventListener("play", handleVideoReady);
+        };
       } else if (videoElement.canPlayType("application/vnd.apple.mpegurl")) {
         videoElement.src = src;
+
+        // Multiple event listeners for robust loading state
+        videoElement.addEventListener("canplay", handleVideoReady);
+        videoElement.addEventListener("play", handleVideoReady);
+
+        videoElement.addEventListener("error", () => {
+          console.error("Video load error");
+          setIsLoading(false);
+        });
+
+        return () => {
+          videoElement.removeEventListener("canplay", handleVideoReady);
+          videoElement.removeEventListener("play", handleVideoReady);
+        };
       }
     }
   }, [videoSrc, isMobile]);
-
-  useEffect(() => {
-    if (project.mainImage.image16by9 && hasLoopVideo) {
-      const imgUrl = project.mainImage.image16by9;
-      const width = 640;
-      const quality = 40;
-      setPosterUrl(
-        `/_next/image?url=${encodeURIComponent(imgUrl)}&w=${width}&q=${quality}`
-      );
-    }
-  }, [project.mainImage.image16by9, hasLoopVideo]);
 
   return (
     <li className='relative h-[100svh] w-full snap-start snap-always'>
       {hasLoopVideo && videoSrc ? (
         <>
+          <AnimatePresence>{isLoading && <Loader />}</AnimatePresence>
           <video
             ref={videoRef}
             key={isMobile ? "mobile" : "desktop"} // Force re-render when switching
@@ -84,7 +125,6 @@ export default function ShowcaseItem({
             autoPlay
             preload='auto'
             className='absolute w-full h-full object-cover'
-            poster={posterUrl || undefined}
           >
             <source
               src={isMobile ? videoSrc.src9by16 : videoSrc.src16by9}
