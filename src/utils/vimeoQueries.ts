@@ -1,4 +1,4 @@
-import { VideoDirectLinks } from "@/types/interfaces";
+import { VideoDirectLinks, VideoLinkObject } from "@/types/interfaces";
 import { Project } from "../../tina/__generated__/types";
 
 const VIMEO_ACCESS_TOKEN = process.env.VIMEO_ACCESS_TOKEN;
@@ -54,3 +54,11 @@ export const getVimeoDirectLinks = async (
     return [];
   }
 };
+
+export function getVideoLinkByRendition(
+  videos: VideoLinkObject[],
+  rendition: string
+): string {
+  const video = videos.find((video) => video.rendition === rendition);
+  return video ? video.link : "";
+}
