@@ -1,5 +1,5 @@
+import { AnimatePresence } from "framer-motion";
 import Hls from "hls.js";
-import { AnimatePresence } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import Loader from "./loader";
 
@@ -81,7 +81,6 @@ export default function VideoLoop({
   }, [videoSrc, isPortrait]);
   return (
     <div>
-      {" "}
       <AnimatePresence>{isLoading && <Loader />}</AnimatePresence>
       <video
         ref={videoRef}
