@@ -1,23 +1,45 @@
+import { ProjectWithDirectLinks } from "@/types/interfaces";
 import { useMobile } from "@/utils/mobileContext";
+import { getVideoLinkByRendition } from "@/utils/vimeoQueries";
 import Image from "next/image";
 import Link from "next/link";
-import { Project } from "../../../tina/__generated__/types";
+import { useMemo } from "react";
+import VideoLoop from "./videoLoop";
 
 export default function ProjectCard({
   project,
   aspectRatio,
 }: {
-  project: Project;
+  project: ProjectWithDirectLinks;
   aspectRatio: string;
 }) {
   const { isMobile } = useMobile();
+  const hasLoopVideo =
+    project.videoDirectLinks &&
+    project.videoDirectLinks?.linksLoop16by9 &&
+    project.videoDirectLinks?.linksLoop9by16;
+
+  const videoSrc = useMemo(() => {
+    if (!hasLoopVideo) return null;
+
+    return {
+      src16by9: getVideoLinkByRendition(
+        project.videoDirectLinks?.linksLoop16by9 ?? [],
+        "adaptive"
+      ),
+      src9by16: getVideoLinkByRendition(
+        project.videoDirectLinks?.linksLoop9by16 ?? [],
+        "adaptive"
+      ),
+    };
+  }, [hasLoopVideo, project.videoDirectLinks]);
+
   return (
     <Link href={`/work/${project?._sys.filename}`} scroll={false}>
       <div
         className='group relative overflow-hidden'
         style={{ paddingBottom: aspectRatio }}
       >
-        <div className='absolute inset-0 bg-black z-[1] opacity-0 group-hover:opacity-10 transition-opacity duration-300' />
         <Image
           src={
             aspectRatio === "56.25%"
@@ -29,10 +51,15 @@ export default function ProjectCard({
           alt={project.title}
           fill
           sizes='(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw'
-          className='object-cover group-hover:scale-[102%] transition-transform duration-500 ease-in-out'
+          className={`z-30 object-cover group-hover:scale-[102%] transition-all duration-500 ease-in-out ${
+            hasLoopVideo && "group-hover:opacity-0"
+          }`}
         />
+        {hasLoopVideo && videoSrc ? (
+          <VideoLoop videoSrc={videoSrc} isPortrait={aspectRatio === "140%"} />
+        ) : null}
         {!isMobile && (
-          <h2 className='absolute bottom-4 left-4 flex flex-col gap-2 font-serif tracking-wider mix-blend-difference text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10'>
+          <h2 className='absolute bottom-4 left-4 flex flex-col gap-2 font-serif tracking-wider mix-blend-difference text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-40'>
             <span>{project.brand}</span>
             <span>{project.title}</span>
           </h2>

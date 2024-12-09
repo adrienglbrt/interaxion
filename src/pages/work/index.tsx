@@ -1,12 +1,13 @@
 import ProjectsGrid from "@/components/blocks/projectsGrid";
 import MetaTags from "@/components/layout/metaTags";
 import Wrapper from "@/components/layout/wrapper";
-import { PageProps } from "@/types/interfaces";
+import { PageProps, ProjectWithDirectLinks } from "@/types/interfaces";
 import {
   getGlobalData,
   getPageData,
   getProjectsList,
 } from "@/utils/dataQueries";
+import { getVimeoDirectLinks } from "@/utils/vimeoQueries";
 import { GetStaticProps } from "next";
 import { useTina } from "tinacms/dist/react";
 import { Project } from "../../../tina/__generated__/types";
@@ -16,7 +17,7 @@ export default function Work({
   activeProjects,
 }: {
   pageData: PageProps;
-  activeProjects: Project[];
+  activeProjects: ProjectWithDirectLinks[];
 }) {
   const { data } = useTina({
     query: pageData.query,
@@ -67,5 +68,24 @@ export const getStaticProps: GetStaticProps = async () => {
       return (b?.year ?? 0) - (a?.year ?? 0);
     });
 
-  return { props: { pageData, activeProjects, globalData } };
+  const vimeoDirectLinks = await getVimeoDirectLinks(
+    activeProjects as Project[]
+  );
+
+  const projectsWithVimeoLinks = activeProjects.map((project) => {
+    const vimeoLinks = vimeoDirectLinks.find(
+      (link) => link.projectId === project?.id
+    );
+    return {
+      ...project,
+      videoDirectLinks: {
+        linksLoop16by9: vimeoLinks?.linksLoop16by9,
+        linksLoop9by16: vimeoLinks?.linksLoop9by16,
+      },
+    };
+  });
+
+  return {
+    props: { pageData, activeProjects: projectsWithVimeoLinks, globalData },
+  };
 };

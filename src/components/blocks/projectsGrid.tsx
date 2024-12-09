@@ -1,8 +1,12 @@
+import { ProjectWithDirectLinks } from "@/types/interfaces";
 import { useEffect, useState } from "react";
-import { Project } from "../../../tina/__generated__/types";
 import ProjectCard from "../ui/projectCard";
 
-export default function ProjectsGrid({ projects }: { projects: Project[] }) {
+export default function ProjectsGrid({
+  projects,
+}: {
+  projects: ProjectWithDirectLinks[];
+}) {
   const [columns, setColumns] = useState(1);
 
   useEffect(() => {

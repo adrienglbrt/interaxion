@@ -23,7 +23,7 @@ export default function NavBar() {
   const { contact, socials } = globalData.data.global;
 
   return (
-    <nav className='fixed bottom-0 h-16 w-full mix-blend-difference text-white z-20'>
+    <nav className='fixed bottom-0 h-16 w-full mix-blend-difference text-white z-50'>
       <Wrapper>
         <Grid>
           <div className='col-span-2 h-full flex items-center'>

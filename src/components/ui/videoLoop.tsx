@@ -80,7 +80,7 @@ export default function VideoLoop({
     }
   }, [videoSrc, isPortrait]);
   return (
-    <div>
+    <div className='z-10'>
       <AnimatePresence>{isLoading && <Loader />}</AnimatePresence>
       <video
         ref={videoRef}
