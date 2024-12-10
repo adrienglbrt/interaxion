@@ -1,8 +1,21 @@
+import { VideoLinkObject } from "@/types/interfaces";
+import { getVideoLinkByRendition } from "@/utils/vimeoQueries";
 import Image from "next/image";
 import { Project } from "../../../tina/__generated__/types";
 import Wrapper from "../layout/wrapper";
 
-export default function ProjectHeader({ project }: { project: Project }) {
+export default function ProjectHeader({
+  project,
+  mainVideoDirectLinks,
+}: {
+  project: Project;
+  mainVideoDirectLinks: VideoLinkObject[];
+}) {
+  const mainVideoSrc = getVideoLinkByRendition(
+    mainVideoDirectLinks ?? [],
+    "adaptive"
+  );
+  console.log(mainVideoSrc);
   return (
     <header className='relative h-screen w-full'>
       <Image

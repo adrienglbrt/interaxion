@@ -4,8 +4,9 @@ import ProjectOptionalBlocks from "@/components/blocks/projectOptionalBlocks";
 import Grid from "@/components/layout/grid";
 import MetaTags from "@/components/layout/metaTags";
 import Wrapper from "@/components/layout/wrapper";
-import { ProjectProps } from "@/types/interfaces";
+import { ProjectProps, VideoLinkObject } from "@/types/interfaces";
 import { getGlobalData, getProjectData } from "@/utils/dataQueries";
+import { getMainVideoDirectLinks } from "@/utils/vimeoQueries";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { useTina } from "tinacms/dist/react";
 import client from "../../../tina/__generated__/client";
@@ -13,8 +14,10 @@ import type { Project } from "../../../tina/__generated__/types";
 
 export default function Project({
   projectData,
+  mainVideoDirectLinks,
 }: {
   projectData: ProjectProps;
+  mainVideoDirectLinks: VideoLinkObject[];
 }) {
   const { data } = useTina({
     query: projectData.query,
@@ -31,7 +34,10 @@ export default function Project({
         metaTitle={project.metaTitle}
         metaDescription={project.metaDescription}
       />
-      <ProjectHeader project={project} />
+      <ProjectHeader
+        project={project}
+        mainVideoDirectLinks={mainVideoDirectLinks}
+      />
       <main>
         <Wrapper>
           <div className='pb-32'>
@@ -58,7 +64,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     getGlobalData(),
   ]);
 
-  return { props: { projectData, globalData } };
+  const mainVideoDirectLinks = await getMainVideoDirectLinks(
+    projectData.data.project as Project
+  );
+
+  return { props: { projectData, globalData, mainVideoDirectLinks } };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {

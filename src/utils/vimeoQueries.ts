@@ -53,6 +53,19 @@ export const getVideoLoopDirectLinks = async (projects: Project[]) => {
   }
 };
 
+export const getMainVideoDirectLinks = async (project: Project) => {
+  try {
+    const { mainVideo } = project;
+    if (!mainVideo) return null;
+    const results: VideoLinkObject[] = await fetchVimeoDirectLinks(mainVideo);
+
+    return results;
+  } catch (error) {
+    console.error("Error fetching Vimeo main video links", error);
+    return null;
+  }
+};
+
 export function getVideoLinkByRendition(
   videos: VideoLinkObject[],
   rendition: string

@@ -26,6 +26,11 @@ export interface ProjectProps {
   variables: ProjectQueryVariables;
 }
 
+export interface VideoLinkObject {
+  link: string;
+  rendition: string;
+}
+
 export interface VideoDirectLinks {
   projectId: string;
   linksLoop16by9?: VideoLinkObject[];
@@ -34,9 +39,4 @@ export interface VideoDirectLinks {
 
 export interface ProjectWithDirectLinks extends Project {
   videoDirectLinks?: VideoDirectLinks;
-}
-
-export interface VideoLinkObject {
-  link: string;
-  rendition: string;
 }
