@@ -88,6 +88,5 @@ export const getStaticProps: GetStaticProps = async () => {
       activeShowcasedProjects: projectsWithVimeoLinks,
       globalData,
     },
-    revalidate: 86400, // Revalidate every 24 hours
   };
 };
