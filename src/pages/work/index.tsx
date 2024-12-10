@@ -7,7 +7,7 @@ import {
   getPageData,
   getProjectsList,
 } from "@/utils/dataQueries";
-import { getVimeoDirectLinks } from "@/utils/vimeoQueries";
+import { getVideoLoopDirectLinks } from "@/utils/vimeoQueries";
 import { GetStaticProps } from "next";
 import { useTina } from "tinacms/dist/react";
 import { Project } from "../../../tina/__generated__/types";
@@ -68,7 +68,7 @@ export const getStaticProps: GetStaticProps = async () => {
       return (b?.year ?? 0) - (a?.year ?? 0);
     });
 
-  const vimeoDirectLinks = await getVimeoDirectLinks(
+  const vimeoDirectLinks = await getVideoLoopDirectLinks(
     activeProjects as Project[]
   );
 

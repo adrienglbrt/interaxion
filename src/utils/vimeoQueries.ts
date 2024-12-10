@@ -30,12 +30,10 @@ async function fetchVimeoDirectLinks(videoId: string) {
   }
 }
 
-export const getVimeoDirectLinks = async (
-  activeShowcasedProjects: Project[]
-) => {
+export const getVideoLoopDirectLinks = async (projects: Project[]) => {
   try {
     const results: VideoDirectLinks[] = await Promise.all(
-      activeShowcasedProjects.map(async (project) => {
+      projects.map(async (project) => {
         const { loop16by9, loop9by16 } = project.videoLoop || {};
 
         const linksLoop16by9 = loop16by9

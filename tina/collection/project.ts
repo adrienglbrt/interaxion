@@ -119,6 +119,13 @@ const Project: Collection = {
       ],
     },
     {
+      name: "mainVideo",
+      type: "string",
+      label: "Main Video",
+      description: "Enter the Vimeo video ID",
+      required: false,
+    },
+    {
       name: "videoLoop",
       type: "object",
       label: "Video Loop",
