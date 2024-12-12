@@ -52,7 +52,7 @@ export default function ProjectHeader({
         <div className='absolute inset-0 flex items-center justify-center z-10'>
           <button
             onClick={openModal}
-            className='bg-black bg-opacity-25 hover:bg-opacity-50 text-white p-4 rounded-full transition-all duration-300'
+            className='text-white text-xl uppercase p-4 rounded-full transition-all hover:opacity-70 duration-300'
             aria-label='Play video'
           >
             Play video
@@ -62,13 +62,14 @@ export default function ProjectHeader({
 
       <div className='relative h-full w-full'>
         <Wrapper>
-          <div className='relative top-16 mix-blend-difference z-10'>
-            <h1 className='flex flex-col gap-2 font-serif tracking-wider text-6xl sm:text-7xl lg:text-8xl xl:text-9xl text-white'>
+          <div className='relative top-16 z-10'>
+            <h1 className='flex flex-col gap-2 font-serif tracking-wider text-4xl sm:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white'>
               <span>{project.brand}</span>
               <span>{project.title}</span>
             </h1>
           </div>
         </Wrapper>
+        <div className='absolute inset-0 bg-black opacity-20' />
       </div>
 
       {isModalOpen && mainVideoSrc && (
