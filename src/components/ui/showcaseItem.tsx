@@ -94,7 +94,7 @@ export default function ShowcaseItem({
         <div className='h-full w-full flex items-center justify-start'>
           <div>
             <Link href={`/work/${project?._sys.filename}`} className=''>
-              <h2 className='flex flex-col gap-2 font-serif tracking-wider mix-blend-difference text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl'>
+              <h2 className='flex flex-col gap-2 font-serif tracking-wider mix-blend-difference text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl hover:opacity-70 transition-opacity duration-500'>
                 <AnimatedText
                   text={project.brand}
                   isVisible={activeSlide === index}
