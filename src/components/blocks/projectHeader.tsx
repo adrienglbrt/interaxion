@@ -52,10 +52,10 @@ export default function ProjectHeader({
         <div className='absolute inset-0 flex items-center justify-center z-10'>
           <button
             onClick={openModal}
-            className='bg-white bg-opacity-50 hover:bg-opacity-75 text-black p-4 rounded-full transition-all duration-300 ease-in-out'
+            className='bg-black bg-opacity-25 hover:bg-opacity-50 text-white p-4 rounded-full transition-all duration-300'
             aria-label='Play video'
           >
-            Play
+            Play video
           </button>
         </div>
       )}

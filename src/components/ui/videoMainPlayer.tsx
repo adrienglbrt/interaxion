@@ -139,20 +139,13 @@ export default function VideoMainPlayer({
         </video>
       </div>
       <style>{styles}</style>
-      <div className='absolute bottom-4 left-4 right-4 flex items-center space-x-4 bg-black p-2 rounded'>
+      <div className='absolute bottom-4 left-4 right-4 flex items-center space-x-4 bg-transparent p-2 rounded'>
         <button
           onClick={togglePlay}
-          className='text-white bg-grey p-2 rounded focus:outline-none'
+          className='text-white bg-black bg-opacity-25 hover:bg-opacity-50 p-2 rounded focus:outline-none transition-all duration-300'
           aria-label={isPlaying ? "Pause" : "Play"}
         >
           {isPlaying ? "Pause" : "Play"}
-        </button>
-        <button
-          onClick={toggleMute}
-          className='text-white bg-grey p-2 rounded focus:outline-none'
-          aria-label={isMuted ? "Unmute" : "Mute"}
-        >
-          {isMuted ? "Unmute" : "Mute"}
         </button>
         <input
           type='range'
@@ -160,14 +153,21 @@ export default function VideoMainPlayer({
           max='100'
           value={progress}
           onChange={handleSeek}
-          className='flex-grow h-1 appearance-none bg-grey outline-none'
+          className='flex-1 h-[2px] appearance-none bg-grey outline-none'
           style={{
             background: `linear-gradient(to right, white ${progress}%, #585858 ${progress}%)`,
           }}
         />
         <button
+          onClick={toggleMute}
+          className='text-white bg-black bg-opacity-25 hover:bg-opacity-50 p-2 rounded focus:outline-none transition-all duration-300'
+          aria-label={isMuted ? "Unmute" : "Mute"}
+        >
+          {isMuted ? "Unmute" : "Mute"}
+        </button>
+        <button
           onClick={toggleFullscreen}
-          className='text-white bg-grey p-2 rounded focus:outline-none'
+          className='text-white bg-black bg-opacity-25 hover:bg-opacity-50 p-2 rounded focus:outline-none transition-all duration-300'
           aria-label={isFullscreen ? "Exit Fullscreen" : "Enter Fullscreen"}
         >
           {isFullscreen ? "Exit Fullscreen" : "Fullscreen"}
@@ -176,7 +176,7 @@ export default function VideoMainPlayer({
 
       <button
         onClick={onClose}
-        className='absolute top-4 right-4 text-white bg-grey p-2 rounded-full focus:outline-none'
+        className='absolute top-4 right-4 text-white bg-black bg-opacity-25 hover:bg-opacity-50 px-4 py-2 rounded-full focus:outline-none transition-all duration-300'
         aria-label='Close video'
       >
         Close
