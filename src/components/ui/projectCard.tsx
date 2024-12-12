@@ -40,6 +40,7 @@ export default function ProjectCard({
         className='group relative overflow-hidden'
         style={{ paddingBottom: aspectRatio }}
       >
+        <div className='absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity duration-300 z-40' />
         <Image
           src={
             aspectRatio === "56.25%"
@@ -59,7 +60,7 @@ export default function ProjectCard({
           <VideoLoop videoSrc={videoSrc} isPortrait={aspectRatio === "140%"} />
         ) : null}
         {!isMobile && (
-          <h2 className='absolute bottom-4 left-4 flex flex-col gap-2 font-serif tracking-wider mix-blend-difference text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-40'>
+          <h2 className='absolute bottom-4 left-4 flex flex-col gap-2 font-serif tracking-wider text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-50'>
             <span>{project.brand}</span>
             <span>{project.title}</span>
           </h2>
