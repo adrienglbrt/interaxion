@@ -3,9 +3,9 @@ import { useMobile } from "@/utils/mobileContext";
 import { getVideoLinkByRendition } from "@/utils/vimeoQueries";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { useMemo } from "react";
 import Wrapper from "../layout/wrapper";
-import AnimatedUnderlineLink from "./animatedUnderlineLink";
 import VideoLoop from "./videoLoop";
 
 const AnimatedText = ({
@@ -93,24 +93,28 @@ export default function ShowcaseItem({
       <Wrapper>
         <div className='h-full w-full flex items-center justify-start'>
           <div>
-            <h2 className='flex flex-col gap-2 font-serif tracking-wider mix-blend-difference text-white text-5xl sm:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl'>
-              <AnimatedText
-                text={project.brand}
-                isVisible={activeSlide === index}
-              />
-              <AnimatedText
-                text={project.title}
-                isVisible={activeSlide === index}
-              />
-            </h2>
-            <div className='pt-10'>
-              <AnimatedUnderlineLink
-                href={`/work/${project?._sys.filename}`}
-                className='mix-blend-difference text-white'
-              >
-                View project
-              </AnimatedUnderlineLink>
-            </div>
+            <Link href={`/work/${project?._sys.filename}`} className=''>
+              <h2 className='flex flex-col gap-2 font-serif tracking-wider mix-blend-difference text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl'>
+                <AnimatedText
+                  text={project.brand}
+                  isVisible={activeSlide === index}
+                />
+                <AnimatedText
+                  text={project.title}
+                  isVisible={activeSlide === index}
+                />
+              </h2>
+            </Link>
+            {/* {!isMobile && (
+              <div className='pt-10'>
+                <AnimatedUnderlineLink
+                  href={`/work/${project?._sys.filename}`}
+                  className='mix-blend-difference text-white'
+                >
+                  View project
+                </AnimatedUnderlineLink>
+              </div>
+            )} */}
           </div>
         </div>
       </Wrapper>
