@@ -1,6 +1,7 @@
 import { VideoLinkObject } from "@/types/interfaces";
 import { getVideoLinkByRendition } from "@/utils/vimeoQueries";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Play } from "lucide-react";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { Project } from "../../../tina/__generated__/types";
@@ -56,12 +57,12 @@ export default function ProjectHeader({
 
       {mainVideoSrc && (
         <div className='absolute inset-0 flex items-center justify-center z-10'>
-          <button
-            onClick={openModal}
-            className='text-white text-xl uppercase p-4 rounded-full transition-all hover:opacity-70 duration-300'
-            aria-label='Play video'
-          >
-            Play video
+          <button onClick={openModal} className='group' aria-label='Play video'>
+            <Play
+              className='w-12 h-12 lg:w-16 lg:h-16 group-hover:scale-90 transition-all duration-500 ease-in-out'
+              strokeWidth={0}
+              fill='white'
+            />
           </button>
         </div>
       )}

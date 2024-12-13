@@ -1,4 +1,12 @@
 import Hls from "hls.js";
+import {
+  Maximize2,
+  Minimize2,
+  Pause,
+  Play,
+  Volume2,
+  VolumeOff,
+} from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 export default function VideoMainPlayer({
@@ -142,10 +150,14 @@ export default function VideoMainPlayer({
       <div className='absolute bottom-4 left-4 right-4 flex items-center space-x-4 bg-transparent p-2 rounded'>
         <button
           onClick={togglePlay}
-          className='text-white bg-black bg-opacity-25 hover:bg-opacity-50 p-2 rounded transition-all duration-300'
+          className='hover:opacity-70 transition-all duration-300'
           aria-label={isPlaying ? "Pause" : "Play"}
         >
-          {isPlaying ? "Pause" : "Play"}
+          {isPlaying ? (
+            <Pause strokeWidth={0} fill='white' />
+          ) : (
+            <Play strokeWidth={0} fill='white' />
+          )}
         </button>
         <input
           type='range'
@@ -153,30 +165,38 @@ export default function VideoMainPlayer({
           max='100'
           value={progress}
           onChange={handleSeek}
-          className='flex-1 h-[2px] appearance-none bg-grey outline-none'
+          className='flex-1 h-[2px] appearance-none bg-grey cursor-pointer'
           style={{
             background: `linear-gradient(to right, white ${progress}%, #585858 ${progress}%)`,
           }}
         />
         <button
           onClick={toggleMute}
-          className='text-white bg-black bg-opacity-25 hover:bg-opacity-50 p-2 rounded transition-all duration-300'
+          className='px-2 text-white hover:opacity-70 transition-all duration-300'
           aria-label={isMuted ? "Unmute" : "Mute"}
         >
-          {isMuted ? "Unmute" : "Mute"}
+          {isMuted ? (
+            <Volume2 strokeWidth={1.5} />
+          ) : (
+            <VolumeOff strokeWidth={1.5} />
+          )}
         </button>
         <button
           onClick={toggleFullscreen}
-          className='text-white bg-black bg-opacity-25 hover:bg-opacity-50 p-2 rounded transition-all duration-300'
+          className='px-2 text-white hover:opacity-70 transition-all duration-300'
           aria-label={isFullscreen ? "Exit Fullscreen" : "Enter Fullscreen"}
         >
-          {isFullscreen ? "Exit Fullscreen" : "Fullscreen"}
+          {isFullscreen ? (
+            <Minimize2 strokeWidth={1.5} />
+          ) : (
+            <Maximize2 strokeWidth={1.5} />
+          )}
         </button>
       </div>
 
       <button
         onClick={onClose}
-        className='absolute top-4 right-4 text-white bg-black bg-opacity-25 hover:bg-opacity-50 px-4 py-2 rounded-full transition-all duration-300'
+        className='absolute top-4 right-4 text-white hover:opacity-70 px-4 transition-all duration-300'
         aria-label='Close video'
       >
         Close
