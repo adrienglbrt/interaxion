@@ -114,20 +114,6 @@ export default function VideoMainPlayer({
     };
   }, []);
 
-  const styles = `
-  input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 0;
-    height: 0;
-  }
-  input[type="range"]::-moz-range-thumb {
-    width: 0;
-    height: 0;
-    border: none;
-  }
-`;
-
   return (
     <div className='relative w-full h-full' ref={containerRef}>
       <div onClick={togglePlay}>
@@ -146,7 +132,6 @@ export default function VideoMainPlayer({
           Your browser does not support the video tag.
         </video>
       </div>
-      <style>{styles}</style>
       <div className='absolute bottom-4 left-4 right-4 flex items-center space-x-4 bg-transparent p-2 rounded'>
         <button
           onClick={togglePlay}
