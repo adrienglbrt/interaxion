@@ -124,7 +124,7 @@ export default function VideoMainPlayer({
           playsInline
           autoPlay
           preload='auto'
-          className='absolute w-full h-full object-contain'
+          className='absolute w-full h-full object-contain sm:object-cover'
           onTimeUpdate={handleProgress}
         >
           <source src={mainVideoSrc} type='application/vnd.apple.mpegurl' />
@@ -132,7 +132,7 @@ export default function VideoMainPlayer({
           Your browser does not support the video tag.
         </video>
       </div>
-      <div className='absolute bottom-4 left-4 right-4 flex items-center space-x-4 bg-transparent p-2 rounded'>
+      <div className='absolute bottom-4 left-4 right-4 flex items-center space-x-4 bg-black bg-opacity-20 p-4 rounded-lg'>
         <button
           onClick={togglePlay}
           className='hover:opacity-70 transition-all duration-300'
@@ -150,7 +150,7 @@ export default function VideoMainPlayer({
           max='100'
           value={progress}
           onChange={handleSeek}
-          className='flex-1 h-[2px] appearance-none bg-grey cursor-pointer'
+          className='flex-1 h-1 sm:h-[2px] appearance-none bg-grey cursor-pointer'
           style={{
             background: `linear-gradient(to right, white ${progress}%, #585858 ${progress}%)`,
           }}
