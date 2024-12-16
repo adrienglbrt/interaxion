@@ -7,5 +7,17 @@ isShowcased: true
 showcaseOrder: 5
 mainImage:
   image16by9: /uploads/porsche/porsche_16_9.jpg
+mainVideo: '1013443064'
+videoLoop:
+  loop16by9: ''
+introduction: |
+  Lakfkanfdkafnaf
+
+  ajkdfaknfak
+credits:
+  - label: Sound design
+    name:
+      - Magali
+      - Korantin
 ---
 
