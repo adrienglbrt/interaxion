@@ -32,7 +32,7 @@ export default function ProjectsGrid({
   };
 
   return (
-    <div className='pt-8 lg:pt-12 2xl:pt-16 flex flex-col sm:flex-row gap-1 sm:gap-2 lg:gap-4'>
+    <div className='pt-4 flex flex-col sm:flex-row gap-1 sm:gap-2 lg:gap-4'>
       {[...Array(columns)].map((_, columnIndex) => (
         <div
           key={columnIndex}
