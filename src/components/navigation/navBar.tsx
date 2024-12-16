@@ -20,7 +20,7 @@ export default function NavBar() {
     return null;
   }
 
-  const { contact, socials } = globalData.data.global;
+  const { socials } = globalData.data.global;
 
   return (
     <nav className='fixed bottom-0 h-16 w-full mix-blend-difference text-white z-50'>
@@ -41,15 +41,9 @@ export default function NavBar() {
               <NavEntry href='/about'>About</NavEntry>
             </div>
             {!isMobile && (
-              <div className='flex'>
-                <NavEntry href={socials.instagram.url} isExternal>
-                  Ig
-                </NavEntry>
-                <span className='mx-2'> / </span>
-                <NavEntry href={`mailto:${contact?.email}`} isExternal>
-                  Email
-                </NavEntry>
-              </div>
+              <NavEntry href={socials.instagram.url} isExternal>
+                Ig
+              </NavEntry>
             )}
           </div>
         </Grid>
