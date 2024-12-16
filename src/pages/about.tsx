@@ -28,7 +28,7 @@ export default function About({ pageData }: { pageData: PageProps }) {
   const { scrollYProgress } = useScroll();
 
   // Create a translation effect based on scroll
-  const y = useTransform(scrollYProgress, [0, 1], [0, 200]);
+  const y = useTransform(scrollYProgress, [0, 1], [0, 100]);
   return (
     <>
       <MetaTags
@@ -53,7 +53,7 @@ export default function About({ pageData }: { pageData: PageProps }) {
                     alt={page.imageAlt ?? ""}
                     fill
                     sizes='100vw'
-                    className='object-cover scale-105'
+                    className='object-cover scale-110'
                   />
                 </motion.div>
               </div>
