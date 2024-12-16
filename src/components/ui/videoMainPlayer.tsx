@@ -150,7 +150,7 @@ export default function VideoMainPlayer({
   }, []);
 
   return (
-    <div className='relative w-full h-full' ref={containerRef}>
+    <div className='relative w-full h-full bg-[#000000]' ref={containerRef}>
       <div onClick={togglePlay}>
         <video
           ref={videoRef}
