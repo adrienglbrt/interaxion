@@ -1,8 +1,8 @@
-import Link from "next/link";
 import {
   GlobalContactAddressOne,
   GlobalContactAddressTwo,
 } from "../../../tina/__generated__/types";
+import AnimatedUnderlineLink from "../ui/animatedUnderlineLink";
 
 export default function ContactBlock({
   address,
@@ -17,12 +17,9 @@ export default function ContactBlock({
       <p>{address.addressLineTwo}</p>
       <p>{address.postCode + ", " + address.city + " / " + address.country}</p>
       <p>{address.phone}</p>
-      <Link
-        href={`mailto:${email}`}
-        className='hover:opacity-70 transition-opacity duration-300'
-      >
+      <AnimatedUnderlineLink href={`mailto:${email}`}>
         {email}
-      </Link>
+      </AnimatedUnderlineLink>
     </div>
   );
 }
