@@ -24,7 +24,7 @@ const AnimatedText = ({
           style={{ verticalAlign: "top" }}
         >
           <motion.span
-            className='inline-block pb-3'
+            className='inline-block pb-1 sm:pb-2 lg:pb-3'
             initial={{ y: "100%" }}
             animate={{ y: isVisible ? 0 : "100%" }}
             transition={{
