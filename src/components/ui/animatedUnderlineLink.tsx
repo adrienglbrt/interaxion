@@ -19,7 +19,7 @@ export default function AnimatedUnderlineLink({
         {/* Base Underline */}
         <span
           className='
-            absolute left-0 top-full h-[0.125rem] w-full border-black border-btransition-transform duration-700 ease-in-out group-hover:translate-x-[200%]'
+            absolute left-0 top-full h-[0.125rem] w-full border-black border-b transition-transform duration-700 ease-in-out group-hover:translate-x-[200%]'
         />
 
         {/* Hover Underline */}
