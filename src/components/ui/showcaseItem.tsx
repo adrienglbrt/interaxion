@@ -105,16 +105,6 @@ export default function ShowcaseItem({
                 />
               </h2>
             </Link>
-            {/* {!isMobile && (
-              <div className='pt-10'>
-                <AnimatedUnderlineLink
-                  href={`/work/${project?._sys.filename}`}
-                  className='mix-blend-difference text-white'
-                >
-                  View project
-                </AnimatedUnderlineLink>
-              </div>
-            )} */}
           </div>
         </div>
       </Wrapper>
