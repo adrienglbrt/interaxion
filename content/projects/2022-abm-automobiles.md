@@ -31,6 +31,7 @@ optionalBlocks:
     imageTwo: /uploads/porsche/porsche_case_dual_5_7-2.jpg
     aspectRatioWidth: 5
     aspectRatioHeight: 7
+    isStackedOnMobile: true
     _template: dualImage
   - image: /uploads/porsche/porsche_case_single_4_3.jpg
     aspectRatioWidth: 4

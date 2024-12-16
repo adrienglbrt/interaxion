@@ -276,6 +276,14 @@ const Project: Collection = {
                 "For instance, for a 16:9 aspect ratio, enter 9. The 2 images must have the same aspect ratio.",
               required: true,
             },
+            {
+              name: "isStackedOnMobile",
+              type: "boolean",
+              label: "Stack on Mobile",
+              description:
+                "If checked, the images will be displayed on top of each other on mobile devices.",
+              required: false,
+            },
           ],
         },
         {

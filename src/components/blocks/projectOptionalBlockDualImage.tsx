@@ -22,7 +22,9 @@ export default function ProjectOptionalBlockDualImage({
         width={aspectRatioWidth}
         height={aspectRatioHeight}
         sizes='50vw'
-        className='col-span-3 lg:col-span-5 lg:col-start-2 w-full '
+        className={`${
+          block.isStackedOnMobile ? "col-span-6" : "col-span-3"
+        } lg:col-span-5 lg:col-start-2 w-full`}
       />
       <Image
         src={imageTwo}
@@ -30,7 +32,9 @@ export default function ProjectOptionalBlockDualImage({
         width={aspectRatioWidth}
         height={aspectRatioHeight}
         sizes='50vw'
-        className='col-span-3 lg:col-span-5 w-full'
+        className={`${
+          block.isStackedOnMobile ? "col-span-6" : "col-span-3"
+        } lg:col-span-5 w-full`}
       />
     </div>
   );
