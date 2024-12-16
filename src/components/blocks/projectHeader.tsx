@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useRef, useState } from "react";
 import { Project } from "../../../tina/__generated__/types";
 import Wrapper from "../layout/wrapper";
-import VideoMainPlayer from "../ui/videoMainPlayer";
+import VideoModal from "./videoModal";
 
 export default function ProjectHeader({
   project,
@@ -36,7 +36,6 @@ export default function ProjectHeader({
     offset: ["start start", "end start"],
   });
 
-  // Create a translation effect based on scroll
   const y = useTransform(scrollYProgress, [0, 1], [0, 200]);
 
   return (
@@ -79,11 +78,11 @@ export default function ProjectHeader({
         <div className='absolute inset-0 bg-black opacity-20' />
       </div>
 
-      {isModalOpen && mainVideoSrc && (
-        <div className='fixed inset-0 flex items-center justify-center bg-black z-[100]'>
-          <VideoMainPlayer mainVideoSrc={mainVideoSrc} onClose={closeModal} />
-        </div>
-      )}
+      <VideoModal
+        mainVideoSrc={mainVideoSrc}
+        isModalOpen={isModalOpen}
+        closeModal={closeModal}
+      />
     </header>
   );
 }
