@@ -28,7 +28,7 @@ export default function About({ pageData }: { pageData: PageProps }) {
   const { scrollYProgress } = useScroll();
 
   // Create a translation effect based on scroll
-  const y = useTransform(scrollYProgress, [0, 1], [0, 100]);
+  const y = useTransform(scrollYProgress, [0, 1], [-100, 100]);
   return (
     <>
       <MetaTags
