@@ -1,3 +1,4 @@
+import ContactBlock from "@/components/blocks/contactBlock";
 import Grid from "@/components/layout/grid";
 import MetaTags from "@/components/layout/metaTags";
 import Wrapper from "@/components/layout/wrapper";
@@ -52,24 +53,16 @@ export default function About({ pageData }: { pageData: PageProps }) {
             </div>
             <div className='col-span-6 sm:col-start-2 sm:col-span-4 lg:col-start-7 lg:col-span-5 pt-10 lg:pt-20'>
               <h2 className='text-grey'>{page.contact.heading}</h2>
-              <div className='pt-4 leading-relaxed'>
-                <p>{contact?.address.addressLineOne}</p>
-                <p>{contact?.address.addressLineTwo}</p>
-                <p>
-                  {contact?.address.postCode +
-                    ", " +
-                    contact?.address.city +
-                    " / " +
-                    contact?.address.country}
-                </p>
-                <p>{contact?.address.phone}</p>
-                <Link
-                  href={`mailto:${contact?.email}`}
-                  className='hover:opacity-70 transition-opacity duration-300'
-                >
-                  {contact?.email}
-                </Link>
-              </div>
+              <ContactBlock
+                address={contact?.addressOne}
+                email={contact?.email}
+              />
+              {contact.addressTwo && (
+                <ContactBlock
+                  address={contact?.addressTwo}
+                  email={contact?.email}
+                />
+              )}
             </div>
             <div className='col-span-6 sm:col-start-2 sm:col-span-4 lg:col-start-7 lg:col-span-5 pt-10 lg:pt-20'>
               <h2 className='text-grey'>{page.socials.heading}</h2>

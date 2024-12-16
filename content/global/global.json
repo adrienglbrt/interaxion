@@ -1,13 +1,21 @@
 {
   "contact": {
     "email": "contact@interaxion.tv",
-    "address": {
+    "addressOne": {
       "addressLineOne": "Interaxion Agency France",
       "addressLineTwo": "14 rue de Montevideo",
       "city": "Paris",
       "postCode": "75116",
       "country": "France",
       "phone": "+33 (0)6 10 58 33 43"
+    },
+    "addressTwo": {
+      "addressLineOne": "Interaxion Digital",
+      "addressLineTwo": "Rue d'Italie, 16",
+      "city": "Genève",
+      "postCode": "1204",
+      "country": "Suisse",
+      "phone": "+41 (0)78 707 52 30"
     }
   },
   "socials": {

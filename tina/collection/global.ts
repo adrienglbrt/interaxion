@@ -26,10 +26,54 @@ const Global: Collection = {
           required: true,
         },
         {
-          name: "address",
-          label: "Address",
+          name: "addressOne",
+          label: "Address One",
           type: "object",
           required: true,
+          fields: [
+            {
+              name: "addressLineOne",
+              label: "Address Line One",
+              type: "string",
+              required: true,
+            },
+            {
+              name: "addressLineTwo",
+              label: "Address Line Two",
+              type: "string",
+              required: true,
+            },
+            {
+              name: "city",
+              label: "City",
+              type: "string",
+              required: true,
+            },
+            {
+              name: "postCode",
+              label: "Post Code",
+              type: "string",
+              required: true,
+            },
+            {
+              name: "country",
+              label: "Country",
+              type: "string",
+              required: true,
+            },
+            {
+              name: "phone",
+              label: "Phone",
+              type: "string",
+              required: true,
+            },
+          ],
+        },
+        {
+          name: "addressTwo",
+          label: "Address Two",
+          type: "object",
+          required: false,
           fields: [
             {
               name: "addressLineOne",
