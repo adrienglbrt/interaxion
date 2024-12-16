@@ -15,12 +15,18 @@ introduction: |
 
   ajkdfaknfak
 credits:
-  - label: Design & motion
-    name:
-      - Jean
   - label: Sound design
     name:
       - Magali
       - Korantin
+  - label: Design & motion
+    name:
+      - Jean
+optionalBlocks:
+  - image: /uploads/massa/massa_16_9.jpg
+    aspectRatioWidth: 16
+    aspectRatioHeight: 9
+    version: Medium
+    _template: singleImage
 ---
 
