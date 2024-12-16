@@ -9,6 +9,17 @@ import {
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
+// Extend the HTMLVideoElement interface to include webkit-specific methods
+interface ExtendedHTMLVideoElement extends HTMLVideoElement {
+  webkitEnterFullscreen?: () => void;
+  webkitExitFullscreen?: () => void;
+}
+
+// Extend the Document interface to include webkit-specific properties
+interface ExtendedDocument extends Document {
+  webkitFullscreenElement?: Element | null;
+}
+
 export default function VideoMainPlayer({
   mainVideoSrc,
   onClose,
@@ -16,7 +27,7 @@ export default function VideoMainPlayer({
   mainVideoSrc: string;
   onClose: () => void;
 }) {
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const videoRef = useRef<ExtendedHTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(false);
@@ -93,13 +104,26 @@ export default function VideoMainPlayer({
   };
 
   const toggleFullscreen = async () => {
-    if (!containerRef.current) return;
+    const videoElement = videoRef.current;
+    const containerElement = containerRef.current;
+
+    if (!videoElement || !containerElement) return;
 
     try {
-      if (!document.fullscreenElement) {
-        await containerRef.current.requestFullscreen();
+      if (videoElement.webkitEnterFullscreen) {
+        // iOS-specific handling
+        if (document.fullscreenElement) {
+          await document.exitFullscreen();
+        } else {
+          videoElement.webkitEnterFullscreen();
+        }
       } else {
-        await document.exitFullscreen();
+        // Standard fullscreen API
+        if (document.fullscreenElement) {
+          await document.exitFullscreen();
+        } else {
+          await containerElement.requestFullscreen();
+        }
       }
     } catch (error) {
       console.error("Error toggling fullscreen:", error);
@@ -108,7 +132,14 @@ export default function VideoMainPlayer({
 
   useEffect(() => {
     const handleFullscreenChange = () => {
-      setIsFullscreen(!!document.fullscreenElement);
+      const extendedDocument = document as ExtendedDocument;
+      setIsFullscreen(
+        !!document.fullscreenElement ||
+          !!(
+            videoRef.current &&
+            extendedDocument.webkitFullscreenElement === videoRef.current
+          )
+      );
     };
 
     document.addEventListener("fullscreenchange", handleFullscreenChange);
