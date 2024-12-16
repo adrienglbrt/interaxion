@@ -15,6 +15,9 @@ introduction: |
 
   ajkdfaknfak
 credits:
+  - label: Design & motion
+    name:
+      - Jean
   - label: Sound design
     name:
       - Magali
