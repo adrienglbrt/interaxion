@@ -1,12 +1,12 @@
 ---
-title: Satisfy Running wip
+title: SS24
 metaTitle: '1'
 metaDescription: '2'
 year: 2022
-brand: Satisfy
+brand: Satisfy Running
 isActive: true
 isShowcased: true
-showcaseOrder: 4
+showcaseOrder: 2
 mainImage:
   image16by9: /uploads/photo 16_9.png
   image5by7: /uploads/photo 5-7.png
