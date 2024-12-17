@@ -4,6 +4,7 @@ year: 2022
 brand: Satisfy
 isActive: true
 isShowcased: true
+showcaseOrder: 8
 mainImage:
   image16by9: /uploads/photo 16_9.png
   alt: ''
