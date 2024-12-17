@@ -10,6 +10,7 @@ showcaseOrder: 4
 mainImage:
   image16by9: /uploads/photo 16_9.png
   image5by7: /uploads/photo 5-7.png
+  image4by3: /uploads/Satisfy/photo 4_3.png
   alt: ''
 mainVideo: '1035130035'
 videoLoop:
