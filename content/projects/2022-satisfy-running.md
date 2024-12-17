@@ -14,7 +14,7 @@ mainImage:
   alt: ''
 mainVideo: '1035131200'
 videoLoop:
-  loop16by9: '1035130035'
+  loop16by9: '1035131200'
   loop9by16: '1035130384'
 introduction: ''
 ---
