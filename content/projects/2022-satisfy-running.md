@@ -1,5 +1,7 @@
 ---
 title: Satisfy Running wip
+metaTitle: '1'
+metaDescription: '2'
 year: 2022
 brand: Satisfy
 isActive: true
