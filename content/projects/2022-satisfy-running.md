@@ -12,7 +12,7 @@ mainImage:
   image5by7: /uploads/photo 5-7.png
   image4by3: /uploads/Satisfy/photo 4_3.png
   alt: ''
-mainVideo: '1035131200'
+mainVideo: '1035130035'
 videoLoop:
   loop16by9: '1035131200'
   loop9by16: '1035130384'
