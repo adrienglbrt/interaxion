@@ -100,6 +100,12 @@ export default function About({ pageData }: { pageData: PageProps }) {
                 </li>
               </ul>
             </div>
+            {(page.colophon?.copyright || page.colophon?.credits) && (
+              <div className='col-span-6 sm:col-start-2 sm:col-span-4 lg:col-start-7 lg:col-span-5 pt-10 lg:pt-20 text-grey opacity-60'>
+                <p>{page.colophon.copyright}</p>
+                <p>{page.colophon.credits}</p>
+              </div>
+            )}
           </Grid>
         </main>
       </Wrapper>

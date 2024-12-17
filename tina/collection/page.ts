@@ -148,6 +148,26 @@ const Page: Collection = {
             },
           ],
         },
+        {
+          name: "colophon",
+          label: "Colophon",
+          type: "object",
+          required: false,
+          fields: [
+            {
+              name: "copyright",
+              label: "Copyright",
+              type: "string",
+              required: false,
+            },
+            {
+              name: "credits",
+              label: "Credits",
+              type: "string",
+              required: false,
+            },
+          ],
+        },
       ],
     },
     {

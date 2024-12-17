@@ -25,6 +25,9 @@ contact:
   heading: Contact
 socials:
   heading: Follow us
+colophon:
+  copyright: Copyright © Interaxion 2024
+  credits: 'Design by Korantin Grall, code by Adrien Galibert'
 _template: about
 ---
 
