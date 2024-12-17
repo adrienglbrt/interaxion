@@ -3,6 +3,7 @@ import PageTransition from "@/components/layout/pageTransition";
 import "@/styles/globals.css";
 import { GlobalProvider } from "@/utils/globalContext";
 import { MobileProvider } from "@/utils/mobileContext";
+import { Analytics } from "@vercel/analytics/next";
 import type { AppProps } from "next/app";
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -17,6 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
           </Layout>
         </MobileProvider>
       </GlobalProvider>
+      <Analytics />
     </>
   );
 }

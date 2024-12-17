@@ -33,6 +33,8 @@ export default function VideoMainPlayer({
   const [isMuted, setIsMuted] = useState(false);
   const [progress, setProgress] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [controlsVisible, setControlsVisible] = useState(true);
+  const timeoutRef = useRef<number | null>(null);
 
   useEffect(() => {
     if (videoRef.current && mainVideoSrc) {
@@ -149,6 +151,38 @@ export default function VideoMainPlayer({
     };
   }, []);
 
+  // Hide controls after 3 seconds of inactivity
+  useEffect(() => {
+    const hideControls = () => {
+      setControlsVisible(false);
+    };
+
+    const resetTimer = () => {
+      if (timeoutRef.current) {
+        window.clearTimeout(timeoutRef.current);
+      }
+      setControlsVisible(true);
+      timeoutRef.current = window.setTimeout(hideControls, 3000);
+    };
+
+    const handleInteraction = () => {
+      resetTimer();
+    };
+
+    document.addEventListener("mousemove", handleInteraction);
+    document.addEventListener("touchstart", handleInteraction);
+
+    resetTimer();
+
+    return () => {
+      document.removeEventListener("mousemove", handleInteraction);
+      document.removeEventListener("touchstart", handleInteraction);
+      if (timeoutRef.current) {
+        window.clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div className='relative w-full h-full bg-[#000000]' ref={containerRef}>
       <div onClick={togglePlay}>
@@ -167,7 +201,11 @@ export default function VideoMainPlayer({
           Your browser does not support the video tag.
         </video>
       </div>
-      <div className='absolute bottom-4 left-4 right-4 flex items-center space-x-4 bg-black bg-opacity-20 p-4 rounded-lg'>
+      <div
+        className={`absolute bottom-4 left-4 right-4 flex items-center space-x-4 bg-black bg-opacity-20 p-4 rounded-lg transition-opacity duration-300 ${
+          controlsVisible ? "opacity-100" : "opacity-0"
+        }`}
+      >
         <button
           onClick={togglePlay}
           className='hover:opacity-70 transition-all duration-300'
@@ -216,7 +254,9 @@ export default function VideoMainPlayer({
 
       <button
         onClick={onClose}
-        className='absolute top-4 right-4 text-white hover:opacity-70 px-4 transition-all duration-300'
+        className={`absolute top-8 right-4 text-white hover:opacity-70 px-4 transition-opacity duration-300 ${
+          controlsVisible ? "opacity-100" : "opacity-0"
+        }`}
         aria-label='Close video'
       >
         Close

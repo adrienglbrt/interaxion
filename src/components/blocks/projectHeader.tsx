@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useRef, useState } from "react";
 import { Project } from "../../../tina/__generated__/types";
 import Wrapper from "../layout/wrapper";
-import VideoModal from "./videoModal";
+import VideoModal from "../ui/videoModal";
 
 export default function ProjectHeader({
   project,
@@ -75,7 +75,7 @@ export default function ProjectHeader({
             </h1>
           </div>
         </Wrapper>
-        <div className='absolute inset-0 bg-black opacity-20' />
+        <div className='absolute inset-0 bg-black opacity-5' />
       </div>
 
       <VideoModal
