@@ -1,6 +1,6 @@
 ---
 title: Forma Fantasma
-year: 2023
+year: 2024
 brand: Perrier-Jouët
 isActive: true
 isShowcased: true
@@ -14,10 +14,15 @@ videoLoop:
   loop16by9: '1034630381'
   loop9by16: '1034631520'
 introduction: >
-  Aliquam erat volutpat. Nunc porta elementum auctor. Maecenas lorem dolor,
-  convallis et sapien a, porttitor consequat mi. Sed malesuada varius commodo.
-  Nullam bibendum arcu vel neque varius, vel tempus libero semper. Lorem ipsum
-  dolor sit amet, consectetur adipiscing elit. Suspendisse aliquet eros enim,
-  vitae tempor arcu maximus sed. In at mollis odio, ac sodales massa.
+  Every year, luxury champagne house Perrier-Jouët collaborates with
+  contemporary artists to revisit the maison's rich heritage.
+
+  We managed the creative direction, the production, art buying, the
+  post-production. 
+
+
+  "In partnership with the visionary studio Formafantasma, Maison Perrier-Jouët
+  reveals an ambitious project dedicated to biodiversity in the heart of its
+  vineyard."
 ---
 
