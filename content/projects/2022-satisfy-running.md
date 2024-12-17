@@ -9,6 +9,7 @@ isShowcased: true
 showcaseOrder: 8
 mainImage:
   image16by9: /uploads/photo 16_9.png
+  image5by7: /uploads/photo 5-7.png
   alt: ''
 mainVideo: '1035130035'
 videoLoop:
