@@ -75,7 +75,7 @@ export default function ProjectHeader({
             </h1>
           </div>
         </Wrapper>
-        <div className='absolute inset-0 bg-black opacity-20' />
+        <div className='absolute inset-0 bg-black opacity-5' />
       </div>
 
       <VideoModal
