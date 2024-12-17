@@ -13,7 +13,7 @@ export default function VideoModal({
   const videoModalVariants = {
     hidden: {
       opacity: 0,
-      scale: 0.8,
+      scale: 0.9,
       transition: {
         duration: 0.3,
       },
@@ -31,7 +31,7 @@ export default function VideoModal({
       opacity: 0,
       scale: 1,
       transition: {
-        duration: 0.4,
+        duration: 0.3,
       },
     },
   };

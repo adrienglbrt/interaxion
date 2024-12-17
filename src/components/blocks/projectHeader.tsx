@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useRef, useState } from "react";
 import { Project } from "../../../tina/__generated__/types";
 import Wrapper from "../layout/wrapper";
-import VideoModal from "./videoModal";
+import VideoModal from "../ui/videoModal";
 
 export default function ProjectHeader({
   project,
