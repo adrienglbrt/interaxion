@@ -254,7 +254,7 @@ export default function VideoMainPlayer({
 
       <button
         onClick={onClose}
-        className={`absolute top-4 right-4 text-white hover:opacity-70 px-4 transition-opacity duration-300 ${
+        className={`absolute top-8 right-4 text-white hover:opacity-70 px-4 transition-opacity duration-300 ${
           controlsVisible ? "opacity-100" : "opacity-0"
         }`}
         aria-label='Close video'
