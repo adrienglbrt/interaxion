@@ -19,13 +19,35 @@ image: /uploads/about_16_9.jpg
 imageAlt: View of the Interaxion office
 clients:
   heading: Our clients
-  content: >-
-    Kering, Volvo, Nike, Boucheron, Citroen, Rossignol, BNP Paris, BMW,
-    Blablacar, Variety, Stell Maccartney, Oxbow, Eric Bompard, Nespresso,
-    Balanciaga, Burton, Volcom, Btwin, Karine Arabian, Lacoste, Louis Vuitton,
-    Quicksilver, Redbull, Gucci, Harley-Davidson, Tavat, Jean Richard, Converse,
-    Frends, Carlsberg, Barbara Bui, P&G, Dentsu, Havas, M&C Saatchi, Publicis,
-    Starcom, LiquidThread.
+  content: |-
+    Saint Laurent 
+    Perrier-Jouët
+    Massimo Dutti
+    MB&F
+    VW
+    Physiodermie
+    Variety 
+    Moncler
+    Satisfy Running
+    Chanel
+    Volvo
+    BlaBlacCar
+    Nike
+    BMW
+    BNP Paribas
+    Red Bull
+    Quiksilver
+    Converse
+    Calrsberg
+    Lacoste
+    Harley Davidson
+    Burton
+    G.H Mumm
+    Balenciaga
+    Boucheron
+    Pomellato
+    Nespresso
+    Louis Vuitton
 contact:
   heading: Contact
 socials:
