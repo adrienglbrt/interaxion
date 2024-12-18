@@ -1,5 +1,5 @@
 ---
-title: Kering
+title: Kering2
 metaTitle: '1'
 metaDescription: '2'
 year: 2017
