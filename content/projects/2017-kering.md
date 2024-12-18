@@ -1,10 +1,12 @@
 ---
 title: Kering
+metaTitle: '1'
+metaDescription: '2'
 year: 2017
 brand: Women In Motion
 isActive: true
 isShowcased: true
-showcaseOrder: 9
+showcaseOrder: 8
 mainImage:
   image16by9: /uploads/kering women in motion/women in motion 16_9.png
   image5by7: '/uploads/kering women in motion/womenin motiion 5:7.png'
