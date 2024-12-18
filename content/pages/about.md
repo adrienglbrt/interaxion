@@ -13,7 +13,8 @@ introductionText: >
 
 
   We cover every stage, from strategy to post-production, to ensure the success
-  of your marketing and communication campaigns. our seamless process guarantees
+  of your marketing and communication campaigns. our seamless process
+  guarantees.
 image: /uploads/about_16_9.jpg
 imageAlt: View of the Interaxion office
 clients:
