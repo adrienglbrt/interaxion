@@ -6,7 +6,7 @@ year: 2022
 brand: Satisfy Running
 isActive: true
 isShowcased: true
-showcaseOrder: 2
+showcaseOrder: 1
 mainImage:
   image16by9: /uploads/photo 16_9.png
   image5by7: /uploads/photo 5-7.png
