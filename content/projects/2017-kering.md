@@ -1,5 +1,5 @@
 ---
-title: Kering2
+title: Cannes Film Festival
 metaTitle: '1'
 metaDescription: '2'
 year: 2017
