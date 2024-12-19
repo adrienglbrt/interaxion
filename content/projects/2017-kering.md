@@ -6,7 +6,7 @@ year: 2017
 brand: Women In Motion
 isActive: true
 isShowcased: true
-showcaseOrder: 7
+showcaseOrder: 6
 mainImage:
   image16by9: /uploads/kering women in motion/women in motion 16_9.png
   image5by7: '/uploads/kering women in motion/womenin motiion 5:7.png'
