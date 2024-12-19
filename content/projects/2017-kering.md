@@ -1,7 +1,7 @@
 ---
 title: Cannes Film Festival
-metaTitle: '1'
-metaDescription: '2'
+metaTitle: ''
+metaDescription: ''
 year: 2017
 brand: Women In Motion
 isActive: true
