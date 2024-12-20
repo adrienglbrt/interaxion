@@ -37,7 +37,7 @@ clients:
     Physiodermie
     -
     Variety 
-    -
+
     Moncler
     -
     Satisfy Running
@@ -53,7 +53,7 @@ clients:
     BMW
     -
     BNP Paribas
-    -
+
     Red Bull
     -
     Quiksilver
@@ -67,7 +67,7 @@ clients:
     Harley Davidson
     -
     Burton
-    -
+
     G.H Mumm
     -
     Balenciaga
