@@ -171,6 +171,32 @@ const Global: Collection = {
         },
       ],
     },
+    {
+      name: "error404",
+      type: "object",
+      label: "Error 404",
+      required: true,
+      fields: [
+        {
+          name: "heading",
+          type: "string",
+          label: "Heading",
+          required: true,
+        },
+        {
+          name: "message",
+          type: "string",
+          label: "Message",
+          required: true,
+        },
+        {
+          name: "redirectLinkLabel",
+          type: "string",
+          label: "Redirect Link Label",
+          required: true,
+        },
+      ],
+    },
   ],
 };
 
