@@ -56,7 +56,7 @@ export default function ProjectCard({
             hasLoopVideo && "group-hover:opacity-0"
           }`}
         />
-        {hasLoopVideo && videoSrc ? (
+        {hasLoopVideo && videoSrc && !isMobile ? (
           <VideoLoop videoSrc={videoSrc} isPortrait={aspectRatio === "140%"} />
         ) : null}
         {!isMobile && (
