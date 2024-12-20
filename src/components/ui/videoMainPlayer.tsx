@@ -220,7 +220,7 @@ export default function VideoMainPlayer({
   return (
     <div className='relative w-full h-full bg-[#000000]' ref={containerRef}>
       <div onClick={togglePlay}>
-        <AnimatePresence>{isLoading && <Loader />}</AnimatePresence>
+        <AnimatePresence>{isLoading && <Loader isDark />}</AnimatePresence>
         <video
           ref={videoRef}
           loop
