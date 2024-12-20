@@ -1,3 +1,4 @@
+import { AnimatePresence } from "framer-motion";
 import Hls from "hls.js";
 import {
   Maximize2,
@@ -8,6 +9,7 @@ import {
   VolumeOff,
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import Loader from "./loader";
 
 // Extend the HTMLVideoElement interface to include webkit-specific methods
 interface ExtendedHTMLVideoElement extends HTMLVideoElement {
@@ -29,6 +31,7 @@ export default function VideoMainPlayer({
 }) {
   const videoRef = useRef<ExtendedHTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const [isLoading, setIsLoading] = useState(true);
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -40,33 +43,64 @@ export default function VideoMainPlayer({
     if (videoRef.current && mainVideoSrc) {
       const videoElement = videoRef.current;
 
+      // Reset loading state
+      setIsLoading(true);
+
+      // Function to handle successful video load
+      const handleVideoReady = () => {
+        setIsLoading(false);
+        videoElement.play().catch((error) => {
+          console.error("Autoplay prevented or failed:", error);
+          setIsLoading(false);
+        });
+      };
+
       if (Hls.isSupported()) {
         const hls = new Hls();
 
         hls.on(Hls.Events.ERROR, (event, data) => {
           if (data.fatal) {
             console.error("Fatal HLS error:", data);
+            setIsLoading(false);
           }
         });
 
         hls.on(Hls.Events.MANIFEST_PARSED, () => {
-          console.log("HLS manifest parsed, ready to play");
-          videoElement
-            .play()
-            .catch((error) => console.error("Autoplay failed:", error));
+          videoElement.play().catch((error) => {
+            console.error("Autoplay failed:", error);
+            setIsLoading(false);
+          });
         });
 
         hls.loadSource(mainVideoSrc);
         hls.attachMedia(videoElement);
 
+        // Listen for when video is ready to play
+        videoElement.addEventListener("canplay", handleVideoReady);
+
+        // Listen for play event to ensure loader disappears
+        videoElement.addEventListener("play", handleVideoReady);
+
         return () => {
           hls.destroy();
+          videoElement.removeEventListener("canplay", handleVideoReady);
+          videoElement.removeEventListener("play", handleVideoReady);
         };
       } else if (videoElement.canPlayType("application/vnd.apple.mpegurl")) {
         videoElement.src = mainVideoSrc;
-        videoElement
-          .play()
-          .catch((error) => console.error("Autoplay failed:", error));
+
+        videoElement.addEventListener("canplay", handleVideoReady);
+        videoElement.addEventListener("play", handleVideoReady);
+
+        videoElement.play().catch((error) => {
+          console.error("Autoplay failed:", error);
+          setIsLoading(false);
+        });
+
+        return () => {
+          videoElement.removeEventListener("canplay", handleVideoReady);
+          videoElement.removeEventListener("play", handleVideoReady);
+        };
       }
     }
   }, [mainVideoSrc]);
@@ -186,6 +220,7 @@ export default function VideoMainPlayer({
   return (
     <div className='relative w-full h-full bg-[#000000]' ref={containerRef}>
       <div onClick={togglePlay}>
+        <AnimatePresence>{isLoading && <Loader />}</AnimatePresence>
         <video
           ref={videoRef}
           loop
