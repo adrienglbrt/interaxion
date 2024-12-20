@@ -1,14 +1,14 @@
 ---
 title: About
 introductionText: >
-  We are an independent creative production company , based in Paris. 
+  We are an independent creative production company , based in Paris.
 
 
-  At the intersection of craft, technology and impactful visual storytelling. 
+  At the intersection of craft, technology and impactful visual storytelling.
 
 
-  The company creates awe-inspiring film, documentaries, live stream events,
-  still photography and branded content for some of the world’s most influential
+  Our team creates awe-inspiring film, documentaries, live stream events, still
+  photography and branded content for some of the world’s most influential
   brands and agencies.
 
 
