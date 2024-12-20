@@ -5,7 +5,7 @@ import NavBar from "../navigation/navBar";
 const enduro = localFont({
   src: [
     {
-      path: "../../../public/fonts/Enduro-Regular-Trial.otf",
+      path: "../../../public/fonts/EnduroWeb-Regular.woff",
       weight: "400",
       style: "normal",
     },
@@ -17,7 +17,7 @@ const enduro = localFont({
 const cardinalPhoto = localFont({
   src: [
     {
-      path: "../../../public/fonts/CardinalPhoto-Regular-Trial.otf",
+      path: "../../../public/fonts/CardinalPhotoWeb-Regular.woff",
       weight: "400",
       style: "normal",
     },
