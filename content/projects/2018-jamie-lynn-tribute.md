@@ -5,6 +5,8 @@ brand: 'Classic Snowboarding '
 isActive: true
 isShowcased: false
 showcaseOrder: 11
+mainImage:
+  image16by9: /uploads/Classic Snowboarding/classic snowboarding.png
 mainVideo: '545869086'
 videoLoop:
   loop16by9: '1041810666'
