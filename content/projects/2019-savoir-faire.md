@@ -7,5 +7,11 @@ isShowcased: false
 mainImage:
   image16by9: '/uploads/Meunier/meunier 16:9.jpg'
 introduction: ''
+optionalBlocks:
+  - imageOne: /uploads/Meunier/_PLP7049.jpg
+    imageTwo: /uploads/Meunier/_PLP7059.jpg
+    aspectRatioWidth: 16
+    aspectRatioHeight: 9
+    _template: dualImage
 ---
 
