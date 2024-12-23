@@ -2,7 +2,7 @@
 title: SS24
 metaTitle: '1'
 metaDescription: '2'
-year: 2022
+year: 2024
 brand: Satisfy Running
 isActive: true
 isShowcased: true
