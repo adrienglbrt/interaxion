@@ -1,8 +1,8 @@
 ---
-title: Openspaces
+title: Magazine
 metaTitle: ''
 year: 2026
-brand: Magazine
+brand: Openspaces
 isActive: true
 isShowcased: true
 showcaseOrder: 10
