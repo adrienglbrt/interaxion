@@ -3,7 +3,7 @@ title: Jamie Lynn Tribute
 year: 2016
 brand: 'Classic Snowboarding '
 isActive: true
-isShowcased: false
+isShowcased: true
 showcaseOrder: 11
 mainImage:
   image16by9: /uploads/Classic Snowboarding/classic snowboarding.png
