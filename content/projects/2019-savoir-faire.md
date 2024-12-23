@@ -5,6 +5,7 @@ brand: Meunier
 isActive: true
 isShowcased: true
 mainImage:
-  image16by9: /uploads/Meunier/_PLP7140.jpg
+  image16by9: '/uploads/Meunier/meunier 16:9.jpg'
+introduction: ''
 ---
 
