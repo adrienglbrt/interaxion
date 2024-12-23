@@ -8,5 +8,7 @@ isShowcased: true
 showcaseOrder: 10
 mainImage:
   image16by9: '/uploads/openspaces/Opensapces 16:9.jpg'
+mainVideo: '517052793'
+introduction: ''
 ---
 
