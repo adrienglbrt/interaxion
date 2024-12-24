@@ -14,12 +14,13 @@ videoLoop:
   loop16by9: '637810200'
   loop9by16: '545869086'
 introduction: >
-  Donec scelerisque placerat scelerisque. Aliquam vulputate nibh eget laoreet
-  facilisis. Phasellus laoreet, nisi sit amet efficitur dictum, felis turpis
-  molestie sem, sed convallis mauris risus a nulla. Nullam egestas justo sapien,
-  eu lobortis odio ultricies et. Phasellus accumsan dolor quis eleifend posuere.
-  Fusce et mi metus. Sed vulputate urna ac leo hendrerit porta. Nunc porta justo
-  at tellus blandit imperdiet. Vestibulum sed imperdiet libero, sed ultrices
-  risus.
+  Italian skiwear brand Moncler launches its fall-winter 2021 campaign called We
+  Love Winter. The images star family and friends in warm portraits captured by
+  Chris Colls.
+
+
+  A cast features American actresses Robin Wright and daughter Dylan Penn,
+  Japanese race car aficionado Mai Ikuzawa and her sons Arto and Milo, French
+  dancer Bats aka Mamadou Bathily, and models Mao Xiaoxing and Mika Schneider.
 ---
 
