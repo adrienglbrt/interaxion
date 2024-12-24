@@ -11,7 +11,7 @@ mainImage:
   image4by3: /uploads/moncler/moncler_4_3.jpg
 mainVideo: '637810200'
 videoLoop:
-  loop16by9: '637810200'
+  loop16by9: '1041899947'
   loop9by16: '1041898121'
 introduction: >
   Italian skiwear brand Moncler launches its fall-winter 2021 campaign called We
