@@ -9,6 +9,7 @@ mainImage:
   image16by9: /uploads/moncler/moncler_16_9.jpg
   image5by7: /uploads/moncler/moncler_5_7.jpg
   image4by3: /uploads/moncler/moncler_4_3.jpg
+mainVideo: '637810200'
 videoLoop:
   loop16by9: '637810200'
   loop9by16: '545869086'
