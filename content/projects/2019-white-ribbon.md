@@ -11,6 +11,7 @@ mainImage:
     RIBBON.png
   image5by7: /uploads/Kering foundation/Kelly Slater 14-3.png
   image4by3: /uploads/Kering foundation/Kelly Slater 5-7.png
+mainVideo: '193349747'
 videoLoop:
   loop16by9: '1042105015'
   loop9by16: '1042105514'
