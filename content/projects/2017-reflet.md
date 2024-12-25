@@ -5,6 +5,8 @@ brand: 'Boucheron '
 isActive: true
 isShowcased: true
 showcaseOrder: 5
+mainImage:
+  image16by9: '/uploads/boucheron/boucheron 16:9.jpg'
 mainVideo: '1035298608'
 videoLoop:
   loop16by9: '1042107594'
