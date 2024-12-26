@@ -104,13 +104,12 @@ export default function ProjectHeader({
           </Wrapper>
           <div className='absolute inset-0 bg-black opacity-5' />
         </div>
-
-        <VideoModal
-          mainVideoSrc={mainVideoSrc}
-          isModalOpen={isModalOpen}
-          closeModal={closeModal}
-        />
       </motion.div>
+      <VideoModal
+        mainVideoSrc={mainVideoSrc}
+        isModalOpen={isModalOpen}
+        closeModal={closeModal}
+      />
     </header>
   );
 }
