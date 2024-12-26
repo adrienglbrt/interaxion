@@ -53,7 +53,15 @@ export default function ProjectHeader({
         }}
         className='relative h-full w-full'
       >
-        <motion.div style={{ y }} className='absolute inset-0'>
+        <motion.div
+          style={{ y }}
+          className='absolute inset-0'
+          initial={{ scale: 1 }}
+          animate={{ scale: 1.1 }}
+          transition={{
+            duration: 0.9,
+          }}
+        >
           <Image
             src={project.mainImage.image16by9}
             alt={project.mainImage.alt ?? project.title}
