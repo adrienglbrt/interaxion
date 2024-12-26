@@ -56,11 +56,21 @@ export default function ProjectCard({
             hasLoopVideo && "group-hover:opacity-0"
           }`}
         />
-        {hasLoopVideo && videoSrc ? (
-          <VideoLoop videoSrc={videoSrc} isPortrait={aspectRatio === "140%"} />
+        {hasLoopVideo && videoSrc && !isMobile ? (
+          <VideoLoop
+            videoSrc={videoSrc}
+            isPortrait={aspectRatio === "140%"}
+            fallbackImage={
+              aspectRatio === "56.25%"
+                ? project.mainImage.image16by9
+                : aspectRatio === "75%"
+                ? project.mainImage.image4by3 ?? project.mainImage.image16by9
+                : project.mainImage.image5by7 ?? project.mainImage.image16by9
+            }
+          />
         ) : null}
         {!isMobile && (
-          <h2 className='absolute bottom-4 left-4 flex flex-col gap-2 font-serif tracking-wider text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-50'>
+          <h2 className='absolute bottom-4 left-4 flex flex-col gap-2 font-serif tracking-wider text-white text-3xl 2xl:text-4xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-50'>
             <span>{project.brand}</span>
             <span>{project.title}</span>
           </h2>
