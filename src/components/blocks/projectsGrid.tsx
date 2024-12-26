@@ -1,6 +1,11 @@
 import { ProjectWithDirectLinks } from "@/types/interfaces";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import ProjectCard from "../ui/projectCard";
+
+type ProjectWithAspectRatio = {
+  project: ProjectWithDirectLinks;
+  aspectRatio: string;
+};
 
 export default function ProjectsGrid({
   projects,
@@ -27,50 +32,80 @@ export default function ProjectsGrid({
     };
   }, []);
 
-  const getColumnProjects = (columnIndex: number) => {
-    return projects.filter((_, index) => index % columns === columnIndex);
+  // Distribute projects across columns to minimize height differences
+  const distributeProjects = () => {
+    if (columns === 1) {
+      return [
+        projects.map((project) => ({
+          project,
+          aspectRatio: "56.25%",
+        })),
+      ];
+    }
+
+    // Initialize columns with empty arrays and running heights
+    const columnArrays: ProjectWithAspectRatio[][] = Array(columns)
+      .fill(null)
+      .map(() => []);
+    const columnHeights = Array(columns).fill(0);
+
+    // Process projects one by one
+    let projectIndex = 0;
+    while (projectIndex < projects.length) {
+      const currentProject = projects[projectIndex];
+      const shortestColumnIndex = columnHeights.indexOf(
+        Math.min(...columnHeights)
+      );
+
+      // Find the best aspect ratio for this position
+      let bestRatio = "56.25%"; // default to 16:9
+
+      if (columns === 2) {
+        if (shortestColumnIndex === 0) {
+          bestRatio = columnArrays[0].length % 2 === 0 ? "140%" : "56.25%";
+        } else {
+          bestRatio = "75%";
+        }
+      } else if (columns === 3) {
+        if (shortestColumnIndex === 0) {
+          bestRatio = columnArrays[0].length % 2 === 0 ? "140%" : "56.25%";
+        } else if (shortestColumnIndex === 1) {
+          bestRatio = "75%";
+        } else {
+          bestRatio = columnArrays[2].length % 2 === 0 ? "56.25%" : "140%";
+        }
+      }
+
+      columnArrays[shortestColumnIndex].push({
+        project: currentProject,
+        aspectRatio: bestRatio,
+      });
+      columnHeights[shortestColumnIndex] +=
+        parseFloat(bestRatio.replace("%", "")) / 100;
+      projectIndex++;
+    }
+
+    return columnArrays;
   };
+
+  const columnArrays = useMemo(distributeProjects, [projects, columns]);
 
   return (
     <div className='pt-4 flex flex-col sm:flex-row gap-1 sm:gap-2 lg:gap-4'>
-      {[...Array(columns)].map((_, columnIndex) => (
+      {columnArrays.map((columnProjects, columnIndex) => (
         <div
           key={columnIndex}
           className='flex-1 flex flex-col gap-1 sm:gap-2 lg:gap-4'
         >
-          {getColumnProjects(columnIndex).map((project, index) => (
+          {columnProjects.map((projectData) => (
             <ProjectCard
-              key={project.id}
-              project={project}
-              aspectRatio={getAspectRatio(columns, columnIndex, index)}
+              key={projectData.project.id}
+              project={projectData.project}
+              aspectRatio={projectData.aspectRatio}
             />
           ))}
         </div>
       ))}
     </div>
   );
-}
-
-function getAspectRatio(
-  columns: number,
-  columnIndex: number,
-  index: number
-): string {
-  if (columns === 1) {
-    return "56.25%"; // 16:9
-  } else if (columns === 2) {
-    if (columnIndex === 0) {
-      return index % 2 === 0 ? "140%" : "56.25%"; // 5:7 and 16:9 alternating
-    } else {
-      return "75%"; // 4:3
-    }
-  } else {
-    if (columnIndex === 0) {
-      return index % 2 === 0 ? "140%" : "56.25%"; // 5:7 and 16:9 alternating
-    } else if (columnIndex === 1) {
-      return "75%"; // 4:3
-    } else {
-      return index % 2 === 0 ? "56.25%" : "140%"; // 16:9 and 5:7 alternating
-    }
-  }
 }
