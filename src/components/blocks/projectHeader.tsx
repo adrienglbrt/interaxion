@@ -92,12 +92,12 @@ export default function ProjectHeader({
                 <AnimatedText
                   text={project.brand}
                   isVisible
-                  globalDelay={0.6}
+                  globalDelay={0.4}
                 />
                 <AnimatedText
                   text={project.title}
                   isVisible
-                  globalDelay={0.6}
+                  globalDelay={0.4}
                 />
               </h1>
             </div>
