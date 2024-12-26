@@ -70,7 +70,7 @@ export default function ProjectCard({
           />
         ) : null}
         {!isMobile && (
-          <h2 className='absolute bottom-4 left-4 flex flex-col gap-2 font-serif tracking-wider text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-50'>
+          <h2 className='absolute bottom-4 left-4 flex flex-col gap-2 font-serif tracking-wider text-white text-3xl 2xl:text-4xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-50'>
             <span>{project.brand}</span>
             <span>{project.title}</span>
           </h2>
