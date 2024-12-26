@@ -1,19 +1,22 @@
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Hls from "hls.js";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import Loader from "./loader";
 
 export default function VideoLoop({
   videoSrc,
   isPortrait,
+  fallbackImage,
 }: {
   videoSrc: { src16by9: string; src9by16: string };
   isPortrait: boolean;
+  fallbackImage: string;
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [shouldLoad, setShouldLoad] = useState(false);
+  const [isVideoReady, setIsVideoReady] = useState(false);
 
   // Load video when it's in view or about to be
   useEffect(() => {
@@ -50,14 +53,18 @@ export default function VideoLoop({
 
       // Reset loading state
       setIsLoading(true);
+      setIsVideoReady(false);
 
       // Function to handle successful video load
       const handleVideoReady = () => {
         setIsLoading(false);
-        videoElement.play().catch((error) => {
-          console.error("Autoplay prevented or failed:", error);
-          setIsLoading(false);
-        });
+        videoElement
+          .play()
+          .then(() => setIsVideoReady(true))
+          .catch((error) => {
+            console.error("Autoplay prevented or failed:", error);
+            setIsLoading(false);
+          });
       };
 
       if (Hls.isSupported() && src) {
@@ -110,10 +117,27 @@ export default function VideoLoop({
   }, [videoSrc, isPortrait, shouldLoad]);
 
   return (
-    <div className='z-10' ref={containerRef}>
-      <AnimatePresence>{isLoading && shouldLoad && <Loader />}</AnimatePresence>
+    <div ref={containerRef}>
+      <AnimatePresence>
+        {isLoading && shouldLoad && (
+          <motion.div
+            key='fallback-image'
+            exit={{ opacity: 0, transition: { duration: 0.7 } }}
+            className='absolute inset-0'
+          >
+            <Image
+              src={fallbackImage}
+              alt=''
+              fill
+              sizes='33vw'
+              quality={40}
+              className='object-cover'
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
       {shouldLoad && (
-        <video
+        <motion.video
           ref={videoRef}
           loop
           muted
@@ -121,13 +145,16 @@ export default function VideoLoop({
           autoPlay
           preload='auto'
           className='absolute w-full h-full object-cover'
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isVideoReady ? 1 : 0 }}
+          transition={{ duration: 0.7 }}
         >
           <source
             src={isPortrait ? videoSrc.src9by16 : videoSrc.src16by9}
             type='video/mp4'
           />
           Your browser does not support the video tag.
-        </video>
+        </motion.video>
       )}
     </div>
   );
