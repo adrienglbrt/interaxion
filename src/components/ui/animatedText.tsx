@@ -3,9 +3,11 @@ import { motion } from "framer-motion";
 export default function AnimatedText({
   text,
   isVisible,
+  globalDelay = 0,
 }: {
   text: string;
   isVisible: boolean;
+  globalDelay?: number;
 }) {
   return (
     <span className='inline-block'>
@@ -21,9 +23,8 @@ export default function AnimatedText({
             animate={{ y: isVisible ? 0 : "100%" }}
             transition={{
               duration: 0.8,
-              // ease: [0.33, 1, 0.68, 1],
               ease: [0.79, 0.14, 0.15, 0.86],
-              delay: index * 0.03,
+              delay: globalDelay + index * 0.03,
             }}
           >
             {char === " " ? "\u00A0" : char}
