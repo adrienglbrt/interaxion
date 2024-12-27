@@ -11,7 +11,7 @@ mainImage:
   image4by3: /uploads/massimo-dutti/interlude_4_3.jpg
 videoLoop:
   loop16by9: '1042456356'
-  loop9by16: '1035128464'
+  loop9by16: '1042457298'
 introduction: ''
 ---
 
