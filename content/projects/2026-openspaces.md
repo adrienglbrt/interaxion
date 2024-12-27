@@ -1,7 +1,7 @@
 ---
 title: Magazine
 metaTitle: ''
-year: 2026
+year: 2019
 brand: Openspaces
 isActive: true
 isShowcased: true
