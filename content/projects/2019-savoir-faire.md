@@ -8,6 +8,11 @@ mainImage:
   image16by9: '/uploads/Meunier/meunier 16:9.jpg'
 introduction: ''
 optionalBlocks:
+  - imageOne: /uploads/_PLP7161.jpg
+    imageTwo: /uploads/_PLP7350.jpg
+    aspectRatioWidth: 9
+    aspectRatioHeight: 16
+    _template: dualImage
   - image: /uploads/_PLP7103.jpg
     aspectRatioWidth: 9
     aspectRatioHeight: 16
