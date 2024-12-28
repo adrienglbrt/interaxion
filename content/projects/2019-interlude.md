@@ -14,5 +14,9 @@ videoLoop:
   loop16by9: '1042456356'
   loop9by16: '1042457298'
 introduction: ''
+credits:
+  - label: 'Director:'
+    name:
+      - Marc Thirouin
 ---
 
