@@ -15,6 +15,9 @@ videoLoop:
   loop9by16: '1042457298'
 introduction: ''
 credits:
+  - label: Model
+    name:
+      - Adele Aldighieri
   - label: Stylism
     name:
       - Marina Gallo
