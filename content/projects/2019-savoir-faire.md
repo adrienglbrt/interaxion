@@ -11,7 +11,7 @@ optionalBlocks:
   - image: /uploads/_PLP6782.jpg
     aspectRatioWidth: 9
     aspectRatioHeight: 16
-    version: Large
+    version: Small
     _template: singleImage
   - imageOne: /uploads/Meunier/_PLP7140.jpg
     imageTwo: /uploads/Meunier/_PLP7444.jpg
