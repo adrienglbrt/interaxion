@@ -9,8 +9,8 @@ mainImage:
 introduction: ''
 optionalBlocks:
   - image: /uploads/_PLP6782.jpg
-    aspectRatioWidth: 16
-    aspectRatioHeight: 9
+    aspectRatioWidth: 9
+    aspectRatioHeight: 16
     version: Large
     _template: singleImage
   - imageOne: /uploads/Meunier/_PLP7140.jpg
