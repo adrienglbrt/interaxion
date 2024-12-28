@@ -7,6 +7,7 @@ isShowcased: false
 mainImage:
   image16by9: '/uploads/SMEP 16:9.jpg'
   image5by7: /uploads/SMEP 5_7.jpg
+  image4by3: '/uploads/SMEP 4:3.jpg'
 introduction: ''
 ---
 
