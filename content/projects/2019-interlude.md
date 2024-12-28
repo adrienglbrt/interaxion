@@ -15,14 +15,17 @@ videoLoop:
   loop9by16: '1042457298'
 introduction: ''
 credits:
-  - label: 'photographer '
+  - label: Stylism
     name:
-      - Quentin Debriey
-  - label: Dop
-    name:
-      - Olivier Rebattet
+      - Marina Gallo
   - label: 'Director:'
     name:
       - Marc Thirouin
+  - label: Dop
+    name:
+      - Olivier Rebattet
+  - label: 'photographer '
+    name:
+      - Quentin Debriey
 ---
 
