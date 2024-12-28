@@ -15,6 +15,9 @@ videoLoop:
   loop9by16: '1042457298'
 introduction: ''
 credits:
+  - label: Dop
+    name:
+      - Olivier Rebattet
   - label: 'Director:'
     name:
       - Marc Thirouin
