@@ -9,6 +9,11 @@ mainImage:
   image5by7: /uploads/variety cover Macron.png
 introduction: ''
 optionalBlocks:
+  - image: /uploads/Capture d’écran 2024-12-29 à 09.33.39.png
+    aspectRatioWidth: 16
+    aspectRatioHeight: 9
+    version: Medium
+    _template: singleImage
   - image: /uploads/Capture d’écran 2024-12-29 à 09.35.38.png
     aspectRatioWidth: 9
     aspectRatioHeight: 16
