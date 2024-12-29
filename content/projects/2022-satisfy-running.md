@@ -17,5 +17,11 @@ videoLoop:
   loop16by9: '1035130035'
   loop9by16: '1035130384'
 introduction: ''
+optionalBlocks:
+  - image: '/uploads/look 1 black 9:16.jpg'
+    aspectRatioWidth: 9
+    aspectRatioHeight: 16
+    version: Medium
+    _template: singleImage
 ---
 
