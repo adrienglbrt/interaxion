@@ -12,6 +12,7 @@ introduction: ''
 credits:
   - {}
 optionalBlocks:
+  - _template: singleImage
   - image: /uploads/12_VIN-SAINTE-MARGUERITE_rgb.jpg
     aspectRatioWidth: 16
     aspectRatioHeight: 9
