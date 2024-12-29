@@ -7,6 +7,7 @@ isShowcased: false
 mainImage:
   image16by9: '/uploads/Variety Macron 16:9.jpg'
   image5by7: /uploads/variety cover Macron.png
+mainVideo: '1031855284'
 introduction: ''
 optionalBlocks:
   - image: '/uploads/Variety Macron 16:9 b&w.jpg'
