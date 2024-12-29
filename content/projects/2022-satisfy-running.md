@@ -8,9 +8,9 @@ isActive: true
 isShowcased: true
 showcaseOrder: 1
 mainImage:
-  image16by9: /uploads/photo 16_9.png
-  image5by7: /uploads/photo 5-7.png
-  image4by3: /uploads/Satisfy/photo 4_3.png
+  image16by9: '/uploads/satisfy running 16:9.jpg'
+  image5by7: '/uploads/satisfy running 5:7.jpg'
+  image4by3: '/uploads/satisfy running 4:3.jpg'
   alt: ''
 mainVideo: '1035130035'
 videoLoop:
