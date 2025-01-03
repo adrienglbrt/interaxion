@@ -1,6 +1,6 @@
 ---
 title: Forma Fantasma
-year: 2024
+year: 2025
 brand: Perrier-Jouët
 isActive: true
 isShowcased: true
