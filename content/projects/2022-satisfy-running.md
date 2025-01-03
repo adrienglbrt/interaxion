@@ -6,7 +6,7 @@ year: 2024
 brand: Satisfy Running
 isActive: true
 isShowcased: true
-showcaseOrder: 1
+showcaseOrder: 2
 mainImage:
   image16by9: '/uploads/satisfy running 16:9.jpg'
   image5by7: '/uploads/satisfy running 5:7.jpg'
