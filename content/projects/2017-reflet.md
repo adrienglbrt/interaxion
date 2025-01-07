@@ -12,5 +12,9 @@ videoLoop:
   loop16by9: '1042107594'
   loop9by16: '1042107801'
 introduction: ''
+credits:
+  - label: Director
+    name:
+      - Jean-Pacôme Dedieux
 ---
 
