@@ -31,16 +31,16 @@ credits:
         Director: Guillaume Jolly - Producer: Julien Joud / Interaxion - Head of
         production: Sandrine Assenat / Interaxion
 optionalBlocks:
-  - imageOne: /uploads/nature_plant_9_16.jpg
-    imageTwo: /uploads/nature_plant_9_16_bis2.jpg
-    aspectRatioWidth: 9
-    aspectRatioHeight: 16
-    _template: dualImage
   - image: /uploads/Portrait_FF_16_9.jpg
     aspectRatioWidth: 16
     aspectRatioHeight: 9
     version: Medium
     _template: singleImage
+  - imageOne: /uploads/nature_plant_9_16.jpg
+    imageTwo: /uploads/nature_plant_9_16_bis2.jpg
+    aspectRatioWidth: 9
+    aspectRatioHeight: 16
+    _template: dualImage
   - image: /uploads/Portrait_FF_16_9_interior.jpg
     aspectRatioWidth: 16
     aspectRatioHeight: 9
