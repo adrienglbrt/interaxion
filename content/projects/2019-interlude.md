@@ -11,7 +11,7 @@ mainImage:
   image4by3: '/uploads/massimo-dutti/MD_4:3_Colombe.jpg'
 mainVideo: '757997944'
 videoLoop:
-  loop16by9: '1042456356'
+  loop16by9: '1045484115'
   loop9by16: '1042457298'
 introduction: ''
 credits:
