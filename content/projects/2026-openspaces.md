@@ -11,7 +11,7 @@ mainImage:
 mainVideo: '517052793'
 videoLoop:
   loop16by9: '1041766106'
-  loop9by16: '1041764114'
+  loop9by16: '1045489197'
 introduction: ''
 ---
 
