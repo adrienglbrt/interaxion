@@ -31,6 +31,11 @@ credits:
         Director: Guillaume Jolly - Producer: Julien Joud / Interaxion - Head of
         production: Sandrine Assenat / Interaxion
 optionalBlocks:
+  - imageOne: /uploads/cocinelle_9_16.jpg
+    imageTwo: /uploads/ceramique_outside_9_16.jpg
+    aspectRatioWidth: 9
+    aspectRatioHeight: 16
+    _template: dualImage
   - image: /uploads/nature_insect_criquet_16_9.jpg
     aspectRatioWidth: 16
     aspectRatioHeight: 9
