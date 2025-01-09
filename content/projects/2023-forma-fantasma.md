@@ -6,9 +6,9 @@ isActive: true
 isShowcased: true
 showcaseOrder: 1
 mainImage:
-  image16by9: /uploads/perrier-jouet/perrier-jouet–16_9.jpg
-  image5by7: /uploads/perrier-jouet/perrier-jouet–5_7.jpg
-  image4by3: /uploads/perrier-jouet/perrier-jouet–4_3.jpg
+  image16by9: /uploads/PJ_Triptique_FF_nature_morte.jpg
+  image5by7: /uploads/PJ_Dyptique_FF_natu_morte_5_7.jpg
+  image4by3: /uploads/PJ_Dyptique_FF_nature_morte_4_3.jpg
 mainVideo: '1013443064'
 videoLoop:
   loop16by9: '1034630381'
