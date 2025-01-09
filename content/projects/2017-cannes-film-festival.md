@@ -8,9 +8,9 @@ isActive: true
 isShowcased: true
 showcaseOrder: 6
 mainImage:
-  image16by9: /uploads/kering women in motion/women in motion 16_9.png
-  image5by7: '/uploads/kering women in motion/womenin motiion 5:7.png'
-  image4by3: /uploads/kering women in motion/women in motion 4_3.png
+  image16by9: /uploads/women_In_motion_16_9bis.jpg
+  image5by7: /uploads/women_In_motion_5_7bis.jpg
+  image4by3: /uploads/women_In_motion_4_3bis.jpg
 mainVideo: '218039079'
 videoLoop:
   loop16by9: '1045492102'
