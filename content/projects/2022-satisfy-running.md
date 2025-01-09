@@ -23,7 +23,7 @@ optionalBlocks:
     aspectRatioHeight: 16
     version: Medium
     _template: singleImage
-  - image: '/uploads/look 2 black 9:16.jpg'
+  - image: /uploads/look_1_9_16.jpg
     aspectRatioWidth: 9
     aspectRatioHeight: 16
     version: Medium
