@@ -12,7 +12,7 @@ mainImage:
 mainVideo: '757997944'
 videoLoop:
   loop16by9: '1045484115'
-  loop9by16: '1042457298'
+  loop9by16: '1045486112'
 introduction: ''
 credits:
   - label: Model
