@@ -31,12 +31,12 @@ credits:
         Director: Guillaume Jolly - Producer: Julien Joud / Interaxion - Head of
         production: Sandrine Assenat / Interaxion
 optionalBlocks:
-  - image: /uploads/KV_brut_16_9.jpg
+  - image: /uploads/Portrait_FF_16_9.jpg
     aspectRatioWidth: 16
     aspectRatioHeight: 9
     version: Medium
     _template: singleImage
-  - image: /uploads/Portrait_FF_16_9.jpg
+  - image: /uploads/KV_brut_16_9.jpg
     aspectRatioWidth: 16
     aspectRatioHeight: 9
     version: Medium
