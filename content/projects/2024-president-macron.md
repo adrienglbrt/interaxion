@@ -13,7 +13,7 @@ introduction: >
   France’s Cultural Boom, the Dangers of AI, Taylor Swift’s Power and Losing
   ‘Emily in Paris’ to Rome
 optionalBlocks:
-  - image: '/uploads/Variety Macron 16:9 b&w.jpg'
+  - image: '/uploads/Variety Macron 16:9.jpg'
     aspectRatioWidth: 16
     aspectRatioHeight: 9
     version: Medium
