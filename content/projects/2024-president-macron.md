@@ -23,7 +23,7 @@ optionalBlocks:
     aspectRatioHeight: 16
     version: Medium
     _template: singleImage
-  - image: /uploads/Capture d’écran 2024-12-29 à 09.33.26.png
+  - image: '/uploads/Variety Macron 16:9 b&w.jpg'
     aspectRatioWidth: 9
     aspectRatioHeight: 16
     version: Medium
