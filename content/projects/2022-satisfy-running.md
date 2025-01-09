@@ -18,7 +18,7 @@ videoLoop:
   loop9by16: '1035130384'
 introduction: ''
 optionalBlocks:
-  - image: '/uploads/look 3 black 9:16.jpg'
+  - image: /uploads/look_3_9_16.jpg
     aspectRatioWidth: 9
     aspectRatioHeight: 16
     version: Medium
