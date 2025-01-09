@@ -13,7 +13,7 @@ mainImage:
   image4by3: /uploads/kering women in motion/women in motion 4_3.png
 mainVideo: '218039079'
 videoLoop:
-  loop16by9: '1040475454'
+  loop16by9: '1045492102'
   loop9by16: '1040477365'
 introduction: ''
 ---
