@@ -12,7 +12,7 @@ mainImage:
 mainVideo: '637810200'
 videoLoop:
   loop16by9: '1041899947'
-  loop9by16: '1041898121'
+  loop9by16: '1045478843'
 introduction: >
   Italian skiwear brand Moncler launches its fall-winter 2021 campaign called We
   Love Winter. The images star family and friends in warm portraits captured by
