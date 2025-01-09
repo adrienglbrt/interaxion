@@ -9,8 +9,6 @@ mainImage:
   image5by7: /uploads/SMEP 5_7.jpg
   image4by3: '/uploads/SMEP 4:3.jpg'
 introduction: ''
-credits:
-  - {}
 optionalBlocks:
   - image: '/uploads/photo ciel 16:9 ok.jpg'
     aspectRatioWidth: 16
