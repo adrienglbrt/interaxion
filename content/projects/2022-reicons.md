@@ -1,5 +1,5 @@
 ---
-title: Re/Icons
+title: Icons
 year: 2022
 brand: Moncler
 isActive: true
