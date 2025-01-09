@@ -61,10 +61,5 @@ optionalBlocks:
     aspectRatioHeight: 9
     version: Medium
     _template: singleImage
-  - image: /uploads/KV_bdb-16-9.jpg
-    aspectRatioWidth: 16
-    aspectRatioHeight: 9
-    version: Medium
-    _template: singleImage
 ---
 
