@@ -30,6 +30,9 @@ introduction: >
   Editeur : EMI Publishing France / Kobalt Music Publishing LTD, Warner Chappell
   Music France
 credits:
+  - label: Singer
+    name:
+      - Mélanie Pain
   - label: Label
     name:
       - Kwaidan Records
