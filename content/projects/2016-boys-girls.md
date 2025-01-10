@@ -28,6 +28,10 @@ introduction: >
   Written by: Damon Albarn, Graham Coxon, Alex James, David Rowntree  
 
   Editeur : EMI Publishing France / Kobalt Music Publishing LTD, Warner Chappell
-  Music France
+  Music France 
+credits:
+  - label: Director
+    name:
+      - Marc Thirouin
 ---
 
