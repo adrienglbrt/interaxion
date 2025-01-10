@@ -6,7 +6,7 @@ export default function RichText({ text }: { text: TinaMarkdownContent }) {
       <TinaMarkdown
         content={text}
         components={{
-          p: (props) => <p className='leading-relaxed' {...props} />,
+          p: (props) => <p className='leading-relaxed mb-1' {...props} />,
         }}
       />
     </div>
