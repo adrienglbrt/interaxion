@@ -219,6 +219,27 @@ const Page: Collection = {
             "The description of the page, displayed in Google search results and in social media shares. If not provided, the heading field will be used.",
           required: false,
         },
+        {
+          name: "heading",
+          label: "Heading",
+          type: "string",
+          required: true,
+        },
+        {
+          name: "timeframe",
+          label: "Timeframe",
+          type: "string",
+          required: true,
+        },
+        {
+          name: "introduction",
+          label: "Introduction",
+          type: "string",
+          required: true,
+          ui: {
+            component: "textarea",
+          },
+        },
       ],
     },
   ],

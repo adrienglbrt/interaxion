@@ -91,7 +91,7 @@ export default function ProjectsGrid({
   const columnArrays = useMemo(distributeProjects, [projects, columns]);
 
   return (
-    <div className='pt-4 flex flex-col sm:flex-row gap-1 sm:gap-2 lg:gap-4'>
+    <div className='pt-8 flex flex-col sm:flex-row gap-1 sm:gap-2 lg:gap-4'>
       {columnArrays.map((columnProjects, columnIndex) => (
         <div
           key={columnIndex}
