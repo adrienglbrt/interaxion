@@ -17,18 +17,18 @@ introduction: >
 
 
   25 Years after the hit by Blur , Marc Thirouin and Melanie revisited this song
-  and shouted in the Paris area. 
+  and shouted in the Paris area.
 
 
-  Nouvelle Vague / Girls and Boys (Official Video - Blur cover) 
+  Nouvelle Vague / Girls and Boys (Official Video - Blur cover)
 
-  Performed by Nouvelle Vague & Mélanie Pain. Guitar: Olivier Libaux 
+  Performed by Nouvelle Vague & Mélanie Pain. Guitar: Olivier Libaux
 
 
-  Written by: Damon Albarn, Graham Coxon, Alex James, David Rowntree  
+  Written by: Damon Albarn, Graham Coxon, Alex James, David Rowntree\
 
   Editeur : EMI Publishing France / Kobalt Music Publishing LTD, Warner Chappell
-  Music France 
+  Music France
 credits:
   - label: Label
     name:
@@ -39,5 +39,11 @@ credits:
   - label: Director
     name:
       - Marc Thirouin
+optionalBlocks:
+  - image: /uploads/visuel_album16_9.jpg
+    aspectRatioWidth: 16
+    aspectRatioHeight: 9
+    version: Medium
+    _template: singleImage
 ---
 
