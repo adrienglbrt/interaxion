@@ -30,6 +30,10 @@ introduction: >
   Editeur : EMI Publishing France / Kobalt Music Publishing LTD, Warner Chappell
   Music France 
 credits:
+  - {}
+  - label: Dop
+    name:
+      - Thibault de Chemelier
   - label: Director
     name:
       - Marc Thirouin
