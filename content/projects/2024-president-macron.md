@@ -13,6 +13,9 @@ introduction: >
   France’s Cultural Boom, the Dangers of AI, Taylor Swift’s Power and Losing
   ‘Emily in Paris’ to Rome
 credits:
+  - label: Photographer
+    name:
+      - Greg Williams
   - label: Director
     name:
       - Paul Chauvin
