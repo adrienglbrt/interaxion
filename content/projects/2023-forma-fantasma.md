@@ -25,6 +25,9 @@ introduction: >
   reveals an ambitious project dedicated to biodiversity in the heart of its
   vineyard."
 credits:
+  - label: Photographer
+    name:
+      - Christophe Coënon
   - label: Director
     name:
       - Guillaume Jolly
