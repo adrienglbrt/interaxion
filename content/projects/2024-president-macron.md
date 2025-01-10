@@ -25,11 +25,6 @@ optionalBlocks:
     aspectRatioHeight: 9
     version: Medium
     _template: singleImage
-  - image: '/uploads/Variety Macron 16:9.jpg'
-    aspectRatioWidth: 9
-    aspectRatioHeight: 16
-    version: Medium
-    _template: singleImage
   - image: '/uploads/Variety Macron 16:9 b&w.jpg'
     aspectRatioWidth: 9
     aspectRatioHeight: 16
