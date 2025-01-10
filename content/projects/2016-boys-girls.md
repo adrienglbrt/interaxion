@@ -4,7 +4,7 @@ year: 2016
 brand: Nouvelle Vague
 isActive: true
 isShowcased: true
-showcaseOrder: 4
+showcaseOrder: 8
 mainImage:
   image16by9: /uploads/nouvelle_vague_169.jpg
   image5by7: /uploads/nouvelle_vague_57.jpg
