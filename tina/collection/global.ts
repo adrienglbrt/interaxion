@@ -73,7 +73,7 @@ const Global: Collection = {
           name: "addressTwo",
           label: "Address Two",
           type: "object",
-          required: false,
+          required: true,
           fields: [
             {
               name: "addressLineOne",

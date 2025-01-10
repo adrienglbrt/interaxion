@@ -76,18 +76,22 @@ export default function About({ pageData }: { pageData: PageProps }) {
               </p>
             </div>
 
-            <div className='col-span-6 sm:col-start-2 sm:col-span-4 lg:col-start-7 lg:col-span-5 pt-10 lg:pt-20'>
+            <div className='col-span-6 sm:col-start-2 sm:col-span-4 lg:col-start-7 lg:col-span-6 pt-10 lg:pt-20'>
               <h2 className='text-grey'>{page.contact.heading}</h2>
-              <ContactBlock
-                address={contact?.addressOne}
-                email={contact?.email}
-              />
-              {contact.addressTwo && (
-                <ContactBlock
-                  address={contact?.addressTwo}
-                  email={contact?.email}
-                />
-              )}
+              <div className='flex max-sm:flex-col gap-1 sm:gap-2 lg:gap-4'>
+                <div className='sm:flex-1'>
+                  <ContactBlock
+                    address={contact?.addressOne}
+                    email={contact?.email}
+                  />
+                </div>
+                <div className='sm:flex-1'>
+                  <ContactBlock
+                    address={contact?.addressTwo}
+                    email={contact?.email}
+                  />
+                </div>
+              </div>
             </div>
 
             <div className='col-span-6 sm:col-start-2 sm:col-span-4 lg:col-start-7 lg:col-span-5 pt-10 lg:pt-20'>
