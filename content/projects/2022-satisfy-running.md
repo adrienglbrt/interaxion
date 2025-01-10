@@ -20,7 +20,7 @@ introduction: ''
 optionalBlocks:
   - imageOne: /uploads/look_1_9_16triple.jpg
     imageTwo: /uploads/look_2_9_16triple.jpg
-    imageThree: /uploads/look_3_9_16triple.jpg
+    imageThree: /uploads/look_3_9_16triple1.jpg
     aspectRatioWidth: 9
     aspectRatioHeight: 16
     _template: tripleImage
