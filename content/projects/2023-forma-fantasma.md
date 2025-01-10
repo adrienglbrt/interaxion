@@ -25,18 +25,18 @@ introduction: >
   reveals an ambitious project dedicated to biodiversity in the heart of its
   vineyard."
 credits:
+  - label: Director
+    name:
+      - Guillaume Jolly
+  - label: Photographer at Milan
+    name:
+      - Christophe Coënon
   - label: Photographer at Epernay
     name:
       - Rachelle Simoneau
   - label: Head of production
     name:
       - Sandrine Assenat
-  - label: Photographer at Milan
-    name:
-      - Christophe Coënon
-  - label: Director
-    name:
-      - Guillaume Jolly
 optionalBlocks:
   - imageOne: /uploads/papillon_9_16.jpg
     imageTwo: /uploads/ceramique_vertical_9_16.jpg
