@@ -50,8 +50,8 @@ introductionText: >
   * Production Executive
 
   * Studio IA
-image: /uploads/about_16_9.jpg
-imageAlt: View of the Interaxion office
+image: /uploads/office_space.jpg
+imageAlt: ' '
 clients:
   heading: Our clients
   content: |-
