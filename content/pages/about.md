@@ -34,7 +34,7 @@ services:
     * Live Talk
     * Production Executive
     * Studio IA
-image: /uploads/about_16_9.jpg
+image: /uploads/office_space.jpg
 imageAlt: View of the Interaxion office
 clients:
   heading: Our clients
@@ -100,7 +100,6 @@ socials:
   heading: Follow us
 colophon:
   copyright: Copyright © Interaxion 2024
-  credits: 'Design by Korantin Grall, code by Adrien Galibert'
+  credits: "Design by Korantin Grall, code by Adrien Galibert"
 _template: about
 ---
-
