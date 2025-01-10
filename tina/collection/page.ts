@@ -84,6 +84,26 @@ const Page: Collection = {
           required: true,
         },
         {
+          name: "services",
+          label: "Services",
+          type: "object",
+          required: false,
+          fields: [
+            {
+              name: "heading",
+              label: "Heading",
+              type: "string",
+              required: true,
+            },
+            {
+              name: "content",
+              label: "Description",
+              type: "rich-text",
+              required: true,
+            },
+          ],
+        },
+        {
           name: "image",
           label: "Image",
           type: "image",

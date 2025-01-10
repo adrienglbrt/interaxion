@@ -10,6 +10,21 @@ introductionText: >
   sed nisi posuere, eu tempus erat efficitur. Proin auctor, mi a egestas
   eleifend, dui augue dignissim turpis, a hendrerit nunc nulla a nibh. In semper
   purus a tempus suscipit.
+services:
+  heading: Services
+  content: |
+    * Animation & Motion Graphics
+    * Campaign & Concept Development
+    * Art Direction
+    * Copywriting
+    * Talent scoot
+    * Storytelling
+    * Photo & Video Production
+    * Brand Content
+    * Corporate communication
+    * Live Talk
+    * Production Executive
+    * Studio IA
 image: /uploads/about_16_9.jpg
 imageAlt: View of the Interaxion office
 clients:

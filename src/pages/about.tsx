@@ -42,6 +42,16 @@ export default function About({ pageData }: { pageData: PageProps }) {
             <div className='col-span-6 sm:col-start-2 sm:col-span-4 lg:col-start-7 lg:col-span-5 pt-20 lg:pt-40'>
               <RichText text={page.introductionText} />
             </div>
+
+            {page.services && (
+              <div className='col-span-6 sm:col-start-2 sm:col-span-4 lg:col-start-7 lg:col-span-6 pt-10 lg:pt-20'>
+                <h2 className='text-grey'>{page.services.heading}</h2>
+                <div className='pt-4 sm:columns-2 gap-1 sm:gap-2 lg:gap-4'>
+                  <RichText text={page.services.content} />
+                </div>
+              </div>
+            )}
+
             <div
               className='col-span-6 lg:col-span-12 -mx-4 sm:-mx-8 lg:-mx-16 pt-10 lg:pt-20'
               ref={containerRef}
@@ -58,12 +68,14 @@ export default function About({ pageData }: { pageData: PageProps }) {
                 </motion.div>
               </div>
             </div>
+
             <div className='col-span-6 sm:col-start-2 sm:col-span-4 lg:col-start-7 lg:col-span-5 pt-10 lg:pt-20'>
               <h2 className='text-grey'>{page.clients.heading}</h2>
               <p className='pt-4 leading-relaxed max-w-prose text-pretty'>
                 {page.clients.content}
               </p>
             </div>
+
             <div className='col-span-6 sm:col-start-2 sm:col-span-4 lg:col-start-7 lg:col-span-5 pt-10 lg:pt-20'>
               <h2 className='text-grey'>{page.contact.heading}</h2>
               <ContactBlock
@@ -77,6 +89,7 @@ export default function About({ pageData }: { pageData: PageProps }) {
                 />
               )}
             </div>
+
             <div className='col-span-6 sm:col-start-2 sm:col-span-4 lg:col-start-7 lg:col-span-5 pt-10 lg:pt-20'>
               <h2 className='text-grey'>{page.socials.heading}</h2>
               <ul className='pt-4 leading-relaxed'>
@@ -100,6 +113,7 @@ export default function About({ pageData }: { pageData: PageProps }) {
                 </li>
               </ul>
             </div>
+
             {(page.colophon?.copyright || page.colophon?.credits) && (
               <div className='col-span-6 sm:col-start-2 sm:col-span-4 lg:col-start-7 lg:col-span-5 pt-10 lg:pt-20 text-grey opacity-60'>
                 <p>{page.colophon.copyright}</p>
