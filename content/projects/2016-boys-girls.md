@@ -43,5 +43,11 @@ credits:
   - label: Director
     name:
       - Marc Thirouin
+optionalBlocks:
+  - image: /uploads/visuel_album_16_9.jpg
+    aspectRatioWidth: 9
+    aspectRatioHeight: 16
+    version: Medium
+    _template: singleImage
 ---
 
