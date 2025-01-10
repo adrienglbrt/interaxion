@@ -1,15 +1,24 @@
 ---
 title: About
 introductionText: >
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula
-  dapibus egestas. Donec ornare tincidunt nisl eget sodales. Ut mattis arcu sit
-  amet massa interdum, non tempus nisl pretium. Sed pharetra nibh nec pretium
-  condimentum. In hac habitasse platea dictumst. Sed magna lorem, porttitor
-  vitae odio at, accumsan feugiat orci. Nulla vitae est quis est condimentum
-  efficitur. Quisque tempor quis enim vitae molestie. Phasellus tempor lectus
-  sed nisi posuere, eu tempus erat efficitur. Proin auctor, mi a egestas
-  eleifend, dui augue dignissim turpis, a hendrerit nunc nulla a nibh. In semper
-  purus a tempus suscipit.
+  We are an independent creative production company, based in Paris.
+
+
+  At the intersection of craft, technology and impactful visual storytelling.
+
+
+  Our team creates awe-inspiring film, documentaries, live stream events, still 
+  photography and branded content for some of the world’s most influential 
+  brands and agencies.
+
+
+  We are passionate to create great things, always believing in our aesthetic 
+  and work ethics.
+
+
+  We cover every stage, from strategy to post-production, to ensure the success 
+  of your marketing and communication campaigns. our seamless process 
+  guarantees.
 services:
   heading: Services
   content: |
@@ -91,6 +100,7 @@ socials:
   heading: Follow us
 colophon:
   copyright: Copyright © Interaxion 2024
-  credits: "Design by Korantin Grall, code by Adrien Galibert"
+  credits: 'Design by Korantin Grall, code by Adrien Galibert'
 _template: about
 ---
+
