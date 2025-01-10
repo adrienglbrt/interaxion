@@ -18,6 +18,12 @@ videoLoop:
   loop9by16: '1035130384'
 introduction: ''
 optionalBlocks:
+  - imageOne: /uploads/look_4_9_16triple.jpg
+    imageTwo: /uploads/look_5_9_16triple.jpg
+    imageThree: /uploads/look_6_9_16triple.jpg
+    aspectRatioWidth: 9
+    aspectRatioHeight: 16
+    _template: tripleImage
   - imageOne: /uploads/look_1_9_16triple.jpg
     imageTwo: /uploads/look_2_9_16triple.jpg
     imageThree: /uploads/look_3_9_16triple1.jpg
