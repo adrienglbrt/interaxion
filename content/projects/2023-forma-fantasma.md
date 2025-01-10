@@ -25,11 +25,9 @@ introduction: >
   reveals an ambitious project dedicated to biodiversity in the heart of its
   vineyard."
 credits:
-  - label: Crew
+  - label: Director
     name:
-      - >-
-        Director: Guillaume Jolly - Producer: Julien Joud / Interaxion - Head of
-        production: Sandrine Assenat / Interaxion
+      - Guillaume Jolly
 optionalBlocks:
   - imageOne: /uploads/papillon_9_16.jpg
     imageTwo: /uploads/ceramique_vertical_9_16.jpg
