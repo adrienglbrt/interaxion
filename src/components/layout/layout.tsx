@@ -1,6 +1,6 @@
 import localFont from "next/font/local";
 import { ReactNode } from "react";
-import NavBar from "../navigation/navBar";
+import NavBarAlt from "../navigation/navBarAlt";
 
 const enduro = localFont({
   src: [
@@ -32,7 +32,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       className={`${cardinalPhoto.variable} ${enduro.variable} font-sans bg-white text-black min-h-[100svh]`}
     >
       {children}
-      <NavBar />
+      <NavBarAlt />
     </div>
   );
 }
