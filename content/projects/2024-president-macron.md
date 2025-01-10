@@ -6,7 +6,7 @@ isActive: true
 isShowcased: false
 mainImage:
   image16by9: '/uploads/Variety Macron 16:9.jpg'
-  image5by7: /uploads/variety cover Macron.png
+  image5by7: ''
 mainVideo: '1031855284'
 introduction: >
   # French President Emmanuel Macron Gives Rare Sit-Down Interview About
