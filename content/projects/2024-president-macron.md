@@ -20,6 +20,11 @@ credits:
     name:
       - Paul Chauvin
 optionalBlocks:
+  - image: /uploads/cover_variety_macron_916_color.jpg
+    aspectRatioWidth: 9
+    aspectRatioHeight: 16
+    version: Medium
+    _template: singleImage
   - image: /uploads/variety_macron_169_olor.jpg
     aspectRatioWidth: 16
     aspectRatioHeight: 9
