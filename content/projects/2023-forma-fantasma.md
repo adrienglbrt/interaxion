@@ -25,6 +25,9 @@ introduction: >
   reveals an ambitious project dedicated to biodiversity in the heart of its
   vineyard."
 credits:
+  - label: Head of production
+    name:
+      - Sandrine Assenat
   - label: Photographer
     name:
       - Christophe Coënon
