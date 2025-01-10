@@ -44,6 +44,11 @@ credits:
     name:
       - Marc Thirouin
 optionalBlocks:
+  - image: /uploads/visuel_album_16_9_2.jpg
+    aspectRatioWidth: 9
+    aspectRatioHeight: 16
+    version: Medium
+    _template: singleImage
   - image: /uploads/visuel_album_16_9.jpg
     aspectRatioWidth: 9
     aspectRatioHeight: 16
