@@ -10,7 +10,7 @@ import {
 import { getVideoLoopDirectLinks } from "@/utils/vimeoQueries";
 import { GetStaticProps } from "next";
 import { useTina } from "tinacms/dist/react";
-import { Project } from "../../../tina/__generated__/types";
+import { PageWork, Project } from "../../../tina/__generated__/types";
 
 export default function Work({
   pageData,
@@ -24,7 +24,7 @@ export default function Work({
     data: pageData.data,
     variables: pageData.variables,
   });
-  const { page } = data;
+  const { page } = data as { page: PageWork };
 
   return (
     <>
@@ -35,10 +35,20 @@ export default function Work({
       />
       <Wrapper>
         <main className='pb-16'>
-          <div className='pt-16 lg:pt-24'>
-            <h1 className='font-serif tracking-wider text-6xl lg:text-7xl 2xl:text-8xl'>
-              {page.title}
-            </h1>
+          <div className='pt-16 lg:pt-32 xl:pt-48'>
+            <div className='flex max-lg:flex-col max-lg:items-start lg:grid lg:grid-cols-3 lg:gap-4 lg:items-end'>
+              <div className='lg:col-span-2'>
+                <h1 className='relative font-serif tracking-wider text-6xl sm:text-7xl lg:text-8xl 2xl:text-9xl lg:-bottom-[8px] 2xl:-bottom-[11px]'>
+                  {page.heading}
+                </h1>
+              </div>
+              <div className='pt-8 lg:col-start-3 '>
+                <h2 className='text-grey'>{page.timeframe}</h2>
+                <p className='pt-2 max-w-prose text-pretty'>
+                  {page.introduction}
+                </p>
+              </div>
+            </div>
           </div>
           {activeProjects && activeProjects.length > 0 && (
             <ProjectsGrid projects={activeProjects} />
