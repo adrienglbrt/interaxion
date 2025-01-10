@@ -12,6 +12,22 @@ mainImage:
 videoLoop:
   loop16by9: '1035133776'
   loop9by16: '1035134526'
-introduction: ''
+introduction: >
+  We produced the music video for the band Nouvelle Vague feat. Mélanie Pain
+
+
+  25 Years after the hit by Blur , Marc Thirouin and Melanie revisited this song
+  and shouted in the Paris area. 
+
+
+  Nouvelle Vague / Girls and Boys (Official Video - Blur cover) 
+
+  Performed by Nouvelle Vague & Mélanie Pain. Guitar: Olivier Libaux 
+
+
+  Written by: Damon Albarn, Graham Coxon, Alex James, David Rowntree  
+
+  Editeur : EMI Publishing France / Kobalt Music Publishing LTD, Warner Chappell
+  Music France
 ---
 
