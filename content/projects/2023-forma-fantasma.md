@@ -28,7 +28,7 @@ credits:
   - label: Head of production
     name:
       - Sandrine Assenat
-  - label: Photographer
+  - label: Photographer at Milan
     name:
       - Christophe Coënon
   - label: Director
