@@ -10,7 +10,7 @@ mainImage:
   image16by9: '/uploads/openspaces/Opensapces 16:9.jpg'
 mainVideo: '517052793'
 videoLoop:
-  loop16by9: '1041766106'
+  loop16by9: '1035130035'
   loop9by16: '1045489197'
 introduction: >
   We were asked to create an animated preview for the launch of the Open Spaces
