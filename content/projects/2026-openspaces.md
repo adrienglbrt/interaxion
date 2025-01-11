@@ -13,8 +13,7 @@ videoLoop:
   loop16by9: '1035130035'
   loop9by16: '1045489197'
 introduction: >
-  We were asked to create an animated preview for the launch of the Open Spaces
-  Magazine.
+  We created an animated preview for the launch of the Open Spaces Magazine.
 
 
   It's a print magazine focused on the intersection of art, travel, and the
