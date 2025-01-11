@@ -14,6 +14,9 @@ videoLoop:
   loop9by16: '1041755359'
 introduction: ''
 credits:
+  - label: Director
+    name:
+      - Marc Thirouin
   - label: Production
     name:
       - Production Berlin Group
