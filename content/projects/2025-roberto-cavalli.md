@@ -13,5 +13,9 @@ videoLoop:
   loop16by9: '1041754593'
   loop9by16: '1041755359'
 introduction: ''
+credits:
+  - label: Production
+    name:
+      - Production Berlin Group
 ---
 
