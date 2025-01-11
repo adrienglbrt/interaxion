@@ -23,6 +23,9 @@ introduction: >
   Japanese race car aficionado Mai Ikuzawa and her sons Arto and Milo, French
   dancer Bats aka Mamadou Bathily, and models Mao Xiaoxing and Mika Schneider.
 credits:
+  - label: Agency
+    name:
+      - WeSayHi
   - label: 'Director '
     name:
       - Marc Thirouin
