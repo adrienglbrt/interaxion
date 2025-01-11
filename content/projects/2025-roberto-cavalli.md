@@ -14,6 +14,7 @@ videoLoop:
   loop9by16: '1041755359'
 introduction: ''
 credits:
+  - label: Photographer
   - label: Agency
     name:
       - Mazarine New York
@@ -23,7 +24,7 @@ credits:
   - label: Director
     name:
       - Marc Thirouin
-  - label: Dop
+  - label: Director
     name:
       - Olivier Rebattet
 ---
