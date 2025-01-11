@@ -16,7 +16,19 @@ mainVideo: '1035130035'
 videoLoop:
   loop16by9: '1035130035'
   loop9by16: '1035130384'
-introduction: ''
+introduction: >
+  LookBook 2024 for the Brand Satisfy Running. With a multidisciplinary
+  expertise in design, music and technology, Satisfy is altering the perception
+  of running. 
+
+
+  "We make products that remove distractions and inspire. All garments are
+  designed and prototyped in our Paris Creative Studio and constructed from
+  fabrics developed in-house or from trusted suppliers. Our obsession with
+  quality comes from our belief that technical running apparel deserves
+  luxury-level care and craftsmanship. We take an essentialist approach to
+  design, meaning that every feature has a purpose. If a garment isn’t right for
+  running it doesn’t exist."
 credits:
   - label: Studio
     name:
