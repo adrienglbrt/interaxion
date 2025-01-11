@@ -14,14 +14,17 @@ videoLoop:
   loop9by16: '1041755359'
 introduction: ''
 credits:
-  - label: Dop
+  - label: Agency
     name:
-      - Olivier Rebattet
-  - label: Director
-    name:
-      - Marc Thirouin
+      - Mazarine New York
   - label: Production
     name:
       - Production Berlin Group
+  - label: Director
+    name:
+      - Marc Thirouin
+  - label: Dop
+    name:
+      - Olivier Rebattet
 ---
 
