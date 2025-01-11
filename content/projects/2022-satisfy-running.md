@@ -18,15 +18,18 @@ videoLoop:
   loop9by16: '1035130384'
 introduction: ''
 credits:
-  - label: Hair & Make up
+  - label: Studio
     name:
-      - Miwa Moroki
-  - label: Camera
-    name:
-      - Julien Borne
+      - A Ciel Ouvert / Paris
   - label: Dop
     name:
       - Thibaut de Chemellier
+  - label: Camera
+    name:
+      - Julien Borne
+  - label: Hair & Make up
+    name:
+      - Miwa Moroki
 optionalBlocks:
   - imageOne: /uploads/look_7_9_16triple.jpg
     imageTwo: /uploads/look_8_9_16triple.jpg
