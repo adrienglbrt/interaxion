@@ -30,6 +30,9 @@ introduction: >
   design, meaning that every feature has a purpose. If a garment isn’t right for
   running it doesn’t exist."
 credits:
+  - label: 'Supervising '
+    name:
+      - Anne Belleville
   - label: Creative
     name:
       - Brice Partouche
