@@ -14,14 +14,13 @@ videoLoop:
   loop9by16: '1041755359'
 introduction: ''
 credits:
-  - label: Photographer
   - label: Agency
     name:
       - Mazarine New York
   - label: Production
     name:
       - Production Berlin Group
-  - label: Director
+  - label: Photographer
     name:
       - Marc Thirouin
   - label: Director
