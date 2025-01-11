@@ -17,6 +17,10 @@ videoLoop:
   loop16by9: '1035130035'
   loop9by16: '1035130384'
 introduction: ''
+credits:
+  - label: Dop
+    name:
+      - Thibaut de Chemellier
 optionalBlocks:
   - imageOne: /uploads/look_7_9_16triple.jpg
     imageTwo: /uploads/look_8_9_16triple.jpg
