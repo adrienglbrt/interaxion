@@ -22,7 +22,11 @@ export default function NavEntryAlt({
         scroll={false}
       >
         <span>{children}</span>
-        {!isExternal && (
+        {isExternal ? (
+          <span className='absolute -right-4 text-lg inline-block opacity-0 group-hover:opacity-70 transition-all duration-300'>
+            ↗
+          </span>
+        ) : (
           <span
             className={`relative inline-block bg-white rounded-full size-[6px] transition-all duration-300 ${
               isActive ? "opacity-100" : "opacity-0 group-hover:opacity-70"
