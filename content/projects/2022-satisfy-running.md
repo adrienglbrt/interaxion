@@ -18,6 +18,9 @@ videoLoop:
   loop9by16: '1035130384'
 introduction: ''
 credits:
+  - label: Hair & Make up
+    name:
+      - Miwa Moroki
   - label: Camera
     name:
       - Julien Borne
