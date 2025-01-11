@@ -30,9 +30,9 @@ introduction: >
   design, meaning that every feature has a purpose. If a garment isn’t right for
   running it doesn’t exist."
 credits:
-  - label: Studio
+  - label: Creative
     name:
-      - A Ciel Ouvert / Paris
+      - Brice Partouche
   - label: Dop
     name:
       - Thibaut de Chemellier
@@ -42,6 +42,9 @@ credits:
   - label: Hair & Make up
     name:
       - Miwa Moroki
+  - label: Studio
+    name:
+      - A Ciel Ouvert / Paris
 optionalBlocks:
   - imageOne: /uploads/look_7_9_16triple.jpg
     imageTwo: /uploads/look_8_9_16triple.jpg
