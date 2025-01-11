@@ -18,6 +18,9 @@ videoLoop:
   loop9by16: '1035130384'
 introduction: ''
 credits:
+  - label: Camera
+    name:
+      - Julien Borne
   - label: Dop
     name:
       - Thibaut de Chemellier
