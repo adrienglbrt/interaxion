@@ -29,7 +29,9 @@ export default function NavEntryAlt({
         ) : (
           <span
             className={`relative inline-block bg-white rounded-full size-[6px] transition-all duration-300 ${
-              isActive ? "opacity-100" : "opacity-0 group-hover:opacity-70"
+              isActive
+                ? "opacity-100 group-hover:opacity-70"
+                : "opacity-0 group-hover:opacity-70"
             }`}
           />
         )}
