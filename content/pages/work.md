@@ -2,7 +2,9 @@
 title: Work
 heading: Selected work
 timeframe: ' '
-introduction: We don’t do everything. But we can do anything.
+introduction: |-
+  We believe brands have the power to transform everyday interactions into
+  elevated experiences through creativity, entertainment and inspiration.
 _template: Work
 ---
 
