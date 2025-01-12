@@ -15,6 +15,8 @@ mainVideo: '193349747'
 videoLoop:
   loop16by9: '1042105015'
   loop9by16: '1042105514'
-introduction: ''
+introduction: >
+  ## Iconic ambassadors join the Kering Foundation’s 5th annual White Ribbon for
+  Women campaign encouraging gen-Z to stop gender-based violence.
 ---
 
