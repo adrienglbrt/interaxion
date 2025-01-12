@@ -1,7 +1,7 @@
 ---
 title: Roberto Cavalli
 metaTitle: ''
-year: 2025
+year: 2023
 brand: Sweet Ferocious
 isActive: true
 isShowcased: true
