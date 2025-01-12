@@ -1,10 +1,10 @@
 ---
 title: White Ribbon
-year: 2019
+year: 2017
 brand: Kering Foundation
 isActive: true
 isShowcased: true
-showcaseOrder: 6
+showcaseOrder: 9
 mainImage:
   image16by9: >-
     /uploads/Kering foundation/Kelly Slater 16_9 - KERING FOUNDATION _ WHITE
