@@ -5,7 +5,7 @@ year: 2025
 brand: Sweet Ferocious
 isActive: true
 isShowcased: true
-showcaseOrder: 2
+showcaseOrder: 3
 mainImage:
   image16by9: '/uploads/Roberto Cavalli/16:9.jpg'
 mainVideo: '1041754593'
