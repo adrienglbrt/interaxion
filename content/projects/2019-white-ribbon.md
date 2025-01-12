@@ -19,6 +19,9 @@ introduction: >
   ## Iconic ambassadors join the Kering Foundation’s 5th annual White Ribbon for
   Women campaign encouraging gen-Z to stop gender-based violence. 
 credits:
+  - label: Dop
+    name:
+      - Thibault de Chemellier
   - label: Director
     name:
       - Benjamin Chartier
