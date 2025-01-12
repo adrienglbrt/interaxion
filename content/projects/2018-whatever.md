@@ -1,0 +1,10 @@
+---
+title: Whatever
+year: 2018
+brand: Epsilon
+isActive: true
+isShowcased: true
+mainImage:
+  image16by9: /uploads/epsylon_169.jpg
+---
+
