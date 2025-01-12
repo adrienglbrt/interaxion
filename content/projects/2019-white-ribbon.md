@@ -17,6 +17,10 @@ videoLoop:
   loop9by16: '1042105514'
 introduction: >
   ## Iconic ambassadors join the Kering Foundation’s 5th annual White Ribbon for
-  Women campaign encouraging gen-Z to stop gender-based violence.
+  Women campaign encouraging gen-Z to stop gender-based violence. 
+credits:
+  - label: Director
+    name:
+      - Benjamin Chartier
 ---
 
