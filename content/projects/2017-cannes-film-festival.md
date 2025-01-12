@@ -2,11 +2,11 @@
 title: Cannes Film Festival
 metaTitle: ''
 metaDescription: _
-year: 2017
+year: 2022
 brand: Women In Motion
 isActive: true
 isShowcased: true
-showcaseOrder: 6
+showcaseOrder: 4
 mainImage:
   image16by9: /uploads/women_In_motion_16_9bis.jpg
   image5by7: /uploads/women_In_motion_5_7bis.jpg
