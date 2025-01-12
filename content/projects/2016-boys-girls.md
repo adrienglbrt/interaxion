@@ -1,6 +1,6 @@
 ---
 title: Boys & Girls
-year: 2017
+year: 2019
 brand: Nouvelle Vague
 isActive: true
 isShowcased: true
