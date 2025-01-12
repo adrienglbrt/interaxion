@@ -8,9 +8,9 @@ isActive: true
 isShowcased: true
 showcaseOrder: 4
 mainImage:
-  image16by9: /uploads/women_In_motion_16_9bis.jpg
-  image5by7: /uploads/women_In_motion_5_7bis.jpg
-  image4by3: /uploads/women_In_motion_4_3bis.jpg
+  image16by9: /uploads/women_in_motion_16_9.png
+  image5by7: /uploads/women_in_motiion_5_7.png
+  image4by3: /uploads/women_in_motion_4_3.png
 mainVideo: '218039079'
 videoLoop:
   loop16by9: '1045492102'
