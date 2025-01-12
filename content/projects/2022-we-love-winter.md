@@ -1,10 +1,10 @@
 ---
 title: We Love Winter
-year: 2022
+year: 2020
 brand: Moncler
 isActive: true
 isShowcased: true
-showcaseOrder: 3
+showcaseOrder: 6
 mainImage:
   image16by9: /uploads/moncler/moncler_16_9.jpg
   image5by7: /uploads/moncler/moncler_5_7.jpg
