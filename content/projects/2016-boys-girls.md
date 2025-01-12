@@ -1,10 +1,10 @@
 ---
 title: Boys & Girls
-year: 2016
+year: 2017
 brand: Nouvelle Vague
 isActive: true
 isShowcased: true
-showcaseOrder: 8
+showcaseOrder: 7
 mainImage:
   image16by9: /uploads/nouvelle_vague_169.jpg
   image5by7: /uploads/nouvelle_vague_57.jpg
