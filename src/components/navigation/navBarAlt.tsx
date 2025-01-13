@@ -1,9 +1,10 @@
 import { useGlobal } from "@/utils/globalContext";
 import { useMobile } from "@/utils/mobileContext";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import Grid from "../layout/grid";
 import Wrapper from "../layout/wrapper";
-import NavEntry from "./navEntry";
+import Logo from "../ui/logo";
 import NavEntryAlt from "./navEntryAlt";
 
 export default function NavBarAlt() {
@@ -26,7 +27,13 @@ export default function NavBarAlt() {
       <Wrapper>
         <Grid>
           <div className='col-span-2 h-full flex items-center'>
-            <NavEntry href='/'>Interaxion</NavEntry>
+            <Link
+              href='/'
+              className='uppercase hover:opacity-70 transition-opacity duration-300'
+              scroll={false}
+            >
+              <Logo className='h-[14px] fill-current' />
+            </Link>
           </div>
           <div className='relative h-full flex items-center justify-between col-start-4 lg:col-start-7 col-span-3 lg:col-span-6'>
             <NavEntryAlt href='/work'>Work</NavEntryAlt>
