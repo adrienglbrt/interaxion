@@ -23,7 +23,7 @@ export default function NavEntryAlt({
       >
         <span>{children}</span>
         {isExternal ? (
-          <span className='absolute -right-4 text-lg inline-block opacity-0 group-hover:opacity-70 transition-all duration-300'>
+          <span className='absolute -right-4 text-xl inline-block opacity-0 group-hover:opacity-70 transition-all duration-300'>
             ↗
           </span>
         ) : (
