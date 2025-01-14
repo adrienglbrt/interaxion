@@ -344,6 +344,56 @@ const Project: Collection = {
             },
           ],
         },
+        {
+          name: "singleVideo",
+          label: "Single Video",
+          fields: [
+            {
+              name: "video",
+              type: "string",
+              label: "Video",
+              description: "Enter the Vimeo video ID",
+              required: true,
+            },
+            {
+              name: "version",
+              type: "string",
+              label: "Version",
+              required: true,
+              options: ["Horizontal", "Vertical"],
+            },
+          ],
+        },
+        {
+          name: "tripleVideo",
+          label: "Triple Video",
+          fields: [
+            {
+              name: "videoOne",
+              type: "string",
+              label: "Video 1",
+              description:
+                "Enter the Vimeo video ID. Use only for vertical videos. The videos must have the same aspect ratio.",
+              required: true,
+            },
+            {
+              name: "videoTwo",
+              type: "string",
+              label: "Video 2",
+              description:
+                "Enter the Vimeo video ID. Use only for vertical videos. The videos must have the same aspect ratio.",
+              required: true,
+            },
+            {
+              name: "videoThree",
+              type: "string",
+              label: "Video 3",
+              description:
+                "Enter the Vimeo video ID. Use only for vertical videos. The videos must have the same aspect ratio.",
+              required: true,
+            },
+          ],
+        },
       ],
     },
   ],
