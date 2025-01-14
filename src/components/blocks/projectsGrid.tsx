@@ -1,4 +1,4 @@
-import { ProjectWithDirectLinks } from "@/types/interfaces";
+import { ProjectWithDirectLinks } from "@/types/video";
 import { useEffect, useMemo, useState } from "react";
 import ProjectCard from "../ui/projectCard";
 

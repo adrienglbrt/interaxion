@@ -1,7 +1,8 @@
 import ProjectsGrid from "@/components/blocks/projectsGrid";
 import MetaTags from "@/components/layout/metaTags";
 import Wrapper from "@/components/layout/wrapper";
-import { PageProps, ProjectWithDirectLinks } from "@/types/interfaces";
+import { PageProps } from "@/types/interfaces";
+import { ProjectWithDirectLinks } from "@/types/video";
 import {
   getGlobalData,
   getPageData,

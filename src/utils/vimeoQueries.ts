@@ -1,4 +1,4 @@
-import { VideoDirectLinks, VideoLinkObject } from "@/types/interfaces";
+import { VideoDirectLinks, VideoLinkObject } from "@/types/video";
 import { Project } from "../../tina/__generated__/types";
 
 const VIMEO_ACCESS_TOKEN = process.env.VIMEO_ACCESS_TOKEN;

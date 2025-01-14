@@ -3,7 +3,6 @@ import {
   GlobalQueryVariables,
   PageQuery,
   PageQueryVariables,
-  Project,
   ProjectQuery,
   ProjectQueryVariables,
 } from "../../tina/__generated__/types";
@@ -26,17 +25,17 @@ export interface ProjectProps {
   variables: ProjectQueryVariables;
 }
 
-export interface VideoLinkObject {
-  link: string;
-  rendition: string;
-}
+// export interface VideoLinkObject {
+//   link: string;
+//   rendition: string;
+// }
 
-export interface VideoDirectLinks {
-  projectId: string;
-  linksLoop16by9?: VideoLinkObject[];
-  linksLoop9by16?: VideoLinkObject[];
-}
+// export interface VideoDirectLinks {
+//   projectId: string;
+//   linksLoop16by9?: VideoLinkObject[];
+//   linksLoop9by16?: VideoLinkObject[];
+// }
 
-export interface ProjectWithDirectLinks extends Project {
-  videoDirectLinks?: VideoDirectLinks;
-}
+// export interface ProjectWithDirectLinks extends Project {
+//   videoDirectLinks?: VideoDirectLinks;
+// }

@@ -1,6 +1,7 @@
 import Showcase from "@/components/blocks/showcase";
 import MetaTags from "@/components/layout/metaTags";
-import { PageProps, ProjectWithDirectLinks } from "@/types/interfaces";
+import { PageProps } from "@/types/interfaces";
+import { ProjectWithDirectLinks } from "@/types/video";
 import {
   getGlobalData,
   getPageData,

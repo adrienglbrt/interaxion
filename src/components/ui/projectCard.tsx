@@ -1,4 +1,4 @@
-import { ProjectWithDirectLinks } from "@/types/interfaces";
+import { ProjectWithDirectLinks } from "@/types/video";
 import { useMobile } from "@/utils/mobileContext";
 import { getVideoLinkByRendition } from "@/utils/vimeoQueries";
 import Image from "next/image";
