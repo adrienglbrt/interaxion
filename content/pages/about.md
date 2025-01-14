@@ -19,6 +19,9 @@ introductionText: >
   We cover every stage, from strategy to post-production, to ensure the success 
   of your marketing and communication campaigns. our seamless process 
   guarantees.
+
+
+  "We don’t do everything. But we can do anything."
 services:
   heading: Services
   content: |
@@ -100,6 +103,7 @@ socials:
   heading: Follow us
 colophon:
   copyright: Copyright © Interaxion 2024
-  credits: "Design by Korantin Grall, code by Adrien Galibert"
+  credits: 'Design by Korantin Grall, code by Adrien Galibert'
 _template: about
 ---
+
