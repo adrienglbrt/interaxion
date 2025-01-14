@@ -1,7 +1,7 @@
 import Showcase from "@/components/blocks/showcase";
 import MetaTags from "@/components/layout/metaTags";
 import { PageProps } from "@/types/interfaces";
-import { ProjectWithDirectLinks } from "@/types/video";
+import { ProjectWithLoopLinks } from "@/types/video";
 import {
   getGlobalData,
   getPageData,
@@ -17,7 +17,7 @@ export default function Home({
   activeShowcasedProjects,
 }: {
   pageData: PageProps;
-  activeShowcasedProjects: ProjectWithDirectLinks[];
+  activeShowcasedProjects: ProjectWithLoopLinks[];
 }) {
   const { data } = useTina({
     query: pageData.query,
@@ -66,8 +66,8 @@ export const getStaticProps: GetStaticProps = async () => {
     return {
       ...project,
       videoDirectLinks: {
-        linksLoop16by9: vimeoLinks?.linksLoop16by9,
-        linksLoop9by16: vimeoLinks?.linksLoop9by16,
+        loop16by9Links: vimeoLinks?.loop16by9Links,
+        loop9by16Links: vimeoLinks?.loop9by16Links,
       },
     };
   });

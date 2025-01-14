@@ -1,4 +1,4 @@
-import { VideoDirectLinks, VideoLinkObject } from "@/types/video";
+import { VideoLinkObject, VideoLoopLinks } from "@/types/video";
 import { Project } from "../../tina/__generated__/types";
 
 const VIMEO_ACCESS_TOKEN = process.env.VIMEO_ACCESS_TOKEN;
@@ -32,18 +32,18 @@ async function fetchVimeoDirectLinks(videoId: string) {
 
 export const getVideoLoopDirectLinks = async (projects: Project[]) => {
   try {
-    const results: VideoDirectLinks[] = await Promise.all(
+    const results: VideoLoopLinks[] = await Promise.all(
       projects.map(async (project) => {
         const { loop16by9, loop9by16 } = project.videoLoop || {};
 
-        const linksLoop16by9 = loop16by9
+        const loop16by9Links = loop16by9
           ? await fetchVimeoDirectLinks(loop16by9)
           : null;
-        const linksLoop9by16 = loop9by16
+        const loop9by16Links = loop9by16
           ? await fetchVimeoDirectLinks(loop9by16)
           : null;
 
-        return { projectId: project.id, linksLoop16by9, linksLoop9by16 };
+        return { projectId: project.id, loop16by9Links, loop9by16Links };
       })
     );
     return results;

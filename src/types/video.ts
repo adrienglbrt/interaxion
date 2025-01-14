@@ -5,12 +5,12 @@ export interface VideoLinkObject {
   rendition: string;
 }
 
-export interface VideoDirectLinks {
+export interface VideoLoopLinks {
   projectId: string;
-  linksLoop16by9?: VideoLinkObject[];
-  linksLoop9by16?: VideoLinkObject[];
+  loop16by9Links?: VideoLinkObject[];
+  loop9by16Links?: VideoLinkObject[];
 }
 
-export interface ProjectWithDirectLinks extends Project {
-  videoDirectLinks?: VideoDirectLinks;
+export interface ProjectWithLoopLinks extends Project {
+  videoDirectLinks?: VideoLoopLinks;
 }

@@ -1,4 +1,4 @@
-import { ProjectWithDirectLinks } from "@/types/interfaces";
+import { ProjectWithDirectLinks } from "@/types/video";
 import { useEffect, useRef, useState } from "react";
 import ShowcaseItem from "../ui/showcaseItem";
 
