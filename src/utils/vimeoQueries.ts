@@ -1,4 +1,8 @@
-import { VideoLinkObject, VideoLoopLinks } from "@/types/video";
+import {
+  OptionalVideoBlockWithLinks,
+  VideoLinkObject,
+  VideoLoopLinks,
+} from "@/types/video";
 import { Project } from "../../tina/__generated__/types";
 
 const VIMEO_ACCESS_TOKEN = process.env.VIMEO_ACCESS_TOKEN;
@@ -63,6 +67,64 @@ export const getMainVideoDirectLinks = async (project: Project) => {
   } catch (error) {
     console.error("Error fetching Vimeo main video links", error);
     return null;
+  }
+};
+
+export const getOptionalVideoDirectLinks = async (project: Project) => {
+  try {
+    if (!project.optionalBlocks) return [];
+
+    const videoBlockPromises = project.optionalBlocks.map(
+      async (block, index) => {
+        // Handle single video block
+        if (block?.__typename === "ProjectOptionalBlocksSingleVideo") {
+          const links = await fetchVimeoDirectLinks(block.video);
+
+          return {
+            blockIndex: index,
+            blockType: "single",
+            video: block.video,
+            version: block.version,
+            links,
+          };
+        }
+
+        // Handle triple video block
+        if (block?.__typename === "ProjectOptionalBlocksTripleVideo") {
+          const [videoOneLinks, videoTwoLinks, videoThreeLinks] =
+            await Promise.all([
+              fetchVimeoDirectLinks(block.videoOne),
+              fetchVimeoDirectLinks(block.videoTwo),
+              fetchVimeoDirectLinks(block.videoThree),
+            ]);
+
+          return {
+            blockIndex: index,
+            blockType: "triple",
+            videos: {
+              videoOne: block.videoOne,
+              videoTwo: block.videoTwo,
+              videoThree: block.videoThree,
+            },
+            links: {
+              videoOne: videoOneLinks,
+              videoTwo: videoTwoLinks,
+              videoThree: videoThreeLinks,
+            },
+          };
+        }
+
+        return null;
+      }
+    );
+
+    const results = await Promise.all(videoBlockPromises);
+    return results.filter(
+      (result): result is OptionalVideoBlockWithLinks => result !== null
+    );
+  } catch (error) {
+    console.error("Error fetching Vimeo optional video links:", error);
+    return [];
   }
 };
 
