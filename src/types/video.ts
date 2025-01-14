@@ -36,7 +36,7 @@ export interface OptionalTripleVideoBlockWithLinks {
 
 export type OptionalVideoBlockWithLinks =
   | OptionalSingleVideoBlockWithLinks
-  | OptionalSingleVideoBlockWithLinks;
+  | OptionalTripleVideoBlockWithLinks;
 
 export interface ProjectWithLoopLinks extends Project {
   videoDirectLinks?: VideoLoopLinks;

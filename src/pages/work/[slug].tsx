@@ -33,8 +33,6 @@ export default function Project({
 
   const project = data.project as Project;
 
-  console.log(optionalVideoDirectLinks);
-
   return (
     <>
       <MetaTags
@@ -52,7 +50,10 @@ export default function Project({
             <Grid>
               <ProjectIntroduction project={project} />
               {project.optionalBlocks && project.optionalBlocks.length > 0 && (
-                <ProjectOptionalBlocks blocks={project.optionalBlocks} />
+                <ProjectOptionalBlocks
+                  blocks={project.optionalBlocks}
+                  optionalVideoDirectLinks={optionalVideoDirectLinks}
+                />
               )}
             </Grid>
           </div>
