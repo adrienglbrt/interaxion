@@ -4,7 +4,7 @@ metaTitle: ''
 year: 2023
 brand: Sweet Ferocious
 isActive: true
-isShowcased: true
+isShowcased: false
 showcaseOrder: 3
 mainImage:
   image16by9: '/uploads/Roberto Cavalli/16:9.jpg'
