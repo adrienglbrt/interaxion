@@ -23,5 +23,11 @@ credits:
   - label: Motion Graphic
     name:
       - Jeremie Vial
+optionalBlocks:
+  - image: /uploads/openspaces_169_P1.jpg
+    aspectRatioWidth: 16
+    aspectRatioHeight: 9
+    version: Large
+    _template: singleImage
 ---
 
