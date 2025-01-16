@@ -130,7 +130,6 @@ export default function VideoLoop({
               alt=''
               fill
               sizes='33vw'
-              quality={40}
               className='object-cover'
             />
           </motion.div>
