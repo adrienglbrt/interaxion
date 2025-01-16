@@ -60,6 +60,7 @@ export default function ProjectCard({
           <VideoLoop
             videoSrc={videoSrc}
             isPortrait={aspectRatio === "140%"}
+            isInProjectCard
             fallbackImage={
               aspectRatio === "56.25%"
                 ? project.mainImage.image16by9

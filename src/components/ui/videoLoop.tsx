@@ -7,10 +7,12 @@ export default function VideoLoop({
   videoSrc,
   isPortrait,
   fallbackImage,
+  isInProjectCard,
 }: {
   videoSrc: { src16by9: string; src9by16: string };
   isPortrait: boolean;
   fallbackImage: string;
+  isInProjectCard?: boolean;
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -129,8 +131,11 @@ export default function VideoLoop({
               src={fallbackImage}
               alt=''
               fill
-              sizes='33vw'
-              quality={40}
+              sizes={
+                isInProjectCard
+                  ? "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  : "33vw"
+              }
               className='object-cover'
             />
           </motion.div>
