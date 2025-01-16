@@ -102,7 +102,7 @@ contact:
 socials:
   heading: Follow us
 colophon:
-  copyright: Copyright © Interaxion 2024
+  copyright: Copyright © Interaxion
   credits: 'Design by Korantin Grall, code by Adrien Galibert'
 _template: about
 ---
