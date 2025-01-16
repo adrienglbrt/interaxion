@@ -7,7 +7,7 @@ isActive: true
 isShowcased: true
 showcaseOrder: 10
 mainImage:
-  image16by9: '/uploads/openspaces/Opensapces 16:9.jpg'
+  image16by9: /uploads/openspaces_169_cover.jpg
 mainVideo: '517052793'
 videoLoop:
   loop16by9: '1041766106'
