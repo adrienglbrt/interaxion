@@ -24,12 +24,12 @@ credits:
     name:
       - Jeremie Vial
 optionalBlocks:
-  - image: /uploads/openspaces_169_P2.jpg
+  - image: /uploads/openspaces_169_P1.jpg
     aspectRatioWidth: 16
     aspectRatioHeight: 9
     version: Large
     _template: singleImage
-  - image: /uploads/openspaces_169_P1.jpg
+  - image: /uploads/openspaces_169_P2.jpg
     aspectRatioWidth: 16
     aspectRatioHeight: 9
     version: Large
