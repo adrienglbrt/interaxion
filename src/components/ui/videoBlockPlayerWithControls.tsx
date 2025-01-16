@@ -236,7 +236,7 @@ export default function VideoBlockPlayerWithControls({
 
   return (
     <div className='relative w-full h-full' ref={containerRef}>
-      <div onClick={togglePlay}>
+      <div onClick={togglePlay} className='cursor-pointer'>
         <AnimatePresence>{isLoading && <Loader />}</AnimatePresence>
         <motion.video
           ref={videoRef}
