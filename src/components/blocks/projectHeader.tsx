@@ -77,7 +77,7 @@ export default function ProjectHeader({
             className='absolute inset-0 flex items-center justify-center z-10'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 1.2 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
           >
             <button
               onClick={openModal}
