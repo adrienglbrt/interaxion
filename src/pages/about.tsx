@@ -97,23 +97,31 @@ export default function About({ pageData }: { pageData: PageProps }) {
 
             <div className='col-span-6 sm:col-start-2 sm:col-span-4 lg:col-start-7 lg:col-span-5 pt-10 lg:pt-20'>
               <h2 className='text-grey'>{page.socials.heading}</h2>
-              <ul className='pt-4 leading-relaxed'>
-                <li>
+              <ul className='pt-4 leading-relaxed flex flex-col items-start'>
+                <li className='inline-block'>
                   <Link
                     href={socials?.instagram.url}
                     target='_blank'
-                    className='hover:opacity-70 transition-opacity duration-300'
+                    rel='noopener noreferrer'
+                    className='relative group hover:opacity-70 transition-opacity duration-300'
                   >
                     {socials?.instagram.label}
+                    <span className='absolute -right-4 inline-block opacity-0 group-hover:opacity-70 transition-all duration-300'>
+                      ↗
+                    </span>
                   </Link>
                 </li>
-                <li>
+                <li className='inline-block'>
                   <Link
                     href={socials?.linkedin.url}
                     target='_blank'
-                    className='hover:opacity-70 transition-opacity duration-300'
+                    rel='noopener noreferrer'
+                    className='relative group hover:opacity-70 transition-opacity duration-300'
                   >
                     {socials?.linkedin.label}
+                    <span className='absolute -right-4 inline-block opacity-0 group-hover:opacity-70 transition-all duration-300'>
+                      ↗
+                    </span>
                   </Link>
                 </li>
               </ul>
@@ -122,7 +130,7 @@ export default function About({ pageData }: { pageData: PageProps }) {
             {(page.colophon?.copyright || page.colophon?.credits) && (
               <div className='col-span-6 sm:col-start-2 sm:col-span-4 lg:col-start-7 lg:col-span-5 pt-10 lg:pt-20 text-grey opacity-60'>
                 <p>
-                  {page.colophon.copyright} {currentYear}{" "}
+                  {page.colophon.copyright} {currentYear}
                 </p>
                 <p>{page.colophon.credits}</p>
               </div>
