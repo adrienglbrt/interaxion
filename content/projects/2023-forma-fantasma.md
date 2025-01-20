@@ -38,6 +38,11 @@ credits:
     name:
       - Sandrine Assenat
 optionalBlocks:
+  - video: '1013445112'
+    version: Horizontal
+    aspectRatioWidth: 16
+    aspectRatioHeight: 9
+    _template: singleVideo
   - imageOne: /uploads/papillon_9_16.jpg
     imageTwo: /uploads/ceramique_vertical_9_16.jpg
     imageThree: /uploads/cocinelle_9_16_1.jpg
