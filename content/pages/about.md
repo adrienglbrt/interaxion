@@ -43,59 +43,59 @@ clients:
   heading: Clients
   content: |
     Saint Laurent 
-    -
+
     Moncler
-    -
+
     Perrier-Jouët
-    -
+
     Balenciaga
-    -
+
     Mumm
-    -
+
     Boucheron
-    -
+
     Pomellato
-    -
+
     MB&F
-    -
+
     Massimo Dutti
-    -
+
     Louis Vuitton
-    -
+
     Chanel
-    -
+
     Lacoste
-    -
+
     Satisfy Running
-    -
+
     Volkswagen
-    -
+
     Volvo
-    -
+
     BlaBlacCar
-    -
+
     BMW
-    -
+
     Harley-Davidson
-    -
+
     Nike
-    -
+
     Red Bull
-    -
+
     Quiksilver
-    -
+
     Physiodermie
-    -
+
     Variety 
-    -
+
     BNP Paribas
-    -
+
     Converse
-    -
+
     Calrsberg
-    -
+
     Burton
-    -
+
     Nespresso
 contact:
   heading: Contact
