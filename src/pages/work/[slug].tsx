@@ -4,9 +4,13 @@ import ProjectOptionalBlocks from "@/components/blocks/projectOptionalBlocks";
 import Grid from "@/components/layout/grid";
 import MetaTags from "@/components/layout/metaTags";
 import Wrapper from "@/components/layout/wrapper";
-import { ProjectProps, VideoLinkObject } from "@/types/interfaces";
+import { ProjectProps } from "@/types/interfaces";
+import { OptionalVideoBlockWithLinks, VideoLinkObject } from "@/types/video";
 import { getGlobalData, getProjectData } from "@/utils/dataQueries";
-import { getMainVideoDirectLinks } from "@/utils/vimeoQueries";
+import {
+  getMainVideoDirectLinks,
+  getOptionalVideoDirectLinks,
+} from "@/utils/vimeoQueries";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { useTina } from "tinacms/dist/react";
 import client from "../../../tina/__generated__/client";
@@ -15,9 +19,11 @@ import type { Project } from "../../../tina/__generated__/types";
 export default function Project({
   projectData,
   mainVideoDirectLinks,
+  optionalVideoDirectLinks,
 }: {
   projectData: ProjectProps;
   mainVideoDirectLinks: VideoLinkObject[];
+  optionalVideoDirectLinks: OptionalVideoBlockWithLinks[];
 }) {
   const { data } = useTina({
     query: projectData.query,
@@ -44,7 +50,10 @@ export default function Project({
             <Grid>
               <ProjectIntroduction project={project} />
               {project.optionalBlocks && project.optionalBlocks.length > 0 && (
-                <ProjectOptionalBlocks blocks={project.optionalBlocks} />
+                <ProjectOptionalBlocks
+                  blocks={project.optionalBlocks}
+                  optionalVideoDirectLinks={optionalVideoDirectLinks}
+                />
               )}
             </Grid>
           </div>
@@ -64,11 +73,19 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     getGlobalData(),
   ]);
 
-  const mainVideoDirectLinks = await getMainVideoDirectLinks(
-    projectData.data.project as Project
-  );
+  const [mainVideoDirectLinks, optionalVideoDirectLinks] = await Promise.all([
+    getMainVideoDirectLinks(projectData.data.project as Project),
+    getOptionalVideoDirectLinks(projectData.data.project as Project),
+  ]);
 
-  return { props: { projectData, globalData, mainVideoDirectLinks } };
+  return {
+    props: {
+      projectData,
+      globalData,
+      mainVideoDirectLinks,
+      optionalVideoDirectLinks,
+    },
+  };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {

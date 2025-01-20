@@ -1,7 +1,8 @@
 import ProjectsGrid from "@/components/blocks/projectsGrid";
 import MetaTags from "@/components/layout/metaTags";
 import Wrapper from "@/components/layout/wrapper";
-import { PageProps, ProjectWithDirectLinks } from "@/types/interfaces";
+import { PageProps } from "@/types/interfaces";
+import { ProjectWithLoopLinks } from "@/types/video";
 import {
   getGlobalData,
   getPageData,
@@ -17,7 +18,7 @@ export default function Work({
   activeProjects,
 }: {
   pageData: PageProps;
-  activeProjects: ProjectWithDirectLinks[];
+  activeProjects: ProjectWithLoopLinks[];
 }) {
   const { data } = useTina({
     query: pageData.query,
@@ -89,8 +90,8 @@ export const getStaticProps: GetStaticProps = async () => {
     return {
       ...project,
       videoDirectLinks: {
-        linksLoop16by9: vimeoLinks?.linksLoop16by9,
-        linksLoop9by16: vimeoLinks?.linksLoop9by16,
+        loop16by9Links: vimeoLinks?.loop16by9Links,
+        loop9by16Links: vimeoLinks?.loop9by16Links,
       },
     };
   });

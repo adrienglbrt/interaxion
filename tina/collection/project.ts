@@ -344,6 +344,86 @@ const Project: Collection = {
             },
           ],
         },
+        {
+          name: "singleVideo",
+          label: "Single Video",
+          fields: [
+            {
+              name: "video",
+              type: "string",
+              label: "Video",
+              description: "Enter the Vimeo video ID",
+              required: true,
+            },
+            {
+              name: "version",
+              type: "string",
+              label: "Version",
+              required: true,
+              options: ["Horizontal", "Vertical"],
+            },
+            {
+              name: "aspectRatioWidth",
+              type: "number",
+              label: "Aspect Ratio Width",
+              description: "For instance, for a 16:9 aspect ratio, enter 16.",
+              required: true,
+            },
+            {
+              name: "aspectRatioHeight",
+              type: "number",
+              label: "Aspect Ratio Height",
+              description: "For instance, for a 16:9 aspect ratio, enter 9.",
+              required: true,
+            },
+          ],
+        },
+        {
+          name: "tripleVideo",
+          label: "Triple Video",
+          fields: [
+            {
+              name: "videoOne",
+              type: "string",
+              label: "Video 1",
+              description:
+                "Enter the Vimeo video ID. Use only for vertical videos.",
+              required: true,
+            },
+            {
+              name: "videoTwo",
+              type: "string",
+              label: "Video 2",
+              description:
+                "Enter the Vimeo video ID. Use only for vertical videos.",
+              required: true,
+            },
+            {
+              name: "videoThree",
+              type: "string",
+              label: "Video 3",
+              description:
+                "Enter the Vimeo video ID. Use only for vertical videos.",
+              required: true,
+            },
+            {
+              name: "aspectRatioWidth",
+              type: "number",
+              label: "Aspect Ratio Width",
+              description:
+                "For instance, for a 9:16 aspect ratio, enter 9. The 3 videos must have the same aspect ratio.",
+              required: true,
+            },
+            {
+              name: "aspectRatioHeight",
+              type: "number",
+              label: "Aspect Ratio Height",
+              description:
+                "For instance, for a 9:16 aspect ratio, enter 16. The 3 videos must have the same aspect ratio.",
+              required: true,
+            },
+          ],
+        },
       ],
     },
   ],
