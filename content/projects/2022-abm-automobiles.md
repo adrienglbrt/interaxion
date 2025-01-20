@@ -11,9 +11,6 @@ mainImage:
   alt: Alt test
 introduction: ''
 credits:
-  - label: Agency
-    name:
-      - Wieden & Kennedy
   - label: Director
     name:
       - Evelyne Kamarad
