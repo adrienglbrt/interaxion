@@ -37,8 +37,8 @@ services:
     * Live Talk
     * Production Executive
     * Studio IA
-image: /uploads/office_space.jpg
-imageAlt: View of the Interaxion office
+image: /uploads/_office_life.jpg
+imageAlt: Interaxion office
 clients:
   heading: Our clients
   content: |-
