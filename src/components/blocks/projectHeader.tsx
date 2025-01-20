@@ -1,4 +1,4 @@
-import { VideoLinkObject } from "@/types/interfaces";
+import { VideoLinkObject } from "@/types/video";
 import { getVideoLinkByRendition } from "@/utils/vimeoQueries";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Play } from "lucide-react";

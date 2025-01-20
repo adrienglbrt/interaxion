@@ -1,4 +1,4 @@
-import { ProjectWithDirectLinks } from "@/types/interfaces";
+import { ProjectWithLoopLinks } from "@/types/video";
 import { useMobile } from "@/utils/mobileContext";
 import { getVideoLinkByRendition } from "@/utils/vimeoQueries";
 import Image from "next/image";
@@ -13,26 +13,26 @@ export default function ShowcaseItem({
   activeSlide,
   index,
 }: {
-  project: ProjectWithDirectLinks;
+  project: ProjectWithLoopLinks;
   activeSlide: number;
   index: number;
 }) {
   const { isMobile } = useMobile();
   const hasLoopVideo =
     project.videoDirectLinks &&
-    project.videoDirectLinks?.linksLoop16by9 &&
-    project.videoDirectLinks?.linksLoop9by16;
+    project.videoDirectLinks?.loop16by9Links &&
+    project.videoDirectLinks?.loop9by16Links;
 
   const videoSrc = useMemo(() => {
     if (!hasLoopVideo) return null;
 
     return {
       src16by9: getVideoLinkByRendition(
-        project.videoDirectLinks?.linksLoop16by9 ?? [],
+        project.videoDirectLinks?.loop16by9Links ?? [],
         "adaptive"
       ),
       src9by16: getVideoLinkByRendition(
-        project.videoDirectLinks?.linksLoop9by16 ?? [],
+        project.videoDirectLinks?.loop9by16Links ?? [],
         "adaptive"
       ),
     };

@@ -1,4 +1,8 @@
-import { VideoDirectLinks, VideoLinkObject } from "@/types/interfaces";
+import {
+  OptionalVideoBlockWithLinks,
+  VideoLinkObject,
+  VideoLoopLinks,
+} from "@/types/video";
 import { Project } from "../../tina/__generated__/types";
 
 const VIMEO_ACCESS_TOKEN = process.env.VIMEO_ACCESS_TOKEN;
@@ -32,18 +36,18 @@ async function fetchVimeoDirectLinks(videoId: string) {
 
 export const getVideoLoopDirectLinks = async (projects: Project[]) => {
   try {
-    const results: VideoDirectLinks[] = await Promise.all(
+    const results: VideoLoopLinks[] = await Promise.all(
       projects.map(async (project) => {
         const { loop16by9, loop9by16 } = project.videoLoop || {};
 
-        const linksLoop16by9 = loop16by9
+        const loop16by9Links = loop16by9
           ? await fetchVimeoDirectLinks(loop16by9)
           : null;
-        const linksLoop9by16 = loop9by16
+        const loop9by16Links = loop9by16
           ? await fetchVimeoDirectLinks(loop9by16)
           : null;
 
-        return { projectId: project.id, linksLoop16by9, linksLoop9by16 };
+        return { projectId: project.id, loop16by9Links, loop9by16Links };
       })
     );
     return results;
@@ -63,6 +67,64 @@ export const getMainVideoDirectLinks = async (project: Project) => {
   } catch (error) {
     console.error("Error fetching Vimeo main video links", error);
     return null;
+  }
+};
+
+export const getOptionalVideoDirectLinks = async (project: Project) => {
+  try {
+    if (!project.optionalBlocks) return [];
+
+    const videoBlockPromises = project.optionalBlocks.map(
+      async (block, index) => {
+        // Handle single video block
+        if (block?.__typename === "ProjectOptionalBlocksSingleVideo") {
+          const links = await fetchVimeoDirectLinks(block.video);
+
+          return {
+            blockIndex: index,
+            blockType: "single",
+            video: block.video,
+            version: block.version,
+            links,
+          };
+        }
+
+        // Handle triple video block
+        if (block?.__typename === "ProjectOptionalBlocksTripleVideo") {
+          const [videoOneLinks, videoTwoLinks, videoThreeLinks] =
+            await Promise.all([
+              fetchVimeoDirectLinks(block.videoOne),
+              fetchVimeoDirectLinks(block.videoTwo),
+              fetchVimeoDirectLinks(block.videoThree),
+            ]);
+
+          return {
+            blockIndex: index,
+            blockType: "triple",
+            videos: {
+              videoOne: block.videoOne,
+              videoTwo: block.videoTwo,
+              videoThree: block.videoThree,
+            },
+            links: {
+              videoOne: videoOneLinks,
+              videoTwo: videoTwoLinks,
+              videoThree: videoThreeLinks,
+            },
+          };
+        }
+
+        return null;
+      }
+    );
+
+    const results = await Promise.all(videoBlockPromises);
+    return results.filter(
+      (result): result is OptionalVideoBlockWithLinks => result !== null
+    );
+  } catch (error) {
+    console.error("Error fetching Vimeo optional video links:", error);
+    return [];
   }
 };
 

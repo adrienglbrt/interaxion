@@ -1,16 +1,16 @@
-import { ProjectWithDirectLinks } from "@/types/interfaces";
+import { ProjectWithLoopLinks } from "@/types/video";
 import { useEffect, useMemo, useState } from "react";
 import ProjectCard from "../ui/projectCard";
 
 type ProjectWithAspectRatio = {
-  project: ProjectWithDirectLinks;
+  project: ProjectWithLoopLinks;
   aspectRatio: string;
 };
 
 export default function ProjectsGrid({
   projects,
 }: {
-  projects: ProjectWithDirectLinks[];
+  projects: ProjectWithLoopLinks[];
 }) {
   const [columns, setColumns] = useState(1);
 

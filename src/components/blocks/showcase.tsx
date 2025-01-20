@@ -1,4 +1,4 @@
-import { ProjectWithDirectLinks } from "@/types/interfaces";
+import { ProjectWithLoopLinks } from "@/types/video";
 import { useEffect, useRef, useState } from "react";
 import ShowcaseItem from "../ui/showcaseItem";
 
@@ -36,7 +36,7 @@ function useIntersectionObserver(setActiveSlide: (index: number) => void) {
 export default function Showcase({
   activeShowcasedProjects,
 }: {
-  activeShowcasedProjects: ProjectWithDirectLinks[];
+  activeShowcasedProjects: ProjectWithLoopLinks[];
 }) {
   const [activeSlide, setActiveSlide] = useState(0);
   const containerRef = useIntersectionObserver(setActiveSlide);
@@ -53,7 +53,7 @@ export default function Showcase({
             <ShowcaseItem
               key={project?.title}
               index={index}
-              project={project as ProjectWithDirectLinks}
+              project={project as ProjectWithLoopLinks}
               activeSlide={activeSlide}
             />
           );
