@@ -41,62 +41,62 @@ image: /uploads/_office_life.jpg
 imageAlt: Interaxion office
 clients:
   heading: Our clients
-  content: |-
+  content: |
     Saint Laurent 
+    -
+    Moncler
     -
     Perrier-Jouët
     -
-    Massimo Dutti
-    -
-    MB&F
-    -
-    VW
-    -
-    Physiodermie
-    -
-    Variety 
-
-    Moncler
-    -
-    Satisfy Running
-    -
-    Chanel
-    -
-    Volvo
-    -
-    BlaBlacCar
-    -
-    Nike
-    -
-    BMW
-    -
-    BNP Paribas
-
-    Red Bull
-    -
-    Quiksilver
-    -
-    Converse
-    -
-    Calrsberg
-    -
-    Lacoste
-    -
-    Harley Davidson
-    -
-    Burton
-
-    Mumm
-    -
     Balenciaga
+    -
+    Mumm
     -
     Boucheron
     -
     Pomellato
     -
-    Nespresso
+    MB&F
+    -
+    Massimo Dutti
     -
     Louis Vuitton
+    -
+    Chanel
+    -
+    Lacoste
+    -
+    Satisfy Running
+    -
+    Volkswagen
+    -
+    Volvo
+    -
+    BlaBlacCar
+    -
+    BMW
+    -
+    Harley-Davidson
+    -
+    Nike
+    -
+    Red Bull
+    -
+    Quiksilver
+    -
+    Physiodermie
+    -
+    Variety 
+    -
+    BNP Paribas
+    -
+    Converse
+    -
+    Calrsberg
+    -
+    Burton
+    -
+    Nespresso
 contact:
   heading: Contact
 socials:
