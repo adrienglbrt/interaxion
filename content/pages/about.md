@@ -40,7 +40,7 @@ services:
 image: /uploads/_office_life.jpg
 imageAlt: Interaxion office
 clients:
-  heading: Our clients
+  heading: Clients
   content: |
     Saint Laurent 
     -
