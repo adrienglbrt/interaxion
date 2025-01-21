@@ -14,10 +14,9 @@ credits:
   - label: Director
     name:
       - Evelyne Kamarad
-  - label: Sound design
+  - label: Photographer
     name:
-      - Marcel Doe
-      - Nathalie Huizenga
+      - Gilles Uzan / Garagism
 optionalBlocks:
   - imageOne: /uploads/porsche/porsche_case_dual_5_7-1.jpg
     imageTwo: /uploads/porsche/porsche_case_dual_5_7-2.jpg
