@@ -11,5 +11,12 @@ mainImage:
   image4by3: '/uploads/Md Mallorca man 4:3.jpg'
 mainVideo: '757989333'
 introduction: ''
+optionalBlocks:
+  - videoOne: '1048826900'
+    videoTwo: '1048828910'
+    videoThree: '1048829287'
+    aspectRatioWidth: 9
+    aspectRatioHeight: 16
+    _template: tripleVideo
 ---
 
