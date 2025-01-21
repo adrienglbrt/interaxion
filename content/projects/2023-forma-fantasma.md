@@ -82,7 +82,7 @@ optionalBlocks:
   - image: /uploads/KV_brut_16_9.jpg
     aspectRatioWidth: 16
     aspectRatioHeight: 9
-    version: Medium
+    version: Large
     _template: singleImage
 ---
 
