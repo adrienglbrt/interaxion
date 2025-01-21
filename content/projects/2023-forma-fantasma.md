@@ -69,16 +69,16 @@ optionalBlocks:
     aspectRatioWidth: 9
     aspectRatioHeight: 16
     _template: singleVideo
-  - imageOne: /uploads/nature_plant_9_16.jpg
-    imageTwo: /uploads/nature_plant_9_16_bis2.jpg
-    aspectRatioWidth: 9
-    aspectRatioHeight: 16
-    _template: dualImage
   - image: /uploads/Portrait_FF_16_9_interior.jpg
     aspectRatioWidth: 16
     aspectRatioHeight: 9
     version: Large
     _template: singleImage
+  - imageOne: /uploads/nature_plant_9_16.jpg
+    imageTwo: /uploads/nature_plant_9_16_bis2.jpg
+    aspectRatioWidth: 9
+    aspectRatioHeight: 16
+    _template: dualImage
   - image: /uploads/KV_brut_16_9.jpg
     aspectRatioWidth: 16
     aspectRatioHeight: 9
