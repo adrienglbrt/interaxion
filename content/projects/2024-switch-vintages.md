@@ -10,5 +10,9 @@ mainImage:
   image4by3: '/uploads/PJ vintage 4:3.jpg'
 mainVideo: '941208011'
 introduction: ''
+credits:
+  - label: Dop
+    name:
+      - Julien Borne
 ---
 
