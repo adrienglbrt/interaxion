@@ -29,7 +29,7 @@ optionalBlocks:
   - image: /uploads/antoine_G_169.jpg
     aspectRatioWidth: 16
     aspectRatioHeight: 9
-    version: Medium
+    version: Large
     _template: singleImage
   - image: /uploads/kelly_S_169.jpg
     aspectRatioWidth: 16
