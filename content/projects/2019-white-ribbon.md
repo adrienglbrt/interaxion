@@ -26,6 +26,11 @@ credits:
     name:
       - Benjamin Chartier
 optionalBlocks:
+  - image: /uploads/kelly_S_169.jpg
+    aspectRatioWidth: 16
+    aspectRatioHeight: 9
+    version: Medium
+    _template: singleImage
   - image: /uploads/antoine_G_169.jpg
     aspectRatioWidth: 16
     aspectRatioHeight: 9
