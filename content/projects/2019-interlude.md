@@ -30,5 +30,11 @@ credits:
   - label: 'photographer '
     name:
       - Quentin Debriey
+optionalBlocks:
+  - video: '1048823316'
+    version: Vertical
+    aspectRatioWidth: 9
+    aspectRatioHeight: 16
+    _template: singleVideo
 ---
 
