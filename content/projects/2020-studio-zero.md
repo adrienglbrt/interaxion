@@ -10,5 +10,11 @@ mainImage:
   image4by3: '/uploads/md studio paris 4:3.jpg'
 mainVideo: '678835698'
 introduction: ''
+optionalBlocks:
+  - video: '1048821216'
+    version: Vertical
+    aspectRatioWidth: 9
+    aspectRatioHeight: 16
+    _template: singleVideo
 ---
 
