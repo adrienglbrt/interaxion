@@ -363,6 +363,14 @@ const Project: Collection = {
               options: ["Horizontal", "Vertical"],
             },
             {
+              name: "autoplay",
+              type: "boolean",
+              label: "Autoplay",
+              description:
+                "If checked, the video will start playing automatically, without sound nor controls.",
+              required: false,
+            },
+            {
               name: "aspectRatioWidth",
               type: "number",
               label: "Aspect Ratio Width",
