@@ -18,7 +18,7 @@ optionalBlocks:
   - image: /uploads/porsche_team_red.jpg
     aspectRatioWidth: 16
     aspectRatioHeight: 9
-    version: Medium
+    version: Large
     _template: singleImage
   - imageOne: /uploads/porsche/porsche_case_dual_5_7-1.jpg
     imageTwo: /uploads/porsche/porsche_case_dual_5_7-2.jpg
