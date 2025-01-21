@@ -29,7 +29,7 @@ optionalBlocks:
   - image: /uploads/porsche/porsche_case_single_4_3.jpg
     aspectRatioWidth: 4
     aspectRatioHeight: 3
-    version: Small
+    version: Large
     _template: singleImage
   - imageOne: /uploads/porsche/porsche_case_triple_5_7-1.jpg
     imageTwo: /uploads/porsche/porsche_case_triple_5_7-2.jpg
