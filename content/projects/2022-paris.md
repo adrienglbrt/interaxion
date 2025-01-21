@@ -10,5 +10,11 @@ mainImage:
   image4by3: '/uploads/Massimo Dutti WoMen  4:3.jpg'
 mainVideo: '672659177'
 introduction: ''
+optionalBlocks:
+  - video: '1048819446'
+    version: Vertical
+    aspectRatioWidth: 9
+    aspectRatioHeight: 16
+    _template: singleVideo
 ---
 
