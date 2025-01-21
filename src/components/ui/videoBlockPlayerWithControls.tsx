@@ -63,10 +63,7 @@ export default function VideoBlockPlayerWithControls({
         });
 
         hls.on(Hls.Events.MANIFEST_PARSED, () => {
-          videoElement.play().catch((error) => {
-            console.error("Autoplay failed:", error);
-            setIsLoading(false);
-          });
+          handleVideoReady();
         });
 
         hls.loadSource(videoSrc);
@@ -89,10 +86,7 @@ export default function VideoBlockPlayerWithControls({
         videoElement.addEventListener("canplay", handleVideoReady);
         videoElement.addEventListener("play", handleVideoReady);
 
-        videoElement.play().catch((error) => {
-          console.error("Autoplay failed:", error);
-          setIsLoading(false);
-        });
+        handleVideoReady();
 
         return () => {
           videoElement.removeEventListener("canplay", handleVideoReady);
