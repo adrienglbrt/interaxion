@@ -35,5 +35,11 @@ credits:
   - label: Dop
     name:
       - Olivier Rebattet
+optionalBlocks:
+  - video: '1048834159'
+    version: Vertical
+    aspectRatioWidth: 9
+    aspectRatioHeight: 16
+    _template: singleVideo
 ---
 
