@@ -77,7 +77,7 @@ optionalBlocks:
   - image: /uploads/Portrait_FF_16_9_interior.jpg
     aspectRatioWidth: 16
     aspectRatioHeight: 9
-    version: Medium
+    version: Large
     _template: singleImage
   - image: /uploads/KV_brut_16_9.jpg
     aspectRatioWidth: 16
