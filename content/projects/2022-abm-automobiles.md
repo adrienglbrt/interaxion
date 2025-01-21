@@ -11,9 +11,6 @@ mainImage:
   alt: Alt test
 introduction: ''
 credits:
-  - label: Director
-    name:
-      - Evelyne Kamarad
   - label: Photographer
     name:
       - Gilles Uzan / Garagism
