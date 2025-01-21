@@ -14,5 +14,12 @@ credits:
   - label: Dop
     name:
       - Julien Borne
+optionalBlocks:
+  - imageOne: /uploads/1J0A0085_V2_9-16a.jpg
+    imageTwo: /uploads/1J0A0081_V3_9-16a.jpg
+    imageThree: /uploads/1J0A0003_V2_9-16a.jpg
+    aspectRatioWidth: 9
+    aspectRatioHeight: 16
+    _template: tripleImage
 ---
 
