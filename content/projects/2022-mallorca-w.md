@@ -11,5 +11,11 @@ mainImage:
   image4by3: '/uploads/MD mallorca Woman 4:3.jpg'
 mainVideo: '757986323'
 introduction: ''
+optionalBlocks:
+  - video: '1048829850'
+    version: Vertical
+    aspectRatioWidth: 9
+    aspectRatioHeight: 16
+    _template: singleVideo
 ---
 
