@@ -3,6 +3,7 @@ import { getVideoLinkByRendition } from "@/utils/vimeoQueries";
 import { motion } from "framer-motion";
 import { ProjectOptionalBlocksSingleVideo } from "../../../tina/__generated__/types";
 import VideoBlockPlayerWithControls from "../ui/videoBlockPlayerWithControls";
+import VideoBlockPlayerWithoutControls from "../ui/videoBlockPlayerWithoutControls";
 
 export default function ProjectOptionalBlockSingleVideo({
   block,
@@ -32,7 +33,11 @@ export default function ProjectOptionalBlockSingleVideo({
         }}
         viewport={{ once: true }}
       >
-        <VideoBlockPlayerWithControls videoSrc={videoSrc} />
+        {block.autoplay ? (
+          <VideoBlockPlayerWithoutControls videoSrc={videoSrc} />
+        ) : (
+          <VideoBlockPlayerWithControls videoSrc={videoSrc} />
+        )}
       </motion.div>
     </div>
   );
