@@ -41,15 +41,5 @@ optionalBlocks:
     aspectRatioWidth: 16
     aspectRatioHeight: 9
     _template: dualImage
-  - image: /uploads/porsche/porsche_case_single_4_3.jpg
-    aspectRatioWidth: 4
-    aspectRatioHeight: 3
-    version: Medium
-    _template: singleImage
-  - image: /uploads/porsche/porsche_16_9.jpg
-    aspectRatioWidth: 16
-    aspectRatioHeight: 9
-    version: Large
-    _template: singleImage
 ---
 
