@@ -26,5 +26,11 @@ credits:
   - label: Director
     name:
       - Jean-Pacôme Dedieux
+optionalBlocks:
+  - video: '1048925522'
+    version: Horizontal
+    aspectRatioWidth: 16
+    aspectRatioHeight: 9
+    _template: singleVideo
 ---
 
