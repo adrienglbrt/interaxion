@@ -4,7 +4,7 @@ metaTitle: ''
 year: 2019
 brand: Openspaces
 isActive: true
-isShowcased: true
+isShowcased: false
 showcaseOrder: 10
 mainImage:
   image16by9: /uploads/openspaces_169_cover.jpg
