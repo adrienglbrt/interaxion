@@ -4,7 +4,7 @@ year: 2025
 brand: Perrier-Jouët
 isActive: true
 isShowcased: true
-showcaseOrder: 1
+showcaseOrder: 2
 mainImage:
   image16by9: /uploads/PJ_Triptique_FF_nature_morte.jpg
   image5by7: /uploads/PJ_Dyptique_FF_natu_morte_5_7.jpg
