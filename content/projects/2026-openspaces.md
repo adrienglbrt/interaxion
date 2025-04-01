@@ -20,6 +20,9 @@ introduction: >
   outdoors. The open path to experience that takes you to a destination; the
   state of transit, the perpetual movement of art and emotion into space.
 credits:
+  - label: Client
+    name:
+      - OpenSpaces Magazine
   - label: Motion Graphic
     name:
       - Jeremie Vial
