@@ -67,16 +67,23 @@ export default function ShowcaseItem({
             className='absolute inset-0'
             aria-label={`View ${project.title}`}
           />
-          <h2 className='flex flex-col gap-2 font-serif tracking-wider mix-blend-difference text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl hover:opacity-70 transition-opacity duration-500 cursor-pointer'>
-            <AnimatedText
-              text={project.brand}
-              isVisible={activeSlide === index}
-            />
-            <AnimatedText
-              text={project.title}
-              isVisible={activeSlide === index}
-            />
-          </h2>
+          <Link
+            href={`/work/${project?._sys.filename}`}
+            aria-hidden='true'
+            tabIndex={-1}
+            className='relative'
+          >
+            <h2 className='flex flex-col gap-2 font-serif tracking-wider mix-blend-difference text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl hover:opacity-70 transition-opacity duration-500 cursor-pointer'>
+              <AnimatedText
+                text={project.brand}
+                isVisible={activeSlide === index}
+              />
+              <AnimatedText
+                text={project.title}
+                isVisible={activeSlide === index}
+              />
+            </h2>
+          </Link>
         </div>
       </Wrapper>
     </li>
