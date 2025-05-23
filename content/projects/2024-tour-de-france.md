@@ -9,12 +9,17 @@ mainImage:
   image16by9: /uploads/16_9 Photo 1 V1.jpg
 introduction: ''
 optionalBlocks:
-  - image: /uploads/16_9 Photo 4 V1.jpg
+  - image: /uploads/16_9 Photo 5 V1.jpg
     aspectRatioWidth: 16
     aspectRatioHeight: 9
     version: Large
     _template: singleImage
   - image: /uploads/16_9 Photo 2 V1.jpg
+    aspectRatioWidth: 16
+    aspectRatioHeight: 9
+    version: Large
+    _template: singleImage
+  - image: /uploads/16_9 Photo 4 V1.jpg
     aspectRatioWidth: 16
     aspectRatioHeight: 9
     version: Large
