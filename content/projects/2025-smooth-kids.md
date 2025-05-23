@@ -1,7 +1,7 @@
 ---
-title: 'Smooth Kids '
+title: Book
 year: 2025
-brand: The Magic Line
+brand: Smooth Kids
 isActive: true
 isShowcased: true
 showcaseOrder: 1
