@@ -22,7 +22,7 @@ optionalBlocks:
   - image: /uploads/Page 9_16 V0.jpg
     aspectRatioWidth: 9
     aspectRatioHeight: 16
-    version: Large
+    version: Medium
     _template: singleImage
 ---
 
