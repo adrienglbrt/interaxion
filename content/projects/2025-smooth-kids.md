@@ -9,7 +9,7 @@ mainImage:
   image16by9: /uploads/Page 16_9 V2.jpg
 introduction: ''
 optionalBlocks:
-  - image: /uploads/Page 9_16 V1.jpg
+  - image: /uploads/Page 9_16 V0.jpg
     aspectRatioWidth: 9
     aspectRatioHeight: 16
     version: Large
