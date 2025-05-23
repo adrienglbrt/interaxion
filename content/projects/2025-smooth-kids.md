@@ -6,7 +6,7 @@ isActive: true
 isShowcased: true
 showcaseOrder: 1
 mainImage:
-  image16by9: /uploads/Page 16_9 V1.jpg
+  image16by9: /uploads/Page 16_9 V2.jpg
 introduction: ''
 optionalBlocks:
   - image: /uploads/Page double 2 16_9 V1.jpg
