@@ -4,7 +4,7 @@ year: 2025
 brand: Smooth Kids
 isActive: true
 isShowcased: true
-showcaseOrder: 1
+showcaseOrder: 2
 mainImage:
   image16by9: /uploads/Page 16_9 V2.jpg
 introduction: ''
