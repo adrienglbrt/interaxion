@@ -15,5 +15,12 @@ credits:
   - label: Dop
     name:
       - Thibault de Chemellier
+optionalBlocks:
+  - video: '848266404'
+    version: Horizontal
+    autoplay: true
+    aspectRatioWidth: 16
+    aspectRatioHeight: 9
+    _template: singleVideo
 ---
 
