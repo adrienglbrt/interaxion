@@ -8,5 +8,9 @@ mainImage:
   image16by9: /uploads/physiodermie 1.jpg
 mainVideo: 'https://vimeo.com/848266404'
 introduction: ''
+credits:
+  - label: Director
+    name:
+      - Marc Thirouin
 ---
 
