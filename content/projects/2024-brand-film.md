@@ -9,11 +9,11 @@ mainImage:
 mainVideo: 'https://vimeo.com/848266404'
 introduction: ''
 credits:
-  - label: Dop
-    name:
-      - Thibault de Chemellier
   - label: Director
     name:
       - Marc Thirouin
+  - label: Dop
+    name:
+      - Thibault de Chemellier
 ---
 
