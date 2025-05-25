@@ -11,7 +11,7 @@ introduction: ''
 credits:
   - label: Dop
     name:
-      - Thibault de Chemelier
+      - Thibault de Chemellier
   - label: Director
     name:
       - Marc Thirouin
